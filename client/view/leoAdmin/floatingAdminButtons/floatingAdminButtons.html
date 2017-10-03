@@ -153,7 +153,8 @@
             filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
         }
-        .floatingAdminButtons .disabled{
+
+        .floatingAdminButtons .disabled {
             opacity: 0.2;
         }
     </style>
@@ -171,16 +172,48 @@
                         </button>
                     </div>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li><a href="#" class="{{checkEqual this.edit true 'disabled' ''}}" data-action="edit"  data-toggle="tooltip" data-placement="left" title="Edit"><i
-                                class="fa fa-pencil"></i></a></li>
-                        <li><a href="#" class="{{checkEqual this.save true 'disabled' ''}}" data-action="save" data-toggle="tooltip" data-placement="left" title="Save"><i
-                                class="fa fa-floppy-o"></i></a></li>
-                        <li><a href="#" class="{{checkEqual this.active true 'disabled' ''}}" data-action="active" data-toggle="tooltip" data-placement="left" title="Active"><i
-                                class="fa fa-thumbs-o-up"></i></a></li>
-                        <li><a href="#" class="{{checkEqual this.inActive true 'disabled' ''}}" data-action="inActive" data-toggle="tooltip" data-placement="left"
-                               title="De-Active"><i class="fa fa-thumbs-o-down"></i></a></li>
-                        <li><a href="#" class="{{checkEqual this.add true 'disabled' ''}}" data-action="add" data-toggle="tooltip" data-placement="left" title="Add"><i
-                                class="fa fa-plus"></i></a></li>
+                        {{#if this.edit}}
+                            <li><a href="#" class="" data-action="edit" data-toggle="tooltip" data-placement="left"
+                                   title="Edit"><i
+                                    class="fa fa-pencil"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="disabled" data-toggle="tooltip" data-placement="left"
+                                   title="Edit"><i
+                                    class="fa fa-pencil"></i></a></li>
+                        {{/if}}
+                        {{#if this.save}}
+                            <li><a href="#" class="" data-action="save" data-toggle="tooltip" data-placement="left"
+                                   title="Save"><i
+                                    class="fa fa-floppy-o"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="disabled" data-toggle="tooltip" data-placement="left" title="Save"><i
+                                    class="fa fa-floppy-o"></i></a></li>
+                        {{/if}}
+                        {{#if this.active}}
+                            <li><a href="#" class="" data-action="active" data-toggle="tooltip" data-placement="left"
+                                   title="Active"><i
+                                    class="fa fa-thumbs-o-up"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="disabled" data-toggle="tooltip" data-placement="left"
+                                   title="De-Active"><i class="fa fa-thumbs-o-up"></i></a></li>
+                        {{/if}}
+                        {{#if this.inActive}}
+                            <li><a href="#" class="" data-action="inActive" data-toggle="tooltip" data-placement="left"
+                                   title="De-Active"><i class="fa fa-thumbs-o-down"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="disabled" data-toggle="tooltip" data-placement="left" title="Add"><i
+                                    class="fa fa-thumbs-o-down"></i></a></li>
+                        {{/if}}
+
+                        {{#if this.add}}
+                            <li><a href="#" class="" data-action="add" data-toggle="tooltip" data-placement="left"
+                                   title="Add"><i
+                                    class="fa fa-plus"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="" data-action="add" data-toggle="tooltip" data-placement="left"
+                                   title="Add"><i
+                                    class="fa fa-plus"></i></a></li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>

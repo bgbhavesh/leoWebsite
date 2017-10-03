@@ -16,7 +16,17 @@ Router.map(function () {
     //     layoutTemplate:"smtMrLayout"
     // });
     this.route('leoAdminProductCategory',{
-    	path:adminContext+'/leoAdminProductCategory',
+        path:adminContext+'/leoAdminProductCategory',
+        // layoutTemplate:'',
+        waitOn:function(){
+
+        },
+        data:function(){
+            routerTitle:'Products-Category'
+        }
+    })
+    this.route('leoAdminProductCategoryDetails',{
+        path:adminContext+'/leoAdminProductCategoryDetails/:catId?',
         // layoutTemplate:'',
         waitOn:function(){
 

@@ -1,6 +1,6 @@
 PAGE_LIMIT = 10;
-PAGE_LIMIT_MR = 10;
-this.LeoUtils = function () {
+// PAGE_LIMIT_MR = 10;
+LeoUtils = function () {
 	var LeoUtilsClass = function () {
 
     };
