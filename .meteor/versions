@@ -18,7 +18,7 @@ blaze@2.3.2
 blaze-html-templates@1.1.2
 blaze-tools@1.0.10
 boilerplate-generator@1.2.0
-bucky:meteortable@0.0.13
+bucky:meteortable@0.0.18
 caching-compiler@1.1.9
 caching-html-compiler@1.1.2
 callback-hook@1.0.10
@@ -75,6 +75,8 @@ matb33:collection-hooks@0.8.4
 mdg:validation-error@0.2.0
 meteor@1.7.2
 meteor-base@1.1.0
+meteorhacks:aggregate@1.3.0
+meteorhacks:collection-utils@1.2.0
 meteorspark:util@0.2.0
 meteortoys:toykit@4.0.1
 minifier-css@1.2.16
@@ -90,6 +92,7 @@ momentjs:moment@2.18.1
 mongo@1.2.2
 mongo-dev-server@1.0.1
 mongo-id@1.0.6
+mongo-livedata@1.0.12
 msavin:mongol@4.0.1
 npm-bcrypt@0.9.3
 npm-mongo@2.2.30

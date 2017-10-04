@@ -2,9 +2,9 @@
   <library name="meteor-packages-auto-import-npm" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/benchmark.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/test.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/index.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/benchmark.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/test.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/index.js" />
         <item url="file://$USER_HOME$/.meteor/packages/thepumpinglemma_object-path/1.0.0/npm/node_modules/object-path/test.js" />
         <item url="file://$USER_HOME$/.meteor/packages/thepumpinglemma_object-path/1.0.0/npm/node_modules/object-path/index.js" />
         <item url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/npm/node_modules/spin.js/bower_components/spin.js/jquery.spin.js" />
@@ -8597,9 +8597,9 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/benchmark.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/test.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.13/npm/node_modules/object-path/index.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/benchmark.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/test.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/bucky_meteortable/0.0.18/npm/node_modules/object-path/index.js" />
       <root url="file://$USER_HOME$/.meteor/packages/thepumpinglemma_object-path/1.0.0/npm/node_modules/object-path/test.js" />
       <root url="file://$USER_HOME$/.meteor/packages/thepumpinglemma_object-path/1.0.0/npm/node_modules/object-path/index.js" />
       <root url="file://$USER_HOME$/.meteor/packages/sacha_spin/2.3.1/npm/node_modules/spin.js/bower_components/spin.js/jquery.spin.js" />

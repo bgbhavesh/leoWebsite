@@ -2,7 +2,7 @@ let tableAdminConfig = {};
 tableAdminConfig.leoAdminProductCategory= function () {
     return {
         collectionsName: 'LeoCollections.LeoProductCategory',
-        aggregateQuery: 'leoProductCategory',
+        aggregateQuery: 'leoMethodQuery.leoProductCategory',
         aggregateFullQuery:null,
         name: 'leoProductCategory',
         order: [1, "desc"],
@@ -12,12 +12,16 @@ tableAdminConfig.leoAdminProductCategory= function () {
         alphaFilter: false,
         isFilter:false,
         filterFields: [
+            'name',
+            'title'
         ],
         tableViewConfig: {
             extraFields: [],
             columns: [
-                {data: "type", Title: "Contract Type"},
-                {data: "type", Title: "Contract Type"},
+                {data: "name", Title: "Name",sort:true},
+                {data: "title", Title: "Title",sort:true},
+                {data: "leoId", Title: "Id",sort:true},
+                {data: "description", Title: "Description",sort:true},
             ]
         }
     }
