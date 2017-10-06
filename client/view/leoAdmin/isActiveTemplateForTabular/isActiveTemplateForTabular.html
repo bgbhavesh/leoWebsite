@@ -1,0 +1,13 @@
+<template name="selectTemplateForTabular">
+    <span><input type="checkbox" class="all checkedType" id="{{this._id}}"></span>
+
+</template>
+<template name="isActiveTemplateForTabular">
+    <div class="isActiveTemplateForTabular">
+    {{#if isActive}}
+        <span> <i class="fa fa-power-off text-success" aria-hidden="true"></i> </span>
+    {{else}}
+        <span> <i class="fa fa-circle-o-notch text-danger" aria-hidden="true"></i> </span>
+    {{/if}}
+    </div>
+</template>

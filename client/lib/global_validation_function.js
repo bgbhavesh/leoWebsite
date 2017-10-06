@@ -31,6 +31,9 @@ selectRegEx = function (regex) {
         case 'alphaNumMinusSpace':
             return SimpleSchema.RegEx.alphaNumMinusSpace;
             break;
+        case 'singleLine':
+            return SimpleSchema.RegEx.singleLine;
+            break;
     }
 }
 validateFields = function (evt,mandatory,validationType) {

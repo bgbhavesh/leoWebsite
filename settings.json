@@ -1,8 +1,12 @@
 {
-	"public":{
-
-	},
-	"private":{
-		
-	}
+  "private": {
+  },
+  "public": {
+    "cloudinary": {
+      "cloud_name": "www-leoquip-com",
+      "api_key": "119274969648794",
+      "api_secret": "EvAa1Cp8tisAUeY8_lbQ2XsbV1k",
+      "unsigned": "j00tvcsc"
+    }
+  }
 }

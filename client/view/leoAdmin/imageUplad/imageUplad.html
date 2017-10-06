@@ -1,0 +1,49 @@
+<template name="leoImageUpload">
+    <div class="form-group leoImageUpload files">
+        <label>Upload Your File </label>
+        <input id="leoImageUpload" type="file" class="form-control" multiple="false">
+        <div style="width: 100%;overflow:auto ">
+            <div style="padding-left:2px;width:{{divWidth}}px">
+                {{#each imagesUploadedInLocal}}
+                    <div class="pull-left" style="position: relative">
+                        <span class="removeUploadedImage" style="cursor: pointer; position: absolute;
+               font-size: 22px; right: 0px;color: #fff;">
+                            <i class="fa fa-times-circle-o pull-right" aria-hidden="true"
+                               style="border-radius: 50%;background: rgba(128, 128, 128, 0.5)"></i></span>
+                        <img src="{{response.secure_url}}" width="150" height="100"><br>
+                        <div style="font-size: 14px;" class="isDefault">
+                            {{#if isDefault}}
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                Is Default
+                            {{else}}
+                                <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                Is Default
+                            {{/if}}
+                        </div>
+                        <div style="font-size: 14px; " class="isActive">
+                            {{#if isActive}}
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                Is Active
+                            {{else}}
+                                <i class="fa fa-square-o" aria-hidden="true"></i>
+                                Is Active
+                            {{/if}}
+                        </div>
+                        {{#if equals percent_uploaded 100}}
+                            Seq: <input class="seq" type="number" value="{{seq}}" min="0"
+                                        style="width:40px!important; border:0px; border-bottom: 1px black solid; outline: none">
+                        {{else}}
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{percent_uploaded}}"
+                                     aria-valuemin="0" aria-valuemax="100" style="width:{{percent_uploaded}}%">
+                                    {{percent_uploaded}}% Complete (success)
+                                </div>
+                            </div>
+                            <!--<div>Loaded: {{percent_uploaded}}%</div>-->
+                        {{/if}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</template>

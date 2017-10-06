@@ -131,7 +131,9 @@
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/hooks.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/router_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/plugins.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/web.browser/.npm/package/node_modules/cloudinary-jquery/cloudinary-jquery.min.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/global_router.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/web.browser/client/functions.coffee" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/route.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/packages/iron_router/lib/template.templates.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ejson/1.0.14/web.browser/ejson.js" />
@@ -444,7 +446,9 @@
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/hooks.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/router_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/plugins.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/web.browser/.npm/package/node_modules/cloudinary-jquery/cloudinary-jquery.min.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/global_router.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/web.browser/client/functions.coffee" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/lib/route.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.1.2/web.browser/packages/iron_router/lib/template.templates.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ejson/1.0.14/web.browser/ejson.js" />

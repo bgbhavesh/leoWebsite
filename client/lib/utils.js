@@ -28,7 +28,7 @@ LeoUtils = function () {
             if (inputObject.attr("mandatory") === true || inputObject.attr("mandatory") === 'true') {
                 mandatory = true;
             }
-            let validationType = ['email','mobileNumber','domain','number','zipCode','IP','alphaNum','alpha' , 'decimal' , 'alphaNumMinusSpace'];
+            let validationType = ['email','mobileNumber','domain','number','zipCode','IP','alphaNum','alpha' ,'singleLine', 'decimal' , 'alphaNumMinusSpace'];
             let self = this;
             _.each(validationType,function(validType){
                 if (inputObject.attr("validationType") === validType) {

@@ -18,9 +18,11 @@ tableAdminConfig.leoAdminProductCategory= function () {
         tableViewConfig: {
             extraFields: [],
             columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
                 {data: "name", Title: "Name",sort:true},
                 {data: "title", Title: "Title",sort:true},
-                {data: "leoId", Title: "Id",sort:true},
+                {data: "productCategoryId", Title: "Id",sort:true},
                 {data: "description", Title: "Description",sort:true},
             ]
         }
