@@ -26,6 +26,12 @@ Template.registerHelper('not', (value) => {
 Template.registerHelper('getSessionVar', function (name) {
     return Session.get(name);
 });
+Template.registerHelper('toString', function (x) {
+    console.log(x);
+    return x.toString();
+
+});
+
 Template.registerHelper('isCordova', function () {
     return Meteor.isCordova;
 

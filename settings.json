@@ -1,5 +1,11 @@
 {
   "private": {
+    "smtp":{
+      "username":"postmaster@sandbox3b5d53e0d15b497ab2b27a2e3fadf564.mailgun.org",
+      "password":"abc123123",
+      "server":"smtp.mailgun.org",
+      "port":"587"
+    }
   },
   "public": {
     "cloudinary": {

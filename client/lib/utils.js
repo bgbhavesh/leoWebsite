@@ -63,8 +63,11 @@ LeoUtils = function () {
             mandatory = true;
         }
         if(validationType){
-            console.log(inputObject.attr('placeholder'));
+            // console.log(inputObject.attr('placeholder'));
             return testRegEx(fieldValue,mandatory,selectRegEx(validationType))
+        }
+        if(mandatory){
+            if(!fieldValue ||fieldValue ==="")return false;
         }
         return true;
     }
@@ -77,7 +80,7 @@ LeoUtils = function () {
             var inputObject = $(this);
             {
                 if(clientValidation && !util.validatedFormInputValues(inputObject)){
-                    clientValidation = false;debugger
+                    clientValidation = false;
                     let field = $(inputObject).siblings('label').text() || inputObject.attr('placeholder') || inputObject.attr('name')|| 'Value';
                     toastr.clear();
                     toastr.error('Enter '+field+' Properly ');

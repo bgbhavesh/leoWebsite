@@ -205,14 +205,22 @@
                                     class="fa fa-thumbs-o-down"></i></a></li>
                         {{/if}}
 
+                        {{#if this.cancel}}
+                            <li><a href="#" class="" data-action="cancel" data-toggle="tooltip" data-placement="left"
+                                   title="Cancel"><i
+                                    class="fa fa-times"></i></a></li>
+                        {{else}}
+                            <li><a href="#" class="disabled" data-action="add" data-toggle="tooltip" data-placement="left"
+                                   title="Add"><i class="fa fa-plus"></i></a></li>
+                        {{/if}}
+
                         {{#if this.add}}
                             <li><a href="#" class="" data-action="add" data-toggle="tooltip" data-placement="left"
                                    title="Add"><i
                                     class="fa fa-plus"></i></a></li>
                         {{else}}
-                            <li><a href="#" class="" data-action="add" data-toggle="tooltip" data-placement="left"
-                                   title="Add"><i
-                                    class="fa fa-plus"></i></a></li>
+                            <li><a href="#" class="disabled" data-action="add" data-toggle="tooltip" data-placement="left"
+                                   title="Add"><i class="fa fa-plus"></i></a></li>
                         {{/if}}
                     </ul>
                 </div>

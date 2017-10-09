@@ -1,3 +1,20 @@
+let singleSelectedId = function () {
+    let ids=[];
+    $(":checked").each(function () {
+        ids.push($(this).attr("id"));
+    });
+    ids = _.difference(ids,[undefined]);
+    if(ids.length===1){
+        return ids[0]
+    }else if(ids.length > 1){
+        toastr.clear();
+        toastr.error(getMessage("selectOnlyOne"));
+    }else{
+        toastr.clear();
+        toastr.error(getMessage("selectAtLeastOneRow"));
+    }
+    return false;
+}
 let checkIdsCollectionUpdate = function (value,key,collectionName) {
     let ids=[];
     $(":checked").each(function () {
@@ -5,7 +22,7 @@ let checkIdsCollectionUpdate = function (value,key,collectionName) {
     });
     ids = _.difference(ids,[undefined]);
     if(ids.length>0){
-        updateTabularCollection(value,key,collectionName)
+        updateTabularCollection(ids,value,key,collectionName)
     }else{
         toastr.clear();
         toastr.error(getMessage("selectAtLeastOneRow"));
@@ -28,5 +45,6 @@ let updateTabularCollection = function (ids,value,key,collectionName) {
 }
 export {
     checkIdsCollectionUpdate,
-    updateTabularCollection
+    updateTabularCollection,
+    singleSelectedId
 }

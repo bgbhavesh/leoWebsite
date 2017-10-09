@@ -1,10 +1,11 @@
 import {
     checkIdsCollectionUpdate,
-    updateTabularCollection
+    updateTabularCollection,
+    singleSelectedId
 } from '../isActiveTemplateForTabular/isActiveTemplateForTabular'
 Template.leoAdminProductCategory.onCreated(function () {
 
-})
+});
 Template.leoAdminProductCategory.onRendered(function () {
 
 });
@@ -12,6 +13,12 @@ Template.leoAdminProductCategory.events({
     "click [data-action='add']":function(e){
         e.preventDefault();
         Router.go("leoAdminProductCategoryDetails")
+    },
+    "click [data-action='edit']":function(e){
+        e.preventDefault();
+        var catId = singleSelectedId();
+        if(catId)
+        Router.go("leoAdminProductCategoryDetails",{catId:catId})
     },
     "click [data-action='inActive']":function(e){
         e.preventDefault();
