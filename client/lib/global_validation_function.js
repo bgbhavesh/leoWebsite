@@ -73,14 +73,27 @@ testNonEmpty = function (key) {
     return true;
 }
 testRegEx = function(key,mandatory,regex){
-    if(!mandatory && key === ""){
-        return true
-    }
-    if (!regex.test(key) ) {
+    if(mandatory && key === ""){
         return false
     }
-    else
-        return
+    else if(mandatory){
+        if(!regex ){
+            return true;
+        }
+        else if(regex && regex.test(key)){
+            return true
+        }
+        return false
+    }
+    else {
+        if(!regex ){
+            return true;
+        }
+        else if(regex && regex.test(key)){
+            return true
+        }
+        return false
+    }
 }
 validateNumber = function (evt) {
     let theEvent = evt || window.event;

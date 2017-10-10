@@ -23,9 +23,11 @@
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/preamble.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/builtins.js" />
         <item url="file://$USER_HOME$/.meteor/packages/boilerplate-generator/1.2.0/web.browser/template-web.browser.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/spiderable/1.0.13/web.browser/spiderable_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/layout.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/domrange.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/version_conflict_errors.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/spiderable/1.0.13/web.browser/spiderable.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze-tools/1.0.10/web.browser/tokens.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze-tools/1.0.10/web.browser/preamble.js" />
         <item url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.1.0/web.browser/lib/middleware_stack.js" />
@@ -338,9 +340,11 @@
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/preamble.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/builtins.js" />
       <root url="file://$USER_HOME$/.meteor/packages/boilerplate-generator/1.2.0/web.browser/template-web.browser.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/spiderable/1.0.13/web.browser/spiderable_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/layout.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/domrange.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_layout/1.0.12/web.browser/version_conflict_errors.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/spiderable/1.0.13/web.browser/spiderable.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze-tools/1.0.10/web.browser/tokens.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze-tools/1.0.10/web.browser/preamble.js" />
       <root url="file://$USER_HOME$/.meteor/packages/iron_middleware-stack/1.1.0/web.browser/lib/middleware_stack.js" />
