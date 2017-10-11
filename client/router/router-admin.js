@@ -22,7 +22,9 @@ Router.map(function () {
 
         },
         data:function(){
-            routerTitle:'Products-Category'
+            let data = {};
+            data.routerTitle='Products-Category';
+            return data;
         }
     })
     this.route('leoAdminProductCategoryDetails',{

@@ -11,7 +11,7 @@ var goToDashboard = function(){
 var loginrequired =function(req, res, next){
 	this.next();
 }
-var exceptedRoutes = [''];
+var exceptedRoutes = ['verifyEmail'];
 Router.onBeforeAction(loginrequired, {
     except: exceptedRoutes
 });
@@ -25,14 +25,12 @@ Router.configure({
 
     }
 });
-export default{
-	adminContext
-}
 Router.map(function () {
     this.route('leoLogin',{
     	path:'/login'
     })
 });
+
 export {
-	adminContext
+    adminContext// there is nothing wrong in declaring this way
 }
