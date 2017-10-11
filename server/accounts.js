@@ -2,7 +2,7 @@
 //
 // });
 Accounts.emailTemplates.siteName = "Leo-Quip";
-Accounts.emailTemplates.from = "Leo-Quip <" + "leoquip@gmail.com" + ">";
+// Accounts.emailTemplates.from = "Leo-Quip <" + "leoquip@gmail.com" + ">";
 Accounts.emailTemplates.verifyEmail.subject= function(user){
     return 'Verify your account with Leo-Quip'
 }
