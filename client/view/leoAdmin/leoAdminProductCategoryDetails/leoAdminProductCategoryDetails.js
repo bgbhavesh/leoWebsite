@@ -1,6 +1,7 @@
 // import {imageUpload} from '../../../cloudinary.config.js'
 Template.leoAdminProductCategoryDetails.onCreated(function () {
     let params = Router.current().params;
+    Cloudinary.collection.remove({});
     if(params && params.catId){
         let productCategory = LeoCollections.LeoProductCategory.findOne({_id:params.catId})
         if(productCategory && productCategory.images && productCategory.images.length>0){

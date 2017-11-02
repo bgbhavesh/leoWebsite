@@ -1,18 +1,18 @@
 
 Meteor.methods({
-    insertProductCategory:function (categoryDetails) {
-        check(categoryDetails,Object);
-        new LeoProductCategoryProcessor({
-            category:categoryDetails
-        }).insertProductCategoryProcessor()
+    insertProduct:function (productDetails) {
+        check(productDetails,Object);
+        new LeoProductProcessor({
+            product:productDetails
+        }).insertProductProcessor()
     },
-    updateProductCategory:function (catId,categoryDetails) {
-        check(catId,String);
-        check(categoryDetails,Object);
+    updateProduct:function (productId,productDetails) {
+        check(productId,String);
+        check(productDetails,Object);
 
-        new LeoProductCategoryProcessor({
-            category:categoryDetails,
-            catId:catId
-        }).updateProductCategoryProcessor()
+        new LeoProductProcessor({
+            product:productDetails,
+            productId:productId
+        }).updateProductProcessor()
     }
 });

@@ -14,62 +14,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="accounts.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/accounts.js">
+      <file leaf-file-name="tableAdminConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/tableAdminConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            <state relative-caret-position="108">
+              <caret line="145" column="39" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="39" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#80#950#0" expanded="false" />
+                <element signature="e#997#1845#0" expanded="false" />
+                <element signature="e#1900#2857#0" expanded="false" />
+                <element signature="e#2904#3829#0" expanded="false" />
+                <element signature="e#3884#4841#0" expanded="false" />
+                <element signature="e#5873#6798#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router-common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/router/router-common.js">
+      <file leaf-file-name="queryCollections.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/queryCollections/queryCollections.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="17">
+              <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+              <folding>
+                <element signature="e#85#213#0" expanded="false" />
+                <element signature="e#282#410#0" expanded="false" />
+                <element signature="e#472#600#0" expanded="false" />
+                <element signature="e#671#799#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form-group has-error</find>
-      <find>in</find>
-      <find>name</find>
-      <find>toa</find>
-      <find>indexof</find>
-      <find>toas</find>
-      <find>updateTabularCollection</find>
-      <find>checkIdsCollectionUpdate</find>
-      <find>leoAdminProductCategoryDetails</find>
-      <find>[name=</find>
-      <find>updateProductCategory</find>
-      <find>secure_url</find>
-      <find>floatingAdminButtons</find>
-      <find>applyValidationAndFloatingLabel</find>
-      <find>message</find>
-      <find>ground.c</find>
-      <find>Ground.Collection</find>
-      <find>new SimpleSchema</find>
-      <find>var</find>
-      <find>email</find>
-      <find>testRegEx</find>
-      <find>signUpUser</find>
-      <find>Crated</find>
-      <find>password:</find>
-      <find>process.env</find>
-      <find>sma</find>
-      <find>active</find>
-      <find>verifyEmailController</find>
-      <find>leoAdminProductCategory</find>
-      <find>verifyEmail</find>
+      <find>leoMethodQuery.leoProductCategory</find>
+      <find>productCategory.</find>
+      <find>LeoProductProcessorClass</find>
+      <find>imageid</find>
+      <find>galleryCategory</find>
+      <find>Title: &quot;Id</find>
+      <find>galle</find>
+      <find>tableAdminConfig</find>
+      <find>leoSerialNumberGenerator</find>
+      <find>ga</find>
+      <find>id</find>
+      <find>pro</find>
+      <find>leoAdminServiceDetails</find>
+      <find>Product</find>
+      <find>product</find>
+      <find>Gallery</find>
+      <find>serviceId</find>
+      <find>insertServiceProcessor</find>
+      <find>prod</find>
+      <find>Team</find>
+      <find>subsc</find>
+      <find>su</find>
+      <find>subscribe</find>
+      <find>singleDocWithId</find>
+      <find>Service</find>
+      <find>serviceCategory</find>
+      <find>service</find>
+      <find>LeoSchemas</find>
+      <find>LeoProductSchema</find>
+      <find>leoMethodQuery</find>
     </findStrings>
     <replaceStrings>
       <replace>Leo</replace>
@@ -78,6 +96,16 @@
       <replace>public</replace>
       <replace>updateTabularCollection</replace>
       <replace>let</replace>
+      <replace>signIn</replace>
+      <replace>LeoGalleryProcessorClass</replace>
+      <replace>gallery</replace>
+      <replace>Gallery</replace>
+      <replace>ShowCase</replace>
+      <replace>Service</replace>
+      <replace>service</replace>
+      <replace>Team</replace>
+      <replace>TeamMember</replace>
+      <replace>teamMember</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -86,57 +114,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/style/floatingLable.css" />
-        <option value="$PROJECT_DIR$/client/style/floatingLabel.css" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/leoSerialNumberGenerator.js" />
-        <option value="$PROJECT_DIR$/packages/meteortab/package.js" />
-        <option value="$PROJECT_DIR$/packages/meteortab/server/methods.js" />
-        <option value="$PROJECT_DIR$/lib/validationRegEx.js" />
-        <option value="$PROJECT_DIR$/server/cloudinary.config.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/images.schema.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/LeoImageSchema.js" />
-        <option value="$PROJECT_DIR$/.meteor/local/build/programs/server/app/app.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/_common.js" />
-        <option value="$PROJECT_DIR$/client/cloudinary.config.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/productCategory.collection.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/leoImageSchema.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/imageUplad/imageUplad.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/imageUplad/imageUplad.html" />
-        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoTabularMethods.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/tableAdminConfig.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/isActiveTemplateForTabular/isActiveTemplateForTabular.html" />
-        <option value="$PROJECT_DIR$/client/lib/constantMessage.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategory/leoAdminProductCategory.js" />
-        <option value="$PROJECT_DIR$/client/style/switch3.css" />
-        <option value="$PROJECT_DIR$/server/publication/publication-admin.js" />
-        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoProducts.js" />
-        <option value="$PROJECT_DIR$/client/lib/_global_function.js" />
-        <option value="$PROJECT_DIR$/client/lib/global_helper.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategoryDetails/leoAdminProductCategoryDetails.html" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/all/auditing.collections.js" />
-        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineProductCategory.js" />
-        <option value="$PROJECT_DIR$/client/lib/utils.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/floatingAdminButtons/floatingAdminButtons.html" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/isActiveTemplateForTabular/isActiveTemplateForTabular.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategoryDetails/leoAdminProductCategoryDetails.js" />
-        <option value="$PROJECT_DIR$/lib/collection.js/common/for/constantMessage.js" />
-        <option value="$PROJECT_DIR$/server/leoMethodsignUp.js" />
-        <option value="$PROJECT_DIR$/client/view/leoCommon/signup/signup.js" />
-        <option value="$PROJECT_DIR$/client/view/leoCommon/signup/signup.html" />
-        <option value="$PROJECT_DIR$/lib/collection/common/for/all/productCategory.collection.js" />
-        <option value="$PROJECT_DIR$/server/emailSetup.js" />
-        <option value="$PROJECT_DIR$/client/lib/global_validation_function.js" />
-        <option value="$PROJECT_DIR$/settings.json" />
-        <option value="$PROJECT_DIR$/server/leoMethodsSignUp/leoMethodsignUp.js" />
-        <option value="$PROJECT_DIR$/private/emailTemplates/verifyEmailTemplate.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductDetails/leoAdminProductDetails.js" />
+        <option value="$PROJECT_DIR$/client/view/leoCommon/leoAutoComplete/leoAutoComplete.js" />
         <option value="$PROJECT_DIR$/.meteor/packages" />
+        <option value="$PROJECT_DIR$/client/view/leoCommon/leoAutoComplete/leoAutoComplete.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProduct/leoAdminProduct.js" />
+        <option value="$PROJECT_DIR$/.meteor/local/build/programs/server/app/app.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoGallery.collection.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminGallery/leoAdminGallery.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminGalleryDetails/leoAdminProductCategoryDetails.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminGalleryDetails/leoAdminProductCategoryDetails.js" />
+        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineGallery.js" />
+        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoGallery.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminGalleryDetails/leoAdminGalleryDetails.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSlider/leoAdminShowCaseSlider.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminGallery/leoAdminGallery.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSlider/leoAdminShowCaseSlider.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSliderDetails/leoAdminGalleryDetails.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSliderDetails/leoAdminGalleryDetails.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSliderDetails/leoAdminShowCaseSliderDetails.js" />
+        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineShowCase.js" />
+        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoShowCaseSlider.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoShowCaseSlider.collection.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminService/leoAdminService.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminService/leoAdminService.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceDetails/leoAdminServiceDetails.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategory/leoAdminProductCategory.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategoryDetails/leoAdminServiceCategoryDetails.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategoryDetails/leoAdminServiceCategoryDetails.html" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoProduct.collection.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategory/leoAdminServiceCategory.js" />
+        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineService.js" />
+        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineServiceCategory.js" />
+        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoServiceCategory.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoLocations.collection.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoServiceCategory.collection.js" />
         <option value="$PROJECT_DIR$/lib/collection/common/for/leoSerialNumberGenerator.js" />
-        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategory/leoAdminProductCategory.html" />
+        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoService.js" />
+        <option value="$PROJECT_DIR$/server/leoEngine/leoEngineTeam.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/leoTeam.collection.js" />
+        <option value="$PROJECT_DIR$/server/leoMethodsAdmin/leoTeamMember.js" />
+        <option value="$PROJECT_DIR$/server/publication/publication-admin.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceDetails/leoAdminServiceDetails.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMemberDetails/leoAdminTeamMemberDetails.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMemberDetails/leoAdminTeamMemberDetails.js" />
         <option value="$PROJECT_DIR$/client/router/router-admin.js" />
-        <option value="$PROJECT_DIR$/client/router/router-common.js" />
-        <option value="$PROJECT_DIR$/client/router/routerConfig.js" />
-        <option value="$PROJECT_DIR$/lib/collection/LeoUsers.js" />
-        <option value="$PROJECT_DIR$/server/accounts.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMember/leoAdminService.html" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMember/leoAdminService.js" />
+        <option value="$PROJECT_DIR$/client/view/leoAdmin/tableAdminConfig.js" />
+        <option value="$PROJECT_DIR$/lib/collection/common/for/allCollections/collectionPreRequisites/_common.js" />
+        <option value="$PROJECT_DIR$/lib/commonThings/commonVariables.js" />
+        <option value="$PROJECT_DIR$/server/queryCollections/queryCollections.js" />
       </list>
     </option>
   </component>
@@ -183,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,70 +226,25 @@
             <path>
               <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="collection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="collection" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="collection" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="for" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="collection" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="for" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="private" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leoWebsite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leoWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="private" type="462c0819:PsiDirectoryNode" />
-              <item name="emailTemplates" type="462c0819:PsiDirectoryNode" />
+              <item name="commonThings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/leoMethodsSingUp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fieldrepo" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="js.meteor.project" value="true" />
@@ -270,18 +252,27 @@
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.selected.package.jscs" value="" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.tslint" value="" />
-    <property name="SearchEverywhereHistoryKey" value="rou&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-common.js&#10;route&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;cons&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/constantMessage.js&#10;_g&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/_global_function.js&#10;_glo&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/_global_function.js&#10;router&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;va&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/lib/validationRegEx.js" />
+    <property name="SearchEverywhereHistoryKey" value="LeoProduct&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/lib/collection/common/for/allCollections/LeoProduct.collection.js&#10;con&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/tableAdminConfig.js&#10;router&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;leoAdminServiceDetails&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/leoAdminServiceDetails/leoAdminServiceDetails.js&#10;rou&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;leoEngineService&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/server/leoEngine/leoEngineService.js&#10;quer&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/server/queryCollections/queryCollections.js&#10;leoAdminServiceCategory&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/leoAdminServiceCategory/leoAdminServiceCategory.js&#10;leoAdminService.&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/leoAdminService/leoAdminService.js&#10;leoAdminProductDetails&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/leoAdminProductDetails/leoAdminProductDetails.html&#10;rout&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;leoSerialNumberGenerator&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/lib/collection/common/for/leoSerialNumberGenerator.js&#10;conf&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/view/leoAdmin/tableAdminConfig.js&#10;acc&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/server/accounts.js&#10;route&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/router/router-admin.js&#10;cons&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/constantMessage.js&#10;_g&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/_global_function.js&#10;_glo&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/client/lib/_global_function.js&#10;va&#9;FILE&#9;file:///home/bhavesh/impdata/meteor/leoWebsite/lib/validationRegEx.js" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/view/leoCommon/login" />
       <recent name="$PROJECT_DIR$/server/leoMethodsSingUp" />
       <recent name="$PROJECT_DIR$/lib/collection.js/common/for" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/view/leoAdmin" />
+      <recent name="$PROJECT_DIR$/server/leoMethodsAdmin" />
+      <recent name="$PROJECT_DIR$/server/leoEngine" />
+      <recent name="$PROJECT_DIR$/lib/collection/common/for/allCollections" />
+      <recent name="$PROJECT_DIR$/lib/collection/common/for/all" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,32 +327,43 @@
       <workItem from="1507706037108" duration="7000" />
       <workItem from="1507731740420" duration="3418000" />
       <workItem from="1507737504149" duration="299000" />
+      <workItem from="1507800327301" duration="3171000" />
+      <workItem from="1507815869029" duration="3609000" />
+      <workItem from="1507875985402" duration="10000" />
+      <workItem from="1508908315625" duration="317000" />
+      <workItem from="1508955255774" duration="6575000" />
+      <workItem from="1509044555361" duration="17976000" />
+      <workItem from="1509124113995" duration="621000" />
+      <workItem from="1509187490136" duration="33412000" />
+      <workItem from="1509368875540" duration="29544000" />
+      <workItem from="1509517101315" duration="3425000" />
+      <workItem from="1509531443945" duration="9762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144635000" />
+    <option name="totallyTimeSpent" value="253057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="111" width="1327" height="780" extended-state="6" />
+    <frame x="41" y="-4" width="1325" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27419356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2596006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29393467" sideWeight="0.5030722" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40124416" sideWeight="0.4969278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36858475" sideWeight="0.4969278" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -371,17 +373,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29393467" sideWeight="0.5030722" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27419356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4214619" sideWeight="0.4969278" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37013996" sideWeight="0.4969278" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,348 +394,422 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/leoEngine/leoEngineProduct.js</url>
+          <line>5</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="48" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="meteor-app-runner">
-        <watch expression="LeoCollections.LeoProductCategory.update({_id:catId},{$set:{category}},{upsert:true})" language="JavaScript" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/meteortab/package.js" />
-    <entry file="file://$USER_HOME$/.meteor/packages/matb33_collection-hooks/0.8.4/npm/node_modules/doctrine/lib/doctrine.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminGalleryDetails/leoAdminGalleryDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="711" column="12" lean-forward="false" selection-start-line="711" selection-start-column="12" selection-end-line="711" selection-end-column="12" />
+        <state relative-caret-position="208">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/cloudinary.config.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProduct/leoAdminProduct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="774">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/local/build/programs/server/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="339" column="0" lean-forward="false" selection-start-line="339" selection-start-column="0" selection-end-line="339" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/cloudinary.config.js" />
-    <entry file="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/web.browser/client/functions.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/lepozepo_cloudinary/4.2.6/npm/node_modules/cloudinary-jquery/cloudinary-jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="2899" column="13" lean-forward="false" selection-start-line="2899" selection-start-column="13" selection-end-line="2899" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/all/leoImageSchema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/imageUplad/imageUplad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/imageUplad/imageUplad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/isActiveTemplateForTabular/isActiveTemplateForTabular.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/tableAdminConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/style/switch3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/publication/publication-admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/_global_function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/global_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/validationRegEx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/all/_common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineProductCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategoryDetails/leoAdminProductCategoryDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="86" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/floatingAdminButtons/floatingAdminButtons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategory/leoAdminProductCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/isActiveTemplateForTabular/isActiveTemplateForTabular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoTabularMethods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/constantMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/accounts-base/1.3.4/web.browser/client_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/all/productCategory.collection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="36" selection-end-column="84" />
+        <state relative-caret-position="141">
+          <caret line="994" column="0" lean-forward="false" selection-start-line="994" selection-start-column="0" selection-end-line="994" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoProducts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="18">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategoryDetails/leoAdminProductCategoryDetails.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductDetails/leoAdminProductDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="235">
+          <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoCommon/signup/signup.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminGallery/leoAdminGallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="324">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoCommon/signup/signup.html">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSliderDetails/leoAdminShowCaseSliderDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+        <state relative-caret-position="-36">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/all/auditing.collections.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/isActiveTemplateForTabular/isActiveTemplateForTabular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="108">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/emailSetup.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSlider/leoAdminShowCaseSlider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="234">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/lib/global_validation_function.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSliderDetails/leoAdminShowCaseSliderDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="94" column="20" lean-forward="false" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+        <state relative-caret-position="234">
+          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/emailTemplates">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/Meteor/lib/Meteor.jar!/tsMeteorStubs/meteor-v1.3.1.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/emailTemplates/verifyEmailTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="41" column="71" lean-forward="false" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/leoSerialNumberGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/all/serialNo.collection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/packages">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/leoMethodsSignUp/leoMethodsignUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductCategory/leoAdminProductCategory.html">
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoShowCaseSlider.collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/collection/LeoUsers.js">
+    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineShowCase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-537">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="126">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.html" />
-    <entry file="file://$PROJECT_DIR$/client/main.js" />
-    <entry file="file://$PROJECT_DIR$/client/router/routerConfig.js">
+    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineGallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="90">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminGalleryDetails/leoAdminGalleryDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoShowCaseSlider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminShowCaseSlider/leoAdminShowCaseSlider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceDetails/leoAdminServiceDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminService/leoAdminService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminProductDetails/leoAdminProductDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategoryDetails/leoAdminServiceCategoryDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+          <folding>
+            <element signature="e#123#799#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategoryDetails/leoAdminServiceCategoryDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="115" lean-forward="false" selection-start-line="42" selection-start-column="115" selection-end-line="42" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminService/leoAdminService.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="69" lean-forward="false" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategory/leoAdminServiceCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#154#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceCategory/leoAdminServiceCategory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoServiceCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoGallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoLocations.collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineServiceCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoServiceCategory.collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/publication/publication-admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoTeamMember.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMember/leoAdminService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="e#305#1383#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/router/router-admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/router/router-common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="93">
+          <caret line="93" column="46" lean-forward="false" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/accounts.js">
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminServiceDetails/leoAdminServiceDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        <state relative-caret-position="516">
+          <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMember/leoAdminService.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMemberDetails/leoAdminTeamMemberDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/leoAdminTeamMemberDetails/leoAdminTeamMemberDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoEngine/leoEngineTeam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/leoMethodsAdmin/leoService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoService.collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoTeamMember.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/_common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/commonThings/commonFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/commonThings/commonVariables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="false" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/collectionPreRequisites/_common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/leoSerialNumberGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/constantMessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/collection/common/for/allCollections/leoProduct.collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/view/leoAdmin/tableAdminConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="145" column="39" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="39" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#80#950#0" expanded="false" />
+            <element signature="e#997#1845#0" expanded="false" />
+            <element signature="e#1900#2857#0" expanded="false" />
+            <element signature="e#2904#3829#0" expanded="false" />
+            <element signature="e#3884#4841#0" expanded="false" />
+            <element signature="e#5873#6798#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/queryCollections/queryCollections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+          <folding>
+            <element signature="e#85#213#0" expanded="false" />
+            <element signature="e#282#410#0" expanded="false" />
+            <element signature="e#472#600#0" expanded="false" />
+            <element signature="e#671#799#0" expanded="false" />
           </folding>
         </state>
       </provider>

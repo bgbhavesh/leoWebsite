@@ -1,5 +1,11 @@
 // signUpUser
 Meteor.methods({
+    addUserToRole:function (userId,role,group) {
+        check(userId,String);
+        check(role,String);
+        check(group,String);
+        return Roles.addUsersToRoles(userId,role,group)
+    },
     signUpUser:function(userObject){
         check(userObject,Object);
         var option = {
@@ -12,9 +18,10 @@ Meteor.methods({
             password: userObject.password,
         };
         var userId = Accounts.createUser(option);
-        Roles.addUsersToRoles(userId, "NEW-USER", "guest-group");
+        Roles.addUsersToRoles(userId, "GUEST-USER", "guest-group");
         Meteor.setTimeout(function () {
             return Accounts.sendVerificationEmail(userId);
-        }, 2 * 1000);
+        }, 2 * 100);
+        return userId;
     }
 });

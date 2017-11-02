@@ -5,14 +5,14 @@ LeoProductCategoryProcessor = function(){
     LeoProductCategoryProcessorClass.prototype.insertProductCategoryProcessor = function(){
         let category = this.options.category;
         LeoIdService.productCategory(category);
-        LeoCollections.LeoProductCategory.insert(category)
+        return LeoCollections.LeoProductCategory.insert(category)
     };
     LeoProductCategoryProcessorClass.prototype.updateProductCategoryProcessor = function(){
         let category = this.options.category;
         let catId = this.options.catId;
         if(LeoCollections.LeoProductCategory.findOne({_id:catId})){
             try{
-                LeoCollections.LeoProductCategory.update({_id:catId},{$set:category})
+                return LeoCollections.LeoProductCategory.update({_id:catId},{$set:category})
             }
             catch(e){
                 throw new Meteor.Error(e)

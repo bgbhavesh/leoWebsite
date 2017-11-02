@@ -27,7 +27,7 @@ Router.configure({
 });
 Router.map(function () {
     this.route('leoLogin',{
-    	path:'/login'
+    	path:'/leoLogin'
     })
 });
 
