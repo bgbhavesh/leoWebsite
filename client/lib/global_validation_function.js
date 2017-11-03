@@ -86,6 +86,9 @@ testRegEx = function(key,mandatory,regex){
         return false
     }
     else {
+        if(!key|| key === "" || key === undefined){
+            return true
+        }
         if(!regex ){
             return true;
         }
