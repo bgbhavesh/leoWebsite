@@ -1,4 +1,13 @@
 leoMethodQuery = {};
+leoMethodQuery.leoNewsFeed = function (selector, sort,fields) {
+    return [
+        {
+            "$match": selector
+        },
+        {"$sort": sort},
+        {'$project':fields},
+    ]
+};
 leoMethodQuery.leoTeamMember = function (selector, sort,fields) {
     return [
         {

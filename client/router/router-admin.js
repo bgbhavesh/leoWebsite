@@ -32,6 +32,35 @@ Router.map(function () {
             return data
         }
     });
+    this.route('leoAdminNewsFeed',{
+        path:adminContext+'/leoAdminNewsFeed',
+        // layoutTemplate:'',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='News-Feed';
+            return data;
+        }
+    });
+    this.route('leoAdminNewsFeedDetails',{
+        path:adminContext+'/leoAdminNewsFeedDetails/:newsFeedId?',
+        // layoutTemplate:'',
+        waitOn:function(){
+            var subArray=[];
+            if(this.params.newsFeedId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoNewsFeed", this.params.newsFeedId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='News-Feed';
+            data.NewsFeed=LeoCollections.LeoNewsFeed.findOne({_id:this.params.newsFeedId});
+            return data
+        }
+    });
     this.route('leoAdminGallery',{
         path:adminContext+'/leoAdminGallery',
         // layoutTemplate:'',

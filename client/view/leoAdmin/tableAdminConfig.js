@@ -53,6 +53,33 @@ tableAdminConfig.leoAdminGallery= function () {
         }
     }
 }
+tableAdminConfig.leoAdminNewsFeed= function () {
+    return {
+        collectionsName: 'LeoCollections.LeoNewsFeed',
+        aggregateQuery: 'leoMethodQuery.leoNewsFeed',
+        aggregateFullQuery:null,
+        name: 'leoNewsFeed',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:false,
+        filterFields: [
+            'title'
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {data: "title", Title: "Title",sort:true},
+                {data: "galleryId", Title: "Code",sort:true},
+                {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+}
 tableAdminConfig.leoAdminProductCategory= function () {
     return {
         collectionsName: 'LeoCollections.LeoProductCategory',
