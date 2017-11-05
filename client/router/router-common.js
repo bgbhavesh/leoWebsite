@@ -36,7 +36,7 @@ Router.map(function () {
                     Router.go('leoAdminProductCategory');
 
                     if (Roles.userIsInRole(Meteor.userId(), 'GUEST-USER', 'guest-group'))
-                        Meteor.call("addUserToRole",Meteor.userId(), 'NEW-USER', 'guest-group')
+                        Meteor.call("setUserToRole",Meteor.userId(), 'NEW-USER', 'guest-group')
 
                 }
             });

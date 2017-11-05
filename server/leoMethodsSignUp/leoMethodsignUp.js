@@ -1,9 +1,10 @@
 // signUpUser
 Meteor.methods({
-    addUserToRole:function (userId,role,group) {
+    setUserToRole:function (userId,role,group) {
         check(userId,String);
         check(role,String);
         check(group,String);
+        LeoCollections.LeoUsers.update({_id:userId},{$unset:{roles:{}}});
         return Roles.addUsersToRoles(userId,role,group)
     },
     signUpUser:function(userObject){
