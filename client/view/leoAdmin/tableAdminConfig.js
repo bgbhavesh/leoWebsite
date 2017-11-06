@@ -25,7 +25,7 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
             ]
         }
     }
-}
+};
 tableAdminConfig.leoAdminGallery= function () {
     return {
         collectionsName: 'LeoCollections.LeoGallery',
@@ -52,7 +52,7 @@ tableAdminConfig.leoAdminGallery= function () {
             ]
         }
     }
-}
+};
 tableAdminConfig.leoAdminNewsFeed= function () {
     return {
         collectionsName: 'LeoCollections.LeoNewsFeed',
@@ -79,7 +79,7 @@ tableAdminConfig.leoAdminNewsFeed= function () {
             ]
         }
     }
-}
+};
 tableAdminConfig.leoAdminProductCategory= function () {
     return {
         collectionsName: 'LeoCollections.LeoProductCategory',
@@ -192,6 +192,36 @@ tableAdminConfig.leoAdminTeamMember= function () {
                 {data: "title", Title: "Title",sort:true},
                 {data: "teamMember", Title: "Code",sort:true},
                 {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+}
+tableAdminConfig.leoAdminLeoUsers= function () {
+    return {
+        collectionsName: 'LeoCollections.LeoUsers',
+        aggregateQuery: 'leoMethodQuery.leoUsers',
+        aggregateFullQuery:null,
+        name: 'leoUsers',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:false,
+        filterFields: [
+            'name',
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {data: "profile.firstname", Title: "F-name",sort:true},
+                {data: "profile.lastname", Title: "L-name",sort:true},
+                {data: "status.online", Title: "Status",sort:true},
+                {data: "username", Title: "Username",sort:true},
+                {data: "emails", Title: "Email",sort:true,tmpl:"emailsListWithVerify"},
+                // {data: "verified", Title: "Verified",sort:true},
             ]
         }
     }

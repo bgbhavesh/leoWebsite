@@ -1,20 +1,20 @@
-Session.setDefault("viewLoginPage","signIn");
+Session.setDefault("viewLoginPage","toSignIn");
 Template.leoLogin.onCreated(function () {
-    Session.set("viewLoginPage","signIn");
+    Session.set("viewLoginPage","toSignIn");
 });
 Template.leoLogin.events({
-    "click #signUp":function (e) {
+    "click #toSignUp":function (e) {
         e.preventDefault()
-        Session.set("viewLoginPage","signIn");
+        Session.set("viewLoginPage","toSignUp");
     },
-    "click #signIn":function (e) {
+    "click #toSignIn":function (e) {
         e.preventDefault()
-        Session.set("viewLoginPage","signUp");
+        Session.set("viewLoginPage","toSignIn");
     }
 });
 
 Template.leoLogin.helpers({
     "viewLoginPage":function (e) {
-        return Session.get("viewLoginPage");
+        return (Session.get("viewLoginPage")==='toSignIn')?"signIn":"signUp";
     }
 });

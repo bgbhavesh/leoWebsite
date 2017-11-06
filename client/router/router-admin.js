@@ -119,6 +119,18 @@ Router.map(function () {
             return data
         }
     });
+    this.route('leoAdminLeoUsers',{
+        path:adminContext+'/leoAdminLeoUsers',
+        // layoutTemplate:'',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Leo User';
+            return data;
+        }
+    });
     this.route('leoAdminTeamMember',{
         path:adminContext+'/leoAdminTeamMember',
         // layoutTemplate:'',

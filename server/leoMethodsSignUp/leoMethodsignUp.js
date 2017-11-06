@@ -9,7 +9,8 @@ Meteor.methods({
     },
     signUpUser:function(userObject){
         check(userObject,Object);
-        var option = {
+        console.log("signUpUser");
+        let option = {
             email: userObject.email,
             username: userObject.username,
             profile: {
@@ -18,7 +19,7 @@ Meteor.methods({
             },
             password: userObject.password,
         };
-        var userId = Accounts.createUser(option);
+        let userId = Accounts.createUser(option);
         Roles.addUsersToRoles(userId, "GUEST-USER", "guest-group");
         Meteor.setTimeout(function () {
             return Accounts.sendVerificationEmail(userId);
