@@ -34,7 +34,7 @@
                     <input type="text" name="title" class="form-control" mandatory="true" value="{{product.title}}"/>
                 </div>
                 {{#let catId = product.categoryId}}
-                    {{>leoAutoComplete name="categoryId" title="Select Category" value="ynkHpMoRSF3C2Fomw" primaryKey="_id" key="name" multi=false settings=LeoAutoCompleteSettings}}
+                    {{>leoAutoComplete name="categoryId" title="Select Category" value="{{catId}}" primaryKey="_id" key="name" multi=false settings=LeoAutoCompleteSettings}}
                 {{/let}}
                 <div class="form-group">
                     <label class="control-label">Tags</label>

@@ -1,6 +1,8 @@
 Template.leoAutoComplete.onCreated(function () {
     let template = this;
 
+    template.dropDownStyle = new ReactiveVar();
+    template.dropDownStyle.set('padding: 6px 12px');
     template.selectedList = new ReactiveVar();
     template.selectedList.set([]);
     template.searchList = new ReactiveVar();
@@ -48,6 +50,9 @@ Template.leoAutoComplete.helpers({
     name: function () {
         return this.name || "";
     },
+    isMulti:function () {
+        return Template.instance().isMulti.get();
+    },
     value: function () {
         let isMulti = Template.instance().isMulti.get();
         let primaryKey = Template.instance().primaryKey.get() || "_id";
@@ -56,14 +61,17 @@ Template.leoAutoComplete.helpers({
             return list[primaryKey]
         });
         if (isMulti)
-            return primaryKeys
+            return primaryKeys;
         else return primaryKeys[0]||""
     },
     focused: function () {
         return Template.instance().isFocused.get();
     },
+    dropDownStyle:function() {
+        return Template.instance().dropDownStyle.get()
+    },
     dropdownWidth: function () {
-        return $('.leoAutoComplete-input').width();
+        return $('.leoAutoComplete-inputBox').width();
     },
     searchList: function () {
         return Template.instance().searchList.get()
@@ -114,6 +122,10 @@ Template.leoAutoComplete.events({
     },
     "keyup .leoAutoComplete-input": function (e, t) {
         console.log(e.keyCode);
+        let isMulti = t.isMulti.get();
+        if(!isMulti){
+            t.selectedList.set([]);
+        }
         focusOnInput(e, t);
     },
     "blur .leoAutoComplete-input": function (e, t) {
@@ -124,14 +136,20 @@ Template.leoAutoComplete.events({
     },
     "click .leoAutoComplete-mask": function (e, t) {
         t.isFocused.set(false);
+        $(".leoAutoComplete-input").val("")
     },
     "click .leoAutoComplete-dropDown": function (e, t) {
         e.preventDefault();
         // focusOnInput(e, t);
     },
     "focus .leoAutoComplete-input": function (e, t) {
-        focusOnInput(e, t)
+        positionTheDropDown(e,t)
+        focusOnInput(e, t);
+
     },
+    "click .leoAutoComplete-inputBox":function (e,t) {
+        $(".leoAutoComplete-input").focus()
+    }
 });
 
 function setPassedValues(t, currentData) {
@@ -141,7 +159,7 @@ function setPassedValues(t, currentData) {
     let primaryKey = t.primaryKey.get() || _id;
     let key = t.key.get() || _id;
     let matchCase = settings.matchCase || {};
-    let textValue = $(".leoAutoComplete-input").text() || "";
+    let textValue = $(".leoAutoComplete-input").val() || "";
     textValue = textValue.trim();
     // $(".leoAutoComplete-input").focus();
     let sort = {[key]: 1};
@@ -178,11 +196,12 @@ function focusOnInput(e, t) {
     let primaryKey = t.primaryKey.get() || _id;
     let key = t.key.get() || _id;
     let matchCase = settings.matchCase || {};
-    let textValue = $(".leoAutoComplete-input").text() || "";
+    let textValue = $(".leoAutoComplete-input").val() || "";
     textValue = textValue.trim();
     let selectedList = t.selectedList.get();
     // $(".leoAutoComplete-input").focus();
     let sort = {[key]: 1};
+
     Meteor.call("leoAutoCompleteSearch", selectedList, collectionName, limit, primaryKey, key, textValue, matchCase, sort, function (err, data) {
         if (err) {
             console.log(err);
@@ -193,3 +212,15 @@ function focusOnInput(e, t) {
     })
 }
 
+function positionTheDropDown(e,t){
+    let offset, pos, position, rule, width;
+    position = $(e.currentTarget).position();debugger
+    width = 'width:'+$(e.currentTarget).closest(".leoAutoComplete-inputBox").width()+"px;";
+    let dropDownStyle = "padding: 6px 12px;"+width;
+    t.dropDownStyle.set(dropDownStyle);
+    // let selector = t.selector.get();
+    // if(selector && selector.position && selector.position === 'top' && position && position.top){
+    //     let bottom = "bottom:"+position.top+"px;";
+    //     dropDownStyle = dropDownStyle+bottom;
+    // }
+}

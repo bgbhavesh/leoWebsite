@@ -1,5 +1,22 @@
 <template name="leoAutoComplete">
     <style type="text/css">
+        .asIn{
+            width: 100%;
+            background: #fff;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 0;
+            margin: 0;
+            height: 34px;
+        }
+        .asIn input{
+            border:none !important;
+            box-shadow: none !important;
+            outline: none;
+        }
+        .asIn ul li{
+            display: inline-block;
+        }
         .has-error .leoAutoComplete-input {
             border-color: #a94442;
             -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -16,7 +33,7 @@
             border-radius: 4px;
             border: 1px solid #ccc;
             padding: 6px 12px;
-            height: 34px;
+            height: 30px;
         }
 
         .leoAutoComplete-dropDown {
@@ -70,6 +87,13 @@
             background-image: -moz-linear-gradient(top, #eee 1%, #fff 15%);
             background-image: linear-gradient(to bottom, #eee 1%, #fff 15%);
         }
+        ul li .selectedItem{
+
+            border:1px solid #ccc;
+            border-radius: 3px;
+            padding:2px;
+            background: rgba(204, 204, 204, 0.26);
+        }
         ul.selectedList li{
             padding: 3px 5px 3px 18px;
             margin: 3px 0 3px 5px;
@@ -112,28 +136,31 @@
         <!--<ul class="leo-choices">-->
             <!--<input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="leoAutoComplete-input-input" id="" style="width: 20px;" placeholder="" aria-activedescendant="leo-result-label-83">-->
         <!--</ul>-->
-        <div class="leoAutoComplete-input" contenteditable="true">
-            <ul>
+        <div class="asIn leoAutoComplete-inputBox">
+            <ul style="list-style: none;margin: 0px; padding:0px 5px;">
                 {{#each selectedList}}
-                    <li class="selectedList" id="{{primaryKey this}}"> {{viewKey this}}</li>
+                    <li class="selectedList" id="{{primaryKey this}}"> <span class="selectedItem">{{viewKey this}}</span> </li>
                 {{/each}}
+                <li>
+                    <input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" class="leoAutoComplete-input"/>
+                </li>
             </ul>
         </div>
         <input type="hidden" name="{{name}}" class="form-control leoAutoComplete-input"
                value="{{value}}"/>
         {{#if focused}}
             <div class="leoAutoComplete-mask"></div>
-            <div class="leoAutoComplete-dropDown" style="width: {{dropdownWidth}}px;    padding: 6px 12px;">
+            <div class="leoAutoComplete-dropDown" style={{dropDownStyle}}>
                 select
                 <hr/>
-                <ul>
-                    {{#each selectedList}}
-                        <li class="selectedList" id="{{primaryKey this}}"> {{viewKey this}}</li>
-                    {{/each}}
-                </ul>
+                <!--<ul>-->
+                    <!--{{#each selectedList}}-->
+                        <!--<li class="selectedList" id="{{primaryKey this}}"> {{viewKey this}}</li>-->
+                    <!--{{/each}}-->
+                <!--</ul>-->
 
                 {{#if searchList}}
-                    <ul>
+                    <ul style="list-style: none;padding:1px 5px;">
                         {{#each searchList}}
                             <li class="searchList" id="{{primaryKey this}}">
                                 {{viewKey this}}</li>
