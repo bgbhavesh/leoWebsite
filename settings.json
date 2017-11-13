@@ -15,5 +15,10 @@
       "api_secret": "EvAa1Cp8tisAUeY8_lbQ2XsbV1k",
       "unsigned": "j00tvcsc"
     }
+  },
+  "coverage": {
+    "coverage_app_folder": "/impdata/meteor/leoWebsite/",
+    "is_coverage_active": true,
+    "verbose": true
   }
 }

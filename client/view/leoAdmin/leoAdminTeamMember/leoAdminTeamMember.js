@@ -2,7 +2,7 @@ import {
     checkIdsCollectionUpdate,
     updateTabularCollection,
     singleSelectedId
-} from '../isActiveTemplateForTabular/isActiveTemplateForTabular'
+} from '../smallTemplates/isActiveTemplateForTabular/isActiveTemplateForTabular'
 Template.leoAdminTeamMember.onCreated(function () {
 
 });

@@ -218,10 +218,29 @@ tableAdminConfig.leoAdminLeoUsers= function () {
                 {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
                 {data: "profile.firstname", Title: "F-name",sort:true},
                 {data: "profile.lastname", Title: "L-name",sort:true},
-                {data: "status.online", Title: "Status",sort:true},
+                {data: "status.online", Title: "Status",
+                    render: function (val, type, doc) {
+                        if (doc && doc.status) {
+                            return (doc.status.online)?"true":"false";
+                        }
+                        return "N/A";
+                    }},
+                {data: "roles", Title: "Role",tmpl:'roleSelectAndChange'},
                 {data: "username", Title: "Username",sort:true},
+                {data: "createdAt", Title: "CreatedOn",sort:true,
+                    render: function (val, type, doc) {
+                        if (doc && doc.createdAt) {
+                            return Blaze._globalHelpers.formatDate(doc.createdAt, "DD/MM/YYYY HH:mm")
+                        }
+                        return "N/A";
+                    }},
                 {data: "emails", Title: "Email",sort:true,tmpl:"emailsListWithVerify"},
-                // {data: "verified", Title: "Verified",sort:true},
+                {data: "emails", Title: "Verified",render: function (val, type, doc) {
+                    if (doc && doc.emails) {
+                        return (doc.emails[0].verified)?"true":"false";
+                    }
+                    return "N/A";
+                }},
             ]
         }
     }

@@ -65,6 +65,8 @@ Template.leoAdminProductDetails.events({
         }else{
             Meteor.call('insertProduct',insertObject,function(err,data){
                 if(data){
+                    toastr.clear();
+                    toastr.success("Product created");
                     // $('#product')[0].reset();
                     Cloudinary.collection.remove();
                 }
@@ -92,9 +94,10 @@ Template.leoAdminProductDetails.helpers({
         return {
             collectionName: "LeoCollections.LeoProductCategory",
             limit: 10,
-            template:"",
             matchCase:{isActive:true},
-            position: "top",
+            extraAttributes:{
+                mandatory:"true"
+            }
         };
     }
 });//

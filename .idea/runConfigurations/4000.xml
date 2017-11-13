@@ -2,6 +2,7 @@
   <configuration default="false" name="4000" type="meteor-app-runner" factoryName="Meteor" programParameters="--settings settings.json --port 4000">
     <option name="envs">
       <entry key="MONGO_URL" value="mongodb://localhost:27017/leo" />
+      <entry key="NODE_OPTIONS" value="--max-old-space-size=4096" />
     </option>
     <option name="exePath" value="/usr/local/bin/meteor" />
     <option name="startBrowserSettings">

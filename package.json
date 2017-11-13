@@ -2,15 +2,25 @@
   "name": "leoWebsite",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "test":"TEST_BROWSER_DRIVER=chrome meteor test --driver-package dispatch:mocha-browser --port 5000 --settings settings-dev.json",
+    "test-watch": "TEST_BROWSER_DRIVER=chrome TEST_WATCH=1 meteor test --settings settings.json --driver-package dispatch:mocha"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bcrypt": "^1.0.3",
+    "chai": "^4.1.2",
     "csvtojson": "^1.1.7",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "~0.2.4",
+    "mocha": "^4.0.1",
     "object-path": "^0.11.4",
+    "simpl-schema": "^0.4.0",
+    "sinon": "^4.1.2",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.33.2",
+    "selenium-webdriver": "^3.0.0-beta-2"
   }
 }

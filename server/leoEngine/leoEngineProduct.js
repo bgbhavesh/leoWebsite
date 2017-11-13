@@ -5,7 +5,7 @@ LeoProductProcessor = function(){
     LeoProductProcessorClass.prototype.insertProductProcessor = function(){
         let product = this.options.product;
         LeoIdService.product(product);
-        LeoCollections.LeoProduct.insert(product)
+        return LeoCollections.LeoProduct.insert(product);
     };
     LeoProductProcessorClass.prototype.updateProductProcessor = function(){
         let product = this.options.product;
