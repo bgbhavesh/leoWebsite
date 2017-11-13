@@ -37,7 +37,7 @@ aldeed:schema-index
 fourseven:scss
 benjaminrh:jquery-blockui
 thepumpinglemma:object-path
-bucky:meteortable
+bucky:meteortable@0.0.32
 chrismbeckett:toastr
 tap:i18n
 check@1.2.5

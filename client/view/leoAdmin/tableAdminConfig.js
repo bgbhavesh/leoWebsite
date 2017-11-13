@@ -10,7 +10,7 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'title'
         ],
@@ -37,7 +37,7 @@ tableAdminConfig.leoAdminGallery= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'title'
         ],
@@ -64,7 +64,7 @@ tableAdminConfig.leoAdminNewsFeed= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'title'
         ],
@@ -91,7 +91,7 @@ tableAdminConfig.leoAdminProductCategory= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
             'title'
@@ -120,7 +120,7 @@ tableAdminConfig.leoAdminProduct= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
             'title'
@@ -149,7 +149,7 @@ tableAdminConfig.leoAdminServiceCategory= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
             'title'
@@ -178,7 +178,7 @@ tableAdminConfig.leoAdminTeamMember= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
             'title'
@@ -207,7 +207,7 @@ tableAdminConfig.leoAdminLeoUsers= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
         ],
@@ -256,7 +256,7 @@ tableAdminConfig.leoAdminService= function () {
         canPrint: false,
         tabView: false,
         alphaFilter: false,
-        isFilter:false,
+        isFilter:true,
         filterFields: [
             'name',
             'title'
