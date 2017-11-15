@@ -19,7 +19,7 @@ LeoGalleryProcessor = function(){
             }
         }
         else{
-            throw new Meteor.Error(404,getMessage("idNotMatching"))
+            throw new Meteor.Error(404,getLeoMessage("idNotMatching"))
         }
 
     };

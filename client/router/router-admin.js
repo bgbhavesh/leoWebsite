@@ -3,6 +3,35 @@ import {
 } from './routerConfig.js'
 // Meteor.startup(function () {})
 Router.map(function () {
+    this.route('leoAdminModule',{
+        path:adminContext+'/leoAdminModule',
+        // layoutTemplate:'',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Modules';
+            return data;
+        }
+    });
+    this.route('leoAdminModuleDetails',{
+        path:adminContext+'/leoAdminModuleDetails/:moduleId?',
+        // layoutTemplate:'',
+        waitOn:function(){
+            var subArray=[];
+            if(this.params.moduleId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoModule", this.params.moduleId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Module';
+            data.Module=LeoCollections.LeoModule.findOne({_id:this.params.moduleId});
+            return data
+        }
+    });
     this.route('leoAdminShowCaseSlider',{
         path:adminContext+'/leoAdminShowCaseSlider',
         // layoutTemplate:'',

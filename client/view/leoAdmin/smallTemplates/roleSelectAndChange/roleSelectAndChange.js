@@ -40,7 +40,6 @@ Template.roleSelectAndChange.helpers({
                 return 'ADMIN-SUPER'
             }
         }
-        console.log(this)
     }
 });
 Template.changeUserRole.helpers({
@@ -66,8 +65,8 @@ Template.changeUserRole.events({
         let group = $(e.currentTarget).attr('group');
         Meteor.call("setUserToRole",userId,role,group,function(err,data){
             toastr.clear();
-            toastr.info(leoMessages["refreshToSeeChange"]);
-            toastr.success(leoMessages["userRoleChanged"]);
+            toastr.info(getLeoMessage("refreshToSeeChange"));
+            toastr.success(getLeoMessage("userRoleChanged"));
         });
 
     }

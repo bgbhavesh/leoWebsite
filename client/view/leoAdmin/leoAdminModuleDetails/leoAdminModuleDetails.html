@@ -1,0 +1,69 @@
+<template name="leoAdminModuleDetails">
+    {{>floatingAdminButtons add=false active=false inActive=false edit=false save=true cancel=true}}
+    <div class="container cont ">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 main">
+            <form id="module" class="floating-labe1">
+                <div class="form-group">
+                    <div class="col-sm-6 text-left">
+                        <label>{{routerTitle}}</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="onoffswitch3">
+                            <input type="checkbox" name="isActive" class="onoffswitch3-checkbox" id="myonoffswitch3"
+                                   checked="{{Module.isActive}}">
+                            <label class="onoffswitch3-label" for="myonoffswitch3">
+                                <span class="onoffswitch3-inner">
+                                    <span class="onoffswitch3-active"><span
+                                            class="onoffswitch3-switch">Active</span></span>
+                                    <span class="onoffswitch3-inactive"><span
+                                            class="onoffswitch3-switch">Inactive</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label">Module Title</label>
+                    <input type="text" name="title" class="form-control" mandatory="true" value="{{Module.title}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Tags</label>
+                    <input type="text" name="tags" class="form-control" value="{{showTags}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea type="text" name="description" class="form-control" mandatory="true"
+                              value="{{Module.description}}"></textarea>
+                </div>
+
+            </form>
+            {{> leoImageUpload }}
+            <table style="width:100%">
+                <tr>
+                    <td>Role</td>
+                    {{#each operations}}
+                        <td>
+                            {{this}}
+                        </td>
+                    {{/each}}
+                </tr>
+                {{#each rolesList}}
+                    <tr>
+                        <td>
+                            {{name}}
+                        </td>
+                        {{#let role=this}}
+                            {{#each operations}}
+                                <td class="crudOperation" role="{{role.name}}" operation="{{this}}" preValue="{{exists role this}}">
+                                    {{exists role this}}
+                                </td>
+                            {{/each}}
+                        {{/let}}
+                        <!--<td>{{exists 'C'}}</td><td>{{exists 'R'}}</td><td>{{exists 'U'}}</td><td>{{exists 'D'}}</td>-->
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</template>

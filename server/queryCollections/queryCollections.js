@@ -8,6 +8,15 @@ leoMethodQuery.leoProductCategory= function (selector, sort,fields) {
         {'$project':fields},
     ]
 };
+leoMethodQuery.leoModule= function (selector, sort,fields) {
+    return [
+        {
+            "$match": selector
+        },
+        {"$sort": sort},
+        {'$project':fields},
+    ]
+};
 leoMethodQuery.leoProduct = function (selector, sort,fields) {
     return [
         {

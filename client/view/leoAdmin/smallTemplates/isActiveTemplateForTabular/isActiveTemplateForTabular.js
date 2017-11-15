@@ -8,10 +8,10 @@ let singleSelectedId = function () {
         return ids[0]
     }else if(ids.length > 1){
         toastr.clear();
-        toastr.error(getMessage("selectOnlyOne"));
+        toastr.error(getLeoMessage("selectOnlyOne"));
     }else{
         toastr.clear();
-        toastr.error(getMessage("selectAtLeastOneRow"));
+        toastr.error(getLeoMessage("selectAtLeastOneRow"));
     }
     return false;
 }
@@ -25,12 +25,12 @@ let checkIdsCollectionUpdate = function (value,key,collectionName) {
         updateTabularCollection(ids,value,key,collectionName)
     }else{
         toastr.clear();
-        toastr.error(getMessage("selectAtLeastOneRow"));
+        toastr.error(getLeoMessage("selectAtLeastOneRow"));
     }
 }
 let updateTabularCollection = function (ids,value,key,collectionName) {
     if(ids.length>0){
-        if(confirm(getMessage("areYouSure"))){
+        if(confirm(getLeoMessage("areYouSure"))){
             Meteor.call("updateKeyOfIds",collectionName,key,ids,value,function (err,data) {
                 if(err){
                     console.log(err)

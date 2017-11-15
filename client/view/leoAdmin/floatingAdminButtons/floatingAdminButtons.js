@@ -19,7 +19,7 @@ Template.floatingAdminButtons.events({
     "click .disabled": function (e, t) {
         e.preventDefault();
         toastr.clear();
-        toastr.error(getMessage("actionNotPermitted"));
+        toastr.error(getLeoMessage("actionNotPermitted"));
     },
 })
 Template.floatingAdminButtons.helpers({

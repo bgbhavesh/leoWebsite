@@ -1,4 +1,31 @@
 let tableAdminConfig = {};
+tableAdminConfig.leoAdminModule = function () {
+    return {
+        collectionsName: 'LeoCollections.LeoModule',
+        aggregateQuery: 'leoMethodQuery.leoModule',
+        aggregateFullQuery:null,
+        name: 'LeoModule',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:true,
+        filterFields: [
+            'title'
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {data: "title", Title: "Title",sort:true},
+                {data: "showCaseId", Title: "Code",sort:true},
+                {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+};
 tableAdminConfig.leoAdminShowCaseSlider= function () {
     return {
         collectionsName: 'LeoCollections.LeoShowCaseSlider',

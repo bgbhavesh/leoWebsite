@@ -15,7 +15,7 @@ Template.signUp.events({
         new LeoUtils().getFormValues(formData,function (data) {
             if(!data.terms){
                 toastr.clear();
-                toastr.error(getMessage('acceptTerms'));
+                toastr.error(getLeoMessage('acceptTerms'));
                 return ;
             }
             insertObject.firstname = data.firstname;
@@ -26,7 +26,7 @@ Template.signUp.events({
             insertObject.confirmPassword = data.confirmPassword;
             if(data.password !== data.confirmPassword ){
                 toastr.clear();
-                toastr.error(getMessage('passwordAndConfirmMatch'));
+                toastr.error(getLeoMessage('passwordAndConfirmMatch'));
                 return ;
             }else{
                 Meteor.call("signUpUser",insertObject,function (err,data) {
@@ -35,8 +35,8 @@ Template.signUp.events({
                         toastr.error(err.reason);
                     }else{
                         toastr.clear();
-                        toastr.success(getMessage('userCreated'));
-                        toastr.info(getMessage('verificationTokenSendToEmail'));
+                        toastr.success(getLeoMessage('userCreated'));
+                        toastr.info(getLeoMessage('verificationTokenSendToEmail'));
                     }
                     console.log(data)
                 })
