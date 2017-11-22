@@ -44,8 +44,8 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
         tableViewConfig: {
             extraFields: [],
             columns: [
-                {tmpl:"selectTemplateForTabular","Title":'Select'},
-                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {tmpl:"selectTemplateForTabular",Title:'Select'},
+                {tmpl:"isActiveTemplateForTabular",Title:'Active',data:"isActive"},
                 {data: "title", Title: "Title",sort:true},
                 {data: "showCaseId", Title: "Code",sort:true},
                 {data: "description", Title: "Description",sort:true},

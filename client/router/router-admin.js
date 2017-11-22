@@ -50,14 +50,14 @@ Router.map(function () {
         waitOn:function(){
             var subArray=[];
             if(this.params.showCaseId){
-                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoGallery", this.params.showCaseId,{}));
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoShowCaseSlider", this.params.showCaseId,{}));
             }
             return subArray;
         },
         data:function(){
             let data = {};
             data.routerTitle='Show-Case';
-            data.showCase=LeoCollections.LeoGallery.findOne({_id:this.params.showCaseId});
+            data.showCase=LeoCollections.LeoShowCaseSlider.findOne({_id:this.params.showCaseId});
             return data
         }
     });

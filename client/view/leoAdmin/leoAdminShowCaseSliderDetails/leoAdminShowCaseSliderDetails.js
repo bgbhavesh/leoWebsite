@@ -2,15 +2,16 @@
 Template.leoAdminShowCaseSliderDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.catId){
-        let showCase = LeoCollections.LeoShowCaseSlider.findOne({_id:params.catId})
+    if(params && params.showCaseId){
+        let showCase = LeoCollections.LeoShowCaseSlider.findOne({_id:params.showCaseId})
         if(showCase && showCase.images && showCase.images.length>0){
             _.each(showCase.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 if(image.secure_url){
                     obj.response = {};
-                    obj.response.secure_url = image.secure_url
+                    obj.response.secure_url = image.secure_url;
+                    obj.public_id = image.public_id;
                 }
                 Cloudinary.collection.insert(obj);
             })
@@ -45,6 +46,7 @@ Template.leoAdminShowCaseSliderDetails.events({
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
             obj.secure_url = image.response.secure_url||"";
+            obj.public_id = image.response.public_id||"";
             images.push(obj);
         })
         insertObject.images = images;

@@ -8,7 +8,7 @@
     }
   },
   "public": {
-    "CDNUrl":"",
+    "CDNUrl":"http://res.cloudinary.com/www-leoquip-com",
     "cloudinary": {
       "cloud_name": "www-leoquip-com",
       "api_key": "119274969648794",

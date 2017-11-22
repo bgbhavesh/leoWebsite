@@ -217,7 +217,9 @@
         <item url="file://$USER_HOME$/.meteor/packages/accounts-password/1.5.0/web.browser/password_server.js" />
         <item url="file://$USER_HOME$/.meteor/packages/msavin_mongol/4.0.1/web.browser/client/row_collection/collections.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-password/1.5.0/web.browser/password_tests.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/swiper_swiper/3.0.8/web.browser/packages/swiper_swiper/dist/css/swiper.min.css" />
         <item url="file://$USER_HOME$/.meteor/packages/msavin_mongol/4.0.1/web.browser/client/row_collection_notFound/notFound.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/swiper_swiper/3.0.8/web.browser/packages/swiper_swiper.js" />
         <item url="file://$USER_HOME$/.meteor/packages/mizzao_timesync/0.3.4/web.browser/timesync-client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/meteorspark_util/0.2.0/web.browser/packages/meteorspark_util.js" />
         <item url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />
@@ -541,7 +543,9 @@
       <root url="file://$USER_HOME$/.meteor/packages/accounts-password/1.5.0/web.browser/password_server.js" />
       <root url="file://$USER_HOME$/.meteor/packages/msavin_mongol/4.0.1/web.browser/client/row_collection/collections.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-password/1.5.0/web.browser/password_tests.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/swiper_swiper/3.0.8/web.browser/packages/swiper_swiper/dist/css/swiper.min.css" />
       <root url="file://$USER_HOME$/.meteor/packages/msavin_mongol/4.0.1/web.browser/client/row_collection_notFound/notFound.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/swiper_swiper/3.0.8/web.browser/packages/swiper_swiper.js" />
       <root url="file://$USER_HOME$/.meteor/packages/mizzao_timesync/0.3.4/web.browser/timesync-client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/meteorspark_util/0.2.0/web.browser/packages/meteorspark_util.js" />
       <root url="file://$USER_HOME$/.meteor/packages/base64/1.0.10/web.browser/base64.js" />

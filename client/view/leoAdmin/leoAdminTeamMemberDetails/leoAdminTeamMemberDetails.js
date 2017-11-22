@@ -10,7 +10,8 @@ Template.leoAdminTeamMemberDetails.onCreated(function () {
                 obj.percent_uploaded = 100;
                 if(image.secure_url){
                     obj.response = {};
-                    obj.response.secure_url = image.secure_url
+                    obj.response.secure_url = image.secure_url;
+                    obj.public_id = image.public_id;
                 }
                 Cloudinary.collection.insert(obj);
             })
