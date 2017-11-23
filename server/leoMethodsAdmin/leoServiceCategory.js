@@ -2,7 +2,7 @@
 Meteor.methods({
     insertServiceCategory:function (categoryDetails) {
         check(categoryDetails,Object);
-        new LeoServiceCategoryProcessor({
+        return new LeoServiceCategoryProcessor({
             category:categoryDetails
         }).insertServiceCategoryProcessor()
     },
@@ -10,7 +10,7 @@ Meteor.methods({
         check(catId,String);
         check(categoryDetails,Object);
 
-        new LeoServiceCategoryProcessor({
+        return new LeoServiceCategoryProcessor({
             category:categoryDetails,
             catId:catId
         }).updateServiceCategoryProcessor()

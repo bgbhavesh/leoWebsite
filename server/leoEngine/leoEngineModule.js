@@ -5,8 +5,6 @@ LeoModuleProcessor = function(){
     LeoModuleProcessorClass.prototype.insertModuleProcessor = function(){
         let module = this.options.module;
         LeoIdService.module(module);
-
-        console.log(module);
         return LeoCollections.LeoModule.insert(module)
     };
     LeoModuleProcessorClass.prototype.updateModuleProcessor = function(){

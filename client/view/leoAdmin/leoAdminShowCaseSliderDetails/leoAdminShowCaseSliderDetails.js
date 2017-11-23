@@ -68,6 +68,8 @@ Template.leoAdminShowCaseSliderDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    toastr.clear();
+                    toastr.success("Slide Created");
                 }
                 if(err){
                     toastr.clear();

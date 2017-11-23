@@ -5,7 +5,7 @@ LeoTeamMemberProcessor = function(){
     LeoTeamMemberProcessorClass.prototype.insertTeamMemberProcessor = function(){
         let teamMember = this.options.teamMember;
         LeoIdService.teamMember(teamMember);
-        LeoCollections.LeoTeamMember.insert(teamMember)
+        return LeoCollections.LeoTeamMember.insert(teamMember)
     };
     LeoTeamMemberProcessorClass.prototype.updateTeamMemberProcessor = function(){
         let teamMember = this.options.teamMember;

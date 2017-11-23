@@ -5,7 +5,7 @@ LeoServiceProcessor = function(){
     LeoServiceProcessorClass.prototype.insertServiceProcessor = function(){
         let service = this.options.service;
         LeoIdService.service(service);
-        LeoCollections.LeoService.insert(service)
+        return LeoCollections.LeoService.insert(service)
     };
     LeoServiceProcessorClass.prototype.updateServiceProcessor = function(){
         let service = this.options.service;

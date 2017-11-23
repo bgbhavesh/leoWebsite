@@ -6,11 +6,11 @@
     </option>
     <option name="exePath" value="/usr/local/bin/meteor" />
     <option name="startBrowserSettings">
-      <browser with-js-debugger="true" url="http://localhost:4000" />
+      <browser url="http://localhost:4000" />
     </option>
     <meteor-runner-state>
       <startBrowserSettings>
-        <browser with-js-debugger="true" url="http://localhost:4000" />
+        <browser url="http://localhost:4000" />
       </startBrowserSettings>
     </meteor-runner-state>
     <method />

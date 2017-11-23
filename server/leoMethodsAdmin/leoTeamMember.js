@@ -2,7 +2,7 @@
 Meteor.methods({
     insertTeamMember:function (teamMemberDetails) {
         check(teamMemberDetails,Object);
-        new LeoTeamMemberProcessor({
+        return new LeoTeamMemberProcessor({
             teamMember:teamMemberDetails
         }).insertTeamMemberProcessor()
     },
@@ -10,7 +10,7 @@ Meteor.methods({
         check(teamMemberId,String);
         check(teamMemberDetails,Object);
 
-        new LeoTeamMemberProcessor({
+        return new LeoTeamMemberProcessor({
             teamMember:teamMemberDetails,
             teamMemberId:teamMemberId
         }).updateTeamMemberProcessor()

@@ -2,7 +2,7 @@
 Meteor.methods({
     insertService:function (serviceDetails) {
         check(serviceDetails,Object);
-        new LeoServiceProcessor({
+        return new LeoServiceProcessor({
             service:serviceDetails
         }).insertServiceProcessor()
     },
@@ -10,7 +10,7 @@ Meteor.methods({
         check(serviceId,String);
         check(serviceDetails,Object);
 
-        new LeoServiceProcessor({
+        return new LeoServiceProcessor({
             service:serviceDetails,
             serviceId:serviceId
         }).updateServiceProcessor()

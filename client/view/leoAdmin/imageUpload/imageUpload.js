@@ -8,7 +8,7 @@ Template.leoImageUpload.helpers({
         return Cloudinary.collection.find().count()*155;
     },
     imageStyle:function () {
-        return {width:150, crop: "pad",height:100};
+        return {width:150, crop: "pad",height:100,format:"png"};
     }
 });
 Template.leoImageUpload.events({

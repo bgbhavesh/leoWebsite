@@ -5,7 +5,7 @@ LeoShowCaseProcessor = function(){
     LeoShowCaseProcessorClass.prototype.insertShowCaseProcessor = function(){
         let showCaseSliderDetails = this.options.showCaseSliderDetails;
         LeoIdService.showCase(showCaseSliderDetails);
-        LeoCollections.LeoShowCaseSlider.insert(showCaseSliderDetails)
+        return LeoCollections.LeoShowCaseSlider.insert(showCaseSliderDetails)
     };
     LeoShowCaseProcessorClass.prototype.updateShowCaseProcessor = function(){
         let showCaseSliderDetails = this.options.showCaseSliderDetails;

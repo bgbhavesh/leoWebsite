@@ -2,7 +2,7 @@
 Meteor.methods({
     insertGallery:function (galleryDetails) {
         check(galleryDetails,Object);
-        new LeoGalleryProcessor({
+        return new LeoGalleryProcessor({
             gallery:galleryDetails
         }).insertGalleryProcessor()
     },
@@ -10,7 +10,7 @@ Meteor.methods({
         check(galleryId,String);
         check(galleryDetails,Object);
 
-        new LeoGalleryProcessor({
+        return new LeoGalleryProcessor({
             gallery:galleryDetails,
             galleryId:galleryId
         }).updateGalleryProcessor()

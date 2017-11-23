@@ -5,7 +5,7 @@ LeoGalleryProcessor = function(){
     LeoGalleryProcessorClass.prototype.insertGalleryProcessor = function(){
         let gallery = this.options.gallery;
         LeoIdService.gallery(gallery);
-        LeoCollections.LeoGallery.insert(gallery)
+        return LeoCollections.LeoGallery.insert(gallery)
     };
     LeoGalleryProcessorClass.prototype.updateGalleryProcessor = function(){
         let gallery = this.options.gallery;
