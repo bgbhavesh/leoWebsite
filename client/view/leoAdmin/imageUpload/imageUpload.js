@@ -6,6 +6,9 @@ Template.leoImageUpload.helpers({
     },
     divWidth:function () {
         return Cloudinary.collection.find().count()*155;
+    },
+    imageStyle:function () {
+        return {width:150, crop: "pad",height:100};
     }
 });
 Template.leoImageUpload.events({

@@ -8,11 +8,9 @@ Template.leoAdminTeamMemberDetails.onCreated(function () {
             _.each(teamMember.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
-                if(image.secure_url){
-                    obj.response = {};
-                    obj.response.secure_url = image.secure_url;
-                    obj.public_id = image.public_id;
-                }
+                obj.response = obj.response||{};
+                obj.response.secure_url = image.response.secure_url||"";
+                obj.response.public_id = image.response.public_id||"";
                 Cloudinary.collection.insert(obj);
             })
 
@@ -46,7 +44,9 @@ Template.leoAdminTeamMemberDetails.events({
             obj.isDefault= image.isDefault||false;
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
-            obj.secure_url = image.response.secure_url||"";
+            obj.response = obj.response||{};
+            obj.response.secure_url = image.response.secure_url||"";
+            obj.response.public_id = image.response.public_id||"";
             images.push(obj);
         })
         insertObject.images = images;

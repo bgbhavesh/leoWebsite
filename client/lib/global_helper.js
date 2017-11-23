@@ -35,6 +35,10 @@ Template.registerHelper('toString', function (x) {
 Template.registerHelper("formatDate", function (date, format, custom) {
     return formatDate(date, format, custom);
 });
+Template.registerHelper("getStyledUrls", function (public_id,style) {
+    console.log(public_id);
+    return getStyledUrls(public_id,style);
+});
 Template.registerHelper('isCordova', function () {
     return Meteor.isCordova;
 

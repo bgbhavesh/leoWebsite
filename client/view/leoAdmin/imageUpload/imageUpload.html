@@ -10,7 +10,7 @@
                font-size: 22px; right: 0px;color: #fff;">
                             <i class="fa fa-times-circle-o pull-right" aria-hidden="true"
                                style="border-radius: 50%;background: rgba(128, 128, 128, 0.5)"></i></span>
-                        <img src="{{response.secure_url}}" width="150" height="100"><br>
+                        <img src="{{getStyledUrls response.public_id imageStyle}}" width="150" height="100"><br>
                         <div style="font-size: 14px;" class="isDefault">
                             {{#if isDefault}}
                                 <i class="fa fa-check-circle-o" aria-hidden="true"></i>

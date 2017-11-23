@@ -1,3 +1,5 @@
+import './_global_image.js'
+import './_gloabl_variable.js'
 getRouterParams = function (id) {
     if(Router.current().params && Router.current().params[id])
     return Router.current().params[id];
