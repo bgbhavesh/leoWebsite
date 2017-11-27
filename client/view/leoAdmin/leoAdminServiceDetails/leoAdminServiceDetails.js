@@ -3,29 +3,29 @@ Template.leoAdminServiceDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
     if(params && params.catId){
-        let service = LeoCollections.LeoService.findOne({_id:params.catId})
+        let service = LeoCollections.LeoService.findOne({_id:params.catId});
         if(service && service.images && service.images.length>0){
             _.each(service.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
-                obj.response.secure_url = image.response.secure_url||"";
-                obj.response.public_id = image.response.public_id||"";
+                obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+                obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
                 Cloudinary.collection.insert(obj);
             })
 
         }
     }
-})
+});
 Template.leoAdminServiceDetails.onRendered(function () {
-    var utilObj = new LeoUtils();
+    let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#service'));
     // imageUpload.cloudinary.imageUpload($('#serviceImage'));
-})
+});
 Template.leoAdminServiceDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminService")
+        Router.go("leoAdminService");
     },
     "click [data-action='save']":function(){
         let formData =$("#service");
@@ -46,10 +46,10 @@ Template.leoAdminServiceDetails.events({
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
             obj.response = obj.response||{};
-            obj.response.secure_url = image.response.secure_url||"";
-            obj.response.public_id = image.response.public_id||"";
+            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
             images.push(obj);
-        })
+        });
         insertObject.images = images;
         if(getRouterParams('serviceId')){
             Meteor.call('updateService',getRouterParams('serviceId'),insertObject,function(err,data){
@@ -80,14 +80,14 @@ Template.leoAdminServiceDetails.events({
     "click #reset":function(){
         // $('#service')[0].reset();
     }
-})
+});
 Template.leoAdminServiceDetails.helpers({
     showTags:function(){
         let tempData = Template.instance().data;
         if(tempData && tempData.service && tempData.service.tags){
             return tempData.service.tags.toString()
         }
-        else return ''
+        else return '';
     },
     LeoAutoCompleteSettings:function () {
         return {
@@ -101,4 +101,4 @@ Template.leoAdminServiceDetails.helpers({
 });//
 Template.leoAdminServiceDetails.onDestroyed(function () {
     Cloudinary.collection.remove()
-})
+});

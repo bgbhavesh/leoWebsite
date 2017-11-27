@@ -67,7 +67,7 @@ validateNonEmpty = function (evt) {
     }
 }
 testNonEmpty = function (key) {
-    if (key == "" || key == null || key == undefined) {
+    if (key === "" || key === null || key === undefined) {
         return false
     }
     return true;
@@ -101,7 +101,7 @@ testRegEx = function(key,mandatory,regex){
 validateNumber = function (evt) {
     let theEvent = evt || window.event;
     let key = theEvent.keyCode || theEvent.which;
-    if (key != 8 || key != 46 || key != 43 || key != 45 || key != 35 || key != 36 || key != 37 || key != 38 || key != 39 || key != 40) {
+    if (key !== 8 || key !== 46 || key !== 43 || key !== 45 || key !== 35 || key !== 36 || key !== 37 || key !== 38 || key !== 39 || key !== 40) {
         key = String.fromCharCode(key);
         let regex = SimpleSchema.RegEx.Number;
         if (!regex.test(key)) {

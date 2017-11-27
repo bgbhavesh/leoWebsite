@@ -16,7 +16,7 @@ Template.leoAdminShowCaseSlider.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var showCaseId = singleSelectedId();
+        let showCaseId = singleSelectedId();
         if(showCaseId)
         Router.go("leoAdminShowCaseSliderDetails",{showCaseId:showCaseId})
     },

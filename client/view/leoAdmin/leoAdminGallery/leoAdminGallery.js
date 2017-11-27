@@ -16,7 +16,7 @@ Template.leoAdminGallery.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var galleryId = singleSelectedId();
+        let galleryId = singleSelectedId();
         if(galleryId)
         Router.go("leoAdminGalleryDetails",{galleryId:galleryId})
     },

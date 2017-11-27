@@ -8,8 +8,8 @@ Accounts.emailTemplates.verifyEmail.subject= function(user){
 }
 SSR.compileTemplate("verifyEmailTemplate",Assets.getText("emailTemplates/verifyEmailTemplate.html"));
 Accounts.emailTemplates.verifyEmail.html = function(user, url) {
-    var template = "verifyEmailTemplate";
-    var html = SSR.render(template, {
+    let template = "verifyEmailTemplate";
+    let html = SSR.render(template, {
         SITE_URL: Meteor.absoluteUrl(),
         SITE_NAME: "LeoQuip Engineering Works",
         EMAIL_LOGO: Meteor.settings.public.CDNUrl + "/images/smart-logo4.png",

@@ -13,7 +13,7 @@ formatDate = function (date, format, custom) {
      if no format then use company specified format
 
      */
-    var condition = "DD-MM-YYYY";
+    let condition = "DD-MM-YYYY";
     if(!date){
         if(custom)
             return '';

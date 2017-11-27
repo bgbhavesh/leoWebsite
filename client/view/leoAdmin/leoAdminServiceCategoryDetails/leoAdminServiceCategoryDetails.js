@@ -9,19 +9,19 @@ Template.leoAdminServiceCategoryDetails.onCreated(function () {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
-                obj.response.secure_url = image.response.secure_url||"";
-                obj.response.public_id = image.response.public_id||"";
+                obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+                obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
                 Cloudinary.collection.insert(obj);
             })
 
         }
     }
-})
+});
 Template.leoAdminServiceCategoryDetails.onRendered(function () {
-    var utilObj = new LeoUtils();
+    let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#serviceCategory'));
     // imageUpload.cloudinary.imageUpload($('#serviceCategoryImage'));
-})
+});
 Template.leoAdminServiceCategoryDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
@@ -45,8 +45,8 @@ Template.leoAdminServiceCategoryDetails.events({
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
             obj.response = obj.response||{};
-            obj.response.secure_url = image.response.secure_url||"";
-            obj.response.public_id = image.response.public_id||"";
+            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
             images.push(obj);
         })
         insertObject.images = images;

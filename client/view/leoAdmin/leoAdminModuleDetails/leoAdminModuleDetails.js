@@ -16,19 +16,19 @@ Template.leoAdminModuleDetails.onCreated(function () {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
-                obj.response.secure_url = image.response.secure_url||"";
-                obj.response.public_id = image.response.public_id||"";
+                obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+                obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
                 Cloudinary.collection.insert(obj);
             })
 
         }
     }
-})
+});
 Template.leoAdminModuleDetails.onRendered(function () {
-    var utilObj = new LeoUtils();
+    let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#module'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
-})
+});
 Template.leoAdminModuleDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
@@ -53,8 +53,8 @@ Template.leoAdminModuleDetails.events({
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
             obj.response = obj.response||{};
-            obj.response.secure_url = image.response.secure_url||"";
-            obj.response.public_id = image.response.public_id||"";
+            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
             images.push(obj);
         })
         insertObject.images = images;
@@ -95,12 +95,12 @@ Template.leoAdminModuleDetails.events({
         let role = $(e.currentTarget).attr('role');
         let code = $(e.currentTarget).attr('operation');
         let preValue = $(e.currentTarget).attr('preValue');
-        let newValue = (preValue ==='no')?true:false;
-        var index = permissions.findIndex(function(p){
+        let newValue = (preValue ==='no');
+        let index = permissions.findIndex(function(p){
             if(p.userType === role){
                 return p
             }
-        })
+        });
         if(index<0){
             permissions.push({userType:role,operations:[code]})
         }
@@ -115,7 +115,7 @@ Template.leoAdminModuleDetails.events({
         }
         t.permissions.set(permissions)
     }
-})
+});
 Template.leoAdminModuleDetails.helpers({
     showTags:function(){
         let tempData = Template.instance().data;
@@ -128,13 +128,13 @@ Template.leoAdminModuleDetails.helpers({
         return Meteor.roles.find().fetch();
     },
     exists:function (role,code) {
-        var roleObject = role;
+        let roleObject = role;
         let permissions = Template.instance().permissions.get();
-        var index = permissions.findIndex(function(p){
+        let index = permissions.findIndex(function(p){
             if(p.userType === roleObject.name){
                 return p
             }
-        })
+        });
         if(index>=0){
             let operations = permissions[index].operations;
             return (operations.indexOf(code)>=0)?'yes':'no';
@@ -149,4 +149,4 @@ Template.leoAdminModuleDetails.helpers({
 
 Template.leoAdminModuleDetails.onDestroyed(function () {
     Cloudinary.collection.remove()
-})
+});

@@ -1,5 +1,5 @@
 Meteor.startup(function (){
-    var smtp = {
+    let smtp = {
         username: Meteor.settings.private["smtp"]["username"], // eg: server@gentlenode.com
         password: Meteor.settings.private["smtp"]["password"], // eg: 3eeP1gtizk5eziohfervU
         server: Meteor.settings.private["smtp"]["server"], // eg: mail.gandi.net

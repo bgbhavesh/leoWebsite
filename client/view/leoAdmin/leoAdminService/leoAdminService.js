@@ -16,7 +16,7 @@ Template.leoAdminService.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var serviceId = singleSelectedId();
+        let serviceId = singleSelectedId();
         if(serviceId)
         Router.go("leoAdminServiceDetails",{serviceId:serviceId})
     },

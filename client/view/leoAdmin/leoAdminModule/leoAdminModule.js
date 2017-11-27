@@ -15,7 +15,7 @@ Template.leoAdminModule.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var moduleId = singleSelectedId();
+        let moduleId = singleSelectedId();
         if(moduleId)
             Router.go("leoAdminModuleDetails",{moduleId:moduleId})
     },

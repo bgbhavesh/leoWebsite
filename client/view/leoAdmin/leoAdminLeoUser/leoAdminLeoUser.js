@@ -16,7 +16,7 @@ Template.leoAdminLeoUsers.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var leoUserId = singleSelectedId();
+        let leoUserId = singleSelectedId();
         if(leoUserId)
         Router.go("leoAdminLeoUserDetails",{leoUserId:leoUserId})
     },

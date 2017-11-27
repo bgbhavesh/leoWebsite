@@ -4,14 +4,14 @@ Template.signUp.onCreated(function () {
 });
 
 Template.signUp.onRendered(function () {
-    var utilObj = new LeoUtils();
+    let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#signup'));
 });
 Template.signUp.events({
     'click #submitSignUp':function(e){
         e.preventDefault();
-        var formData =$("#signup");
-        var insertObject = {};
+        let formData =$("#signup");
+        let insertObject = {};
         new LeoUtils().getFormValues(formData,function (data) {
             if(!data.terms){
                 toastr.clear();

@@ -1,17 +1,17 @@
 adminContext = "socius";
-var adminLoginPath = 'leoLogin';
-var adminDashboardPath = '';
-var clientLoginPath = "leoLogin";
-var clientDashboardPath = "";
-var goToDashboard = function(){
-	var isAdminPath = Router.current().url.indexOf(adminContext) >= 0;
+let adminLoginPath = 'leoLogin';
+let adminDashboardPath = 'leoAdminCompanyDetails';
+let clientLoginPath = "leoLogin";
+let clientDashboardPath = "";
+let goToDashboard = function(){
+	let isAdminPath = Router.current().url.indexOf(adminContext) >= 0;
 	if(isAdminPath){}
 		this.next();
-}
-var loginrequired =function(req, res, next){
+};
+let loginrequired =function(req, res, next){
 	this.next();
-}
-var exceptedRoutes = ['verifyEmail'];
+};
+let exceptedRoutes = ['verifyEmail'];
 Router.onBeforeAction(loginrequired, {
     except: exceptedRoutes
 });
@@ -22,7 +22,7 @@ Router.configure({
     // notFoundTemplate: "notFound",
     // loadingTemplate: 'loading',
     waitOn:function(){
-
+        Meteor.subscribe("leoCompany",{},{});
     }
 });
 Router.map(function () {
@@ -32,5 +32,5 @@ Router.map(function () {
 });
 
 export {
-    adminContext// there is nothing wrong in declaring this way
-}
+    adminContext// there is nothing wrong in export this way
+};

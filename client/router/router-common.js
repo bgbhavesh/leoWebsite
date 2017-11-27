@@ -13,7 +13,7 @@ Router.map(function () {
         // controller: 'verifyEmailTokenController',
         path: '/verify-email/:token',
         action: function () {
-            var token = this.params.token;
+            let token = this.params.token;
             console.log(token);
             debugger
             Accounts.verifyEmail(this.params.token, function (err) {
@@ -24,7 +24,7 @@ Router.map(function () {
                         toastr.error(err.reason);
                         //  $("#login-flow").modal("show");
                         //Router.go('/smtMrAndAsmChangePassword');
-                        // pageSession.set("clientLoginError", { 'alert-danger': informationMessages.varificationTokenExpired });
+                        // pageSession.set("clientLoginError", { 'alert-danger': informationMessages.letificationTokenExpired });
                     }
                     else{
                         toastr.clear();

@@ -3,25 +3,25 @@ Template.leoAdminGalleryDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
     if(params && params.catId){
-        let gallery = LeoCollections.LeoGallery.findOne({_id:params.catId})
+        let gallery = LeoCollections.LeoGallery.findOne({_id:params.catId});
         if(gallery && gallery.images && gallery.images.length>0){
             _.each(gallery.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
-                obj.response.secure_url = image.response.secure_url||"";
-                obj.response.public_id = image.response.public_id||"";
+                obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+                obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
                 Cloudinary.collection.insert(obj);
             })
 
         }
     }
-})
+});
 Template.leoAdminGalleryDetails.onRendered(function () {
-    var utilObj = new LeoUtils();
+    let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#gallery'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
-})
+});
 Template.leoAdminGalleryDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
@@ -44,8 +44,8 @@ Template.leoAdminGalleryDetails.events({
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
             obj.response = obj.response||{};
-            obj.response.secure_url = image.response.secure_url||"";
-            obj.response.public_id = image.response.public_id||"";
+            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
             images.push(obj);
         })
         insertObject.images = images;
@@ -54,11 +54,12 @@ Template.leoAdminGalleryDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    toastr.clear();
+                    toastr.success("Gallery updated");
                 }
                 if(err){
                     toastr.clear();
                     toastr.error(err.reason);
-
                 }
             })
         }else{
@@ -67,7 +68,7 @@ Template.leoAdminGalleryDetails.events({
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
                     toastr.clear();
-                    toastr.success("Gallery Item Updated");
+                    toastr.success("Gallery Item Created");
                 }
                 if(err){
                     toastr.clear();
@@ -80,18 +81,16 @@ Template.leoAdminGalleryDetails.events({
     "click #reset":function(){
         // $('#productCategory')[0].reset();
     }
-})
+});
 Template.leoAdminGalleryDetails.helpers({
     showTags:function(){
         let tempData = Template.instance().data;
         if(tempData && tempData.Gallery && tempData.Gallery.tags){
             return tempData.Gallery.tags.toString()
         }
-        else return ''
-
-
+        else return '';
     }
 });//
 Template.leoAdminGalleryDetails.onDestroyed(function () {
-    Cloudinary.collection.remove()
-})
+    Cloudinary.collection.remove();
+});

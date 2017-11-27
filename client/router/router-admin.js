@@ -5,7 +5,7 @@ import {
 Router.map(function () {
     this.route('leoAdminModule',{
         path:adminContext+'/leoAdminModule',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -14,12 +14,38 @@ Router.map(function () {
             data.routerTitle='Modules';
             return data;
         }
+    });//leoAdminCompanyDetails
+    this.route('leoAdminCompanyDetails',{
+        path:adminContext+'/leoAdminCompanyDetails/:companyId?',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+            let subArray=[];
+            if(this.params.companyId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoCompany", this.params.companyId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Company-Details';
+            data.Company=LeoCollections.LeoCompany.findOne({_id:this.params.companyId});
+            return data
+        },
+        onAfterAction:function () {
+            if(!this.params.companyId){
+                let company = LeoCollections.LeoCompany.findOne();
+                if( company && company._id){
+                    Router.go("leoAdminCompanyDetails",{companyId:company._id});
+                }
+            }
+            // this.next();
+        }
     });
     this.route('leoAdminModuleDetails',{
         path:adminContext+'/leoAdminModuleDetails/:moduleId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.moduleId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoModule", this.params.moduleId,{}));
             }
@@ -34,7 +60,7 @@ Router.map(function () {
     });
     this.route('leoAdminShowCaseSlider',{
         path:adminContext+'/leoAdminShowCaseSlider',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -46,9 +72,9 @@ Router.map(function () {
     });
     this.route('leoAdminShowCaseSliderDetails',{
         path:adminContext+'/leoAdminShowCaseSliderDetails/:showCaseId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.showCaseId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoShowCaseSlider", this.params.showCaseId,{}));
             }
@@ -63,7 +89,7 @@ Router.map(function () {
     });
     this.route('leoAdminNewsFeed',{
         path:adminContext+'/leoAdminNewsFeed',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -75,9 +101,9 @@ Router.map(function () {
     });
     this.route('leoAdminNewsFeedDetails',{
         path:adminContext+'/leoAdminNewsFeedDetails/:newsFeedId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.newsFeedId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoNewsFeed", this.params.newsFeedId,{}));
             }
@@ -92,7 +118,7 @@ Router.map(function () {
     });
     this.route('leoAdminGallery',{
         path:adminContext+'/leoAdminGallery',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -104,9 +130,9 @@ Router.map(function () {
     });
     this.route('leoAdminGalleryDetails',{
         path:adminContext+'/leoAdminGalleryDetails/:galleryId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.galleryId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoGallery", this.params.galleryId,{}));
             }
@@ -121,7 +147,7 @@ Router.map(function () {
     });
     this.route('leoAdminProduct',{
         path:adminContext+'/leoAdminProduct',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -133,9 +159,9 @@ Router.map(function () {
     });
     this.route('leoAdminProductDetails',{
         path:adminContext+'/leoAdminProductDetails/:productId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.productId){
                 subArray.push(Meteor.subscribe("singleDocWithId",'LeoCollections.LeoProduct', this.params.productId,{}));
             }
@@ -150,7 +176,7 @@ Router.map(function () {
     });
     this.route('leoAdminLeoUsers',{
         path:adminContext+'/leoAdminLeoUsers',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -162,7 +188,7 @@ Router.map(function () {
     });
     this.route('leoAdminTeamMember',{
         path:adminContext+'/leoAdminTeamMember',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -174,9 +200,9 @@ Router.map(function () {
     });
     this.route('leoAdminTeamMemberDetails',{
         path:adminContext+'/leoAdminTeamMemberDetails/:memberId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.memberId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoTeamMember", this.params.memberId,{}));
             }
@@ -191,7 +217,7 @@ Router.map(function () {
     });
     this.route('leoAdminProductCategory',{
         path:adminContext+'/leoAdminProductCategory',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -203,16 +229,16 @@ Router.map(function () {
     });
     this.route('leoAdminProductCategoryDetails',{
         path:adminContext+'/leoAdminProductCategoryDetails/:catId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.catId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoProductCategory", this.params.catId,{}));
             }
             return subArray;
         },
         data:function(){
-            let data = {}
+            let data = {};
             data.routerTitle='Products-Category';
             data.productCategory=LeoCollections.LeoProductCategory.findOne({_id:this.params.catId});
             return data
@@ -220,7 +246,7 @@ Router.map(function () {
     });
     this.route('leoAdminService',{
         path:adminContext+'/leoAdminService',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -232,16 +258,16 @@ Router.map(function () {
     });
     this.route('leoAdminServiceDetails',{
         path:adminContext+'/leoAdminServiceDetails/:serviceId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.serviceId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoService", this.params.serviceId,{}));
             }
             return subArray;
         },
         data:function(){
-            let data = {}
+            let data = {};
             data.routerTitle='Service';
             data.service=LeoCollections.LeoService.findOne({_id:this.params.serviceId});
             return data
@@ -249,7 +275,7 @@ Router.map(function () {
     });
     this.route('leoAdminServiceCategory',{
         path:adminContext+'/leoAdminServiceCategory',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
 
         },
@@ -261,9 +287,9 @@ Router.map(function () {
     });
     this.route('leoAdminServiceCategoryDetails',{
         path:adminContext+'/leoAdminServiceCategoryDetails/:catId?',
-        // layoutTemplate:'',
+        layoutTemplate:'leoAdminLayout',
         waitOn:function(){
-            var subArray=[];
+            let subArray=[];
             if(this.params.catId){
                 subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoServiceCategory", this.params.catId,{}));
             }

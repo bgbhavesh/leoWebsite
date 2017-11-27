@@ -16,7 +16,7 @@ Template.leoAdminProductCategory.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var catId = singleSelectedId();
+        let catId = singleSelectedId();
         if(catId)
         Router.go("leoAdminProductCategoryDetails",{catId:catId})
     },

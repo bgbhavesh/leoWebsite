@@ -9,11 +9,14 @@ Template.leoImageUpload.helpers({
     },
     imageStyle:function () {
         return {width:150, crop: "pad",height:100,format:"png"};
+    },
+    label:function () {
+        return this.label||"Upload Image"
     }
 });
 Template.leoImageUpload.events({
     'change #leoImageUpload':function () {
-        var file = $('#leoImageUpload')[0].files[0];
+        let file = $('#leoImageUpload')[0].files[0];
         // console.log(file);
         if(file && file!==""){
             Cloudinary.upload(file,{}, function(err, res) {
@@ -34,7 +37,7 @@ Template.leoImageUpload.events({
         Cloudinary.collection.update({_id:this._id},{$set:{isActive:true}})
     },
     "change .leoImageUpload .seq":function (e) {
-        var seq= $(e.currentTarget).val()
+        let seq= $(e.currentTarget).val()
         seq = parseInt(seq);
         Cloudinary.collection.update({_id:this._id},{$set:{seq:seq}})
     },

@@ -1,13 +1,13 @@
 PAGE_LIMIT = 10;
 // PAGE_LIMIT_MR = 10;
 LeoUtils = function () {
-	var LeoUtilsClass = function () {
+	let LeoUtilsClass = function () {
 
     };
     LeoUtilsClass.prototype.applyValidationAndFloatingLabel = function (formObject) {
         setInterval(function () {
             $('.floating-labe1 .form-control').each(function () {
-                if ($(this).val() && $(this).val() != "" && $(this).val().length > 0) {
+                if ($(this).val() && $(this).val() !== "" && $(this).val().length > 0) {
                     $(this).parents('.form-group').toggleClass('focused', true);
                 }
             })
@@ -23,7 +23,7 @@ LeoUtils = function () {
             $(this).attr('placeholder', $(this).data('placeholder'));
         });
         formObject.find("input,select,textarea").each(function () {
-            var inputObject = $(this);
+            let inputObject = $(this);
             let mandatory = false;
             if (inputObject.attr("mandatory") === true || inputObject.attr("mandatory") === 'true') {
                 mandatory = true;
@@ -54,10 +54,10 @@ LeoUtils = function () {
         })
     }
     LeoUtilsClass.prototype.validatedFormInputValues = function (inputObject) {
-        var fieldName = inputObject.attr("name");
+        let fieldName = inputObject.attr("name");
 
-        var validationType = inputObject.attr("validationType");
-        var fieldValue = $.trim(inputObject.val());
+        let validationType = inputObject.attr("validationType");
+        let fieldValue = $.trim(inputObject.val());
         let mandatory = false;
         if (inputObject.attr("mandatory") === true || inputObject.attr("mandatory") === 'true') {
             mandatory = true;
@@ -73,11 +73,11 @@ LeoUtils = function () {
     }
     LeoUtilsClass.prototype.getFormValues = function (formObject, submitCallback) {
 
-        var values = {};
+        let values = {};
         let util = this;
         let clientValidation = true;
         formObject.find("input,select,textarea").each(function () {
-            var inputObject = $(this);
+            let inputObject = $(this);
             {
                 if(clientValidation && !util.validatedFormInputValues(inputObject)){
                     clientValidation = false;
@@ -89,32 +89,32 @@ LeoUtils = function () {
         })
         if(clientValidation ){
             formObject.find("input,select,textarea").each(function () {
-                var inputObject = $(this);
-                var fieldName = inputObject.attr("name");
-                var fieldValue = $.trim(inputObject.val());
+                let inputObject = $(this);
+                let fieldName = inputObject.attr("name");
+                let fieldValue = $.trim(inputObject.val());
 
-                if (inputObject.attr("type") == "checkbox") {
+                if (inputObject.attr("type") === "checkbox") {
                     // auto set data type for checkbox
                     if (!inputObject.attr("data-type")) {
 
                         // single checkbox with that name means dataType="BOOL" else it is "ARRAY"
-                        if (formObject.find("input[name='" + fieldName + "']").length == 1 && !inputObject.attr("data-custom")) {
+                        if (formObject.find("input[name='" + fieldName + "']").length === 1 && !inputObject.attr("data-custom")) {
                             dataType = "BOOL";
                         }
                         else {
                             dataType = "ARRAY";
                         }
                     }
-                    if (dataType == "BOOL") fieldValue = inputObject.is(":checked");
-                    if (dataType == "ARRAY") fieldValue = inputObject.is(":checked") ? fieldValue : "off";
-                    if (dataType == "ARRAY") {
-                        if ($.isArray(values[fieldName]) && values[fieldName].length != 0) {
-                            if (fieldValue != "") {
+                    if (dataType === "BOOL") fieldValue = inputObject.is(":checked");
+                    if (dataType === "ARRAY") fieldValue = inputObject.is(":checked") ? fieldValue : "off";
+                    if (dataType === "ARRAY") {
+                        if ($.isArray(values[fieldName]) && values[fieldName].length !== 0) {
+                            if (fieldValue !== "") {
                                 values[fieldName].push(fieldValue)
                             }
                         } else {
                             values[fieldName] = [];
-                            if (fieldValue != "") {
+                            if (fieldValue !== "") {
                                 values[fieldName].push(fieldValue)
                             }
 
@@ -124,7 +124,7 @@ LeoUtils = function () {
                     }
 
                 }
-                else if (inputObject.attr("type") == "radio") {
+                else if (inputObject.attr("type") === "radio") {
                     if (inputObject.is(":checked")) {
                         values[fieldName] = $.trim(fieldValue);
                     }
@@ -133,8 +133,8 @@ LeoUtils = function () {
                         values[fieldName] = $.trim(fieldValue);
                     } else {
                         dataTypeInput = "ARRAY";
-                        if (dataTypeInput == "ARRAY") {
-                            if ($.isArray(values[fieldName]) && values[fieldName].length != 0) {
+                        if (dataTypeInput === "ARRAY") {
+                            if ($.isArray(values[fieldName]) && values[fieldName].length !== 0) {
                                 values[fieldName].push($.trim(fieldValue))
 
                             } else {

@@ -16,7 +16,7 @@ Template.leoAdminNewsFeed.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var newsFeedId = singleSelectedId();
+        let newsFeedId = singleSelectedId();
         if(newsFeedId)
         Router.go("leoAdminNewsFeedDetails",{newsFeedId:newsFeedId})
     },

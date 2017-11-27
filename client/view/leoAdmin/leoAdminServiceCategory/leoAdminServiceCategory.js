@@ -16,9 +16,9 @@ Template.leoAdminServiceCategory.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        var catId = singleSelectedId();
+        let catId = singleSelectedId();
         if(catId)
-        Router.go("leoAdminServiceCategoryDetails",{catId:catId})
+        Router.go("leoAdminServiceCategoryDetails",{catId:catId});
     },
     "click [data-action='inActive']":function(e){
         e.preventDefault();
