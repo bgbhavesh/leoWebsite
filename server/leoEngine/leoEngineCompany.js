@@ -12,6 +12,7 @@ LeoCompanyProcessor = function(){
         let companyId = this.options.companyId;
         if(LeoCollections.LeoCompany.findOne({_id:companyId})){
             try{
+                console.log(company);
                 return LeoCollections.LeoCompany.update({_id:companyId},{$set:company})
             }
             catch(e){
@@ -21,7 +22,6 @@ LeoCompanyProcessor = function(){
         else{
             throw new Meteor.Error(404,getLeoMessage("idNotMatching"))
         }
-
     };
     return LeoCompanyProcessorClass
 }();

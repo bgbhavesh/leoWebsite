@@ -117,7 +117,7 @@ Template.leoAdminCompanyDetails.helpers({
             let index = _.findWhere(dbValues, {code:this.code});
             if(index) {
                 return index.url || ""
-            }else""
+            }else return""
         }
     }
 

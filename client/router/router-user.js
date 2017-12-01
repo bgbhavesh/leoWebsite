@@ -4,10 +4,11 @@ Router.map(function () {
         path: '/',
         // layoutTemplate:'',
         waitOn: function () {
-
+            // Meteor.subscribe("leoCompany",{},{})
         },
         data: function () {
-            routerTitle:'HOME'
+            routerTitle:'HOME';
+            // leoCompany:LeoCollections.LeoCompany.findOne();
         }
     });
 });
