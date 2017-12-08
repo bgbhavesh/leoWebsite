@@ -22,6 +22,9 @@ Template.registerHelper('getAlbhabet', function (lowerCase) {
 Template.registerHelper('not', (value) => {
     return !value;
 });
+Template.registerHelper('getDefaultUrl', function (images,style) {
+    return getDefaultUrl(images,style);
+});
 
 Template.registerHelper('getSessionVar', function (name) {
     return Session.get(name);

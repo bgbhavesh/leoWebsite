@@ -1,11 +1,11 @@
 // import {imageUpload} from '../../../cloudinary.config.js'
-Template.leoAdminShowCaseSliderDetails.onCreated(function () {
+Template.leoAdminAddressDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.showCaseId){
-        let showCase = LeoCollections.LeoShowCaseSlider.findOne({_id:params.showCaseId})
-        if(showCase && showCase.images && showCase.images.length>0){
-            _.each(showCase.images,function (image) {
+    if(params && params.catId){
+        let address = LeoCollections.LeoAddress.findOne({_id:params.catId});
+        if(address && address.images && address.images.length>0){
+            _.each(address.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
@@ -17,18 +17,18 @@ Template.leoAdminShowCaseSliderDetails.onCreated(function () {
         }
     }
 });
-Template.leoAdminShowCaseSliderDetails.onRendered(function () {
+Template.leoAdminAddressDetails.onRendered(function () {
     let utilObj = new LeoUtils();
-    utilObj.applyValidationAndFloatingLabel($('#showCase'));
+    utilObj.applyValidationAndFloatingLabel($('#address'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
 });
-Template.leoAdminShowCaseSliderDetails.events({
+Template.leoAdminAddressDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminShowCase")
+        Router.go("leoAdminAddress")
     },
     "click [data-action='save']":function(){
-        let formData =$("#showCase");
+        let formData =$("#address");
         let insertObject = {};
         new LeoUtils().getFormValues(formData,function (data) {
             insertObject.tags = data.tags.split(",");
@@ -49,29 +49,26 @@ Template.leoAdminShowCaseSliderDetails.events({
             images.push(obj);
         })
         insertObject.images = images;
-        if(getRouterParams('showCaseId')){
-            Meteor.call('updateShowCaseSlider',getRouterParams('showCaseId'),insertObject,function(err,data){
+        if(getRouterParams('addressId')){
+            Meteor.call('updateAddress',getRouterParams('addressId'),insertObject,function(err,data){
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
                     toastr.clear();
-                    toastr.success("Slide Updated");
-                    Router.go("leoAdminShowCaseSlider");
+                    toastr.success("Address updated");
                 }
                 if(err){
                     toastr.clear();
                     toastr.error(err.reason);
-
                 }
             })
         }else{
-            Meteor.call('insertShowCaseSlider',insertObject,function(err,data){
+            Meteor.call('insertAddress',insertObject,function(err,data){
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
                     toastr.clear();
-                    toastr.success("Slide Created");
-                    Router.go("leoAdminShowCaseSlider");
+                    toastr.success("Address Item Created");
                 }
                 if(err){
                     toastr.clear();
@@ -84,18 +81,16 @@ Template.leoAdminShowCaseSliderDetails.events({
     "click #reset":function(){
         // $('#productCategory')[0].reset();
     }
-})
-Template.leoAdminShowCaseSliderDetails.helpers({
+});
+Template.leoAdminAddressDetails.helpers({
     showTags:function(){
         let tempData = Template.instance().data;
-        if(tempData && tempData.showCase && tempData.showCase.tags){
-            return tempData.showCase.tags.toString()
+        if(tempData && tempData.Address && tempData.Address.tags){
+            return tempData.Address.tags.toString()
         }
-        else return ''
-
-
+        else return '';
     }
 });//
-Template.leoAdminShowCaseSliderDetails.onDestroyed(function () {
-    Cloudinary.collection.remove()
-})
+Template.leoAdminAddressDetails.onDestroyed(function () {
+    Cloudinary.collection.remove();
+});

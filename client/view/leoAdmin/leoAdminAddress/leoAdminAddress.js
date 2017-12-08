@@ -3,42 +3,42 @@ import {
     updateTabularCollection,
     singleSelectedId
 } from '../smallTemplates/isActiveTemplateForTabular/isActiveTemplateForTabular'
-Template.leoAdminProduct.onCreated(function () {
+Template.leoAdminAddress.onCreated(function () {
 
 });
-Template.leoAdminProduct.onRendered(function () {
+Template.leoAdminAddress.onRendered(function () {
 
 });
-Template.leoAdminProduct.events({
+Template.leoAdminAddress.events({
     "click [data-action='add']":function(e){
         e.preventDefault();
-        Router.go("leoAdminProductDetails")
+        Router.go("leoAdminAddressDetails")
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        let productId = singleSelectedId();
-        if(productId)
-        Router.go("leoAdminProductDetails",{productId:productId})
+        let addressId = singleSelectedId();
+        if(addressId)
+        Router.go("leoAdminAddressDetails",{addressId:addressId})
     },
     "click [data-action='inActive']":function(e){
         e.preventDefault();
-        checkIdsCollectionUpdate(false,'isActive','LeoCollections.LeoProduct')
+        checkIdsCollectionUpdate(false,'isActive','LeoCollections.LeoAddress')
     },
     "click [data-action='active']":function(e){
         e.preventDefault();
-        checkIdsCollectionUpdate(true,'isActive','LeoCollections.LeoProduct')
+        checkIdsCollectionUpdate(true,'isActive','LeoCollections.LeoAddress')
     },
     "click .isActiveTemplateForTabular .text-success":function (e) {
         e.preventDefault();
-        updateTabularCollection([this._id],false,'isActive','LeoCollections.LeoProduct')
+        updateTabularCollection([this._id],false,'isActive','LeoCollections.LeoAddress')
     },
     "click .isActiveTemplateForTabular .text-danger":function (e) {
         e.preventDefault();
-        updateTabularCollection([this._id],true,'isActive','LeoCollections.LeoProduct')
+        updateTabularCollection([this._id],true,'isActive','LeoCollections.LeoAddress')
     }
 });
-Template.leoAdminProduct.helpers({
-    productSelector:function(){
+Template.leoAdminProductCategory.helpers({
+    addressSelector:function(){
         return {
             // isActive:true
         }

@@ -145,6 +145,36 @@ Router.map(function () {
             return data
         }
     });
+
+    this.route('leoAdminAddress',{
+        path:adminContext+'/leoAdminAddress',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Address';
+            return data;
+        }
+    });
+    this.route('leoAdminAddressDetails',{
+        path:adminContext+'/leoAdminAddressDetails/:addressId?',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+            let subArray=[];
+            if(this.params.productId){
+                subArray.push(Meteor.subscribe("singleDocWithId",'LeoCollections.LeoAddress', this.params.productId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {}
+            data.routerTitle='Address';
+            data.Address=LeoCollections.LeoAddress.findOne({_id:this.params.addressId});
+            return data
+        }
+    });
     this.route('leoAdminProduct',{
         path:adminContext+'/leoAdminProduct',
         layoutTemplate:'leoAdminLayout',

@@ -53,6 +53,33 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
         }
     }
 };
+tableAdminConfig.leoAdminAddress= function () {
+    return {
+        collectionsName: 'LeoCollections.LeoAddress',
+        aggregateQuery: 'leoMethodQuery.leoAddress',
+        aggregateFullQuery:null,
+        name: 'leoAddress',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:true,
+        filterFields: [
+            'title'
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {data: "title", Title: "Title",sort:true},
+                {data: "addressId", Title: "Code",sort:true},
+                {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+};
 tableAdminConfig.leoAdminGallery= function () {
     return {
         collectionsName: 'LeoCollections.LeoGallery',

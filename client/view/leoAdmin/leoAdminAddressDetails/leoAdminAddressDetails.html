@@ -1,0 +1,93 @@
+<template name="leoAdminAddressDetails">
+    {{>floatingAdminButtons add=false active=false inActive=false edit=false save=true cancel=true}}
+    <div class="container cont ">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 main">
+            <form id="address" class="floating-labe1">
+                <div class="form-group">
+                    <div class="col-sm-6 text-left">
+                        <label>{{routerTitle}}</label>
+                        <!--<button type="button" id="reset" class="btn btn-default preview-add-button">-->
+                        <!--<i class="fa fa-refresh" aria-hidden="true"></i> Reset-->
+                        <!--</button>-->
+                        <!--<button type="button" id="addCategory" class="btn btn-default preview-add-button">-->
+                        <!--<i class="fa fa-plus" aria-hidden="true"></i> Save-->
+                        <!--</button>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="onoffswitch3">
+                            <input type="checkbox" name="isActive" class="onoffswitch3-checkbox" id="myonoffswitch3" checked="{{Address.isActive}}">
+                            <label class="onoffswitch3-label" for="myonoffswitch3">
+                                <span class="onoffswitch3-inner">
+                                    <span class="onoffswitch3-active"><span class="onoffswitch3-switch">Active</span></span>
+                                    <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">Inactive</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label">Address Title</label>
+                    <input type="text" name="title" class="form-control" mandatory="true" value="{{Address.title}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Tags</label>
+                    <input type="text" name="tags" class="form-control" value="{{showTags}}"/>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label">Locality</label>
+                    <input type="text" name="address.locality" class="form-control" value="{{Address.address.locality}}"/>
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label">Address Line 1</label>
+                    <input type="text" name="address.addressLine1" class="form-control" value="{{Address.address.addressLine1}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Address Line 2</label>
+                    <input type="text" name="address.addressLine2" class="form-control" value="{{Address.address.addressLine2}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Address Line 3</label>
+                    <input type="text" name="address.addressLine3" class="form-control" value="{{Address.address.addressLine3}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">City</label>
+                    <input type="text" name="address.city" class="form-control" value="{{Address.address.city}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">State</label>
+                    <input type="text" name="address.state" class="form-control" value="{{Address.address.state}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">ZipCode</label>
+                    <input type="text" name="address.zipCode" class="form-control" value="{{Address.address.zipCode}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Country</label>
+                    <input type="text" name="address.country" class="form-control" value="{{Address.address.country}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Latitude</label>
+                    <input type="text" name="address.cords.latitude" class="form-control" value="{{Address.address.cords.latitude}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Longitude</label>
+                    <input type="text" name="address.cords.longitude" class="form-control" value="{{Address.address.cords.longitude}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea type="text" name="description" class="form-control" mandatory="true" value="{{Address.description}}"></textarea>
+                </div>
+
+            </form>
+            {{> leoImageUpload }}
+        </div>
+    </div>
+</template>
