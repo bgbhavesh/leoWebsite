@@ -48,7 +48,7 @@ var attachSwiper = function(container){
     var swiper = new Swiper(container, {
         effect: 'cube',
         loop:true,
-        autoplay: 2000,
+        autoplay: 5000,
         speed: 1000,
         grabCursor: true, 
         preloadImages: true,

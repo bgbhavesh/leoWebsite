@@ -37,12 +37,16 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="mainNav">
-
+                        {{#if leoCompany.socialLinks}}
                         <ul class="nav  navbar-nav navbar-left">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            {{#each leoCompany.socialLinks}}
+                                <li><a href="{{url}}"><i class="fa fa-{{code}}"></i></a></li>    
+                            {{/each}}
+                            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
                         </ul>
+                        {{/if}}
                         <ul class="nav navbar-right navbar-nav">
                             <li><a href="#"><i class="fa fa-home"></i> HOME</a></li>
                             <li><a href="#">Link</a></li>
