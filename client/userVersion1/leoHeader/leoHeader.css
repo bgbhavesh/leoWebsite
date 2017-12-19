@@ -1,18 +1,4 @@
 
-body{
-    background:#e9eaed;
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Open Sans Condensed', sans-serif, sans-serif;
-}
-
-.container{
-}
-
-.wrapper{
-}
-
 #header{
     border:1px solid #ddd;
     margin-bottom:20px;
