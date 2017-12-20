@@ -2,8 +2,8 @@
 Template.leoAdminTeamMemberDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.catId){
-        let teamMember = LeoCollections.LeoTeamMember.findOne({_id:params.catId})
+    if(params && params.memberId){
+        let teamMember = LeoCollections.LeoTeamMember.findOne({_id:params.memberId})
         if(teamMember && teamMember.images && teamMember.images.length>0){
             _.each(teamMember.images,function (image) {
                 let obj = image;

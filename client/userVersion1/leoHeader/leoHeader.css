@@ -31,7 +31,7 @@
     overflow:hidden;
     border:3px solid #eee;
     margin-left:15px;
-    background:#333;
+    /*background:#333;*/
     text-align:center;
     line-height:160px;
     color:#fff !important;
@@ -42,23 +42,26 @@
     transition: all 0.3s ease-in-out ;
 
 }
-
-
-#header .site-name{
+#header .companyBrief{
     color:#fff;
-    font-size:2.4em;
+    /*font-size:2.4em;*/
     float:left;
     margin-top:-65px !important;
     margin-left:15px;
     font-family: 'Open Sans Condensed', sans-serif, sans-serif;
 
 }
+
+#header .site-name{
+    font-size:2.4em;
+    float:none;
+    /*margin-top:-65px !important;*/
+    font-family: 'Open Sans Condensed', sans-serif, sans-serif;
+}
 #header .site-description{
-    color:#fff;
     font-size:1.3em;
-    float:left;
-    margin-top:-30px !important;
-    margin-left:15px;
+    float:none;
+    /*margin-top:-30px !important;*/
 }
 #header .main-menu{
     position:absolute;

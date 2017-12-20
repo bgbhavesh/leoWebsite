@@ -15,6 +15,53 @@ Router.map(function () {
             return data;
         }
     });//leoAdminCompanyDetails
+    this.route('leoAdminModuleDetails',{
+        path:adminContext+'/leoAdminModuleDetails/:moduleId?',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+            let subArray=[];
+            if(this.params.moduleId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoModule", this.params.moduleId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Module';
+            data.Module=LeoCollections.LeoModule.findOne({_id:this.params.moduleId});
+            return data
+        }
+    });
+
+    this.route('leoAdminLocation',{
+        path:adminContext+'/leoAdminLocation',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Location';
+            return data;
+        }
+    });//leoAdminCompanyDetails
+    this.route('leoAdminLocationsDetails',{
+        path:adminContext+'/leoAdminLocationsDetails/:locationId?',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+            let subArray=[];
+            if(this.params.locationId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoLocation", this.params.locationId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='Location';
+            data.Location=LeoCollections.LeoLocation.findOne({_id:this.params.locationId});
+            return data
+        }
+    });
     this.route('leoAdminCompanyDetails',{
         path:adminContext+'/leoAdminCompanyDetails/:companyId?',
         layoutTemplate:'leoAdminLayout',
@@ -39,23 +86,6 @@ Router.map(function () {
                 }
             }
             // this.next();
-        }
-    });
-    this.route('leoAdminModuleDetails',{
-        path:adminContext+'/leoAdminModuleDetails/:moduleId?',
-        layoutTemplate:'leoAdminLayout',
-        waitOn:function(){
-            let subArray=[];
-            if(this.params.moduleId){
-                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoModule", this.params.moduleId,{}));
-            }
-            return subArray;
-        },
-        data:function(){
-            let data = {};
-            data.routerTitle='Module';
-            data.Module=LeoCollections.LeoModule.findOne({_id:this.params.moduleId});
-            return data
         }
     });
     this.route('leoAdminShowCaseSlider',{

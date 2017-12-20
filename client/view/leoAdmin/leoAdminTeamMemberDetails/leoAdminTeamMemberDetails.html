@@ -58,16 +58,16 @@
 
             </form>
             <form id="socialLinks" class="floating-labe1">
-                {{#each socialLinks}}
-                    <div class="row">
+                <div class="row">
+                    {{#each socialLinks}}
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">{{title}}</label>
                                 <input type="text" name="{{code}}" class="form-control socialLinks"  value="{{socialLinksUrl}}"/>
                             </div>
                         </div>
-                    </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </form>
             {{> leoImageUpload }}
         </div>

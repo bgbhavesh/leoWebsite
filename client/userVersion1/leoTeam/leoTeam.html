@@ -1,38 +1,52 @@
 <template name="leoTeam">
-    {{>leoTeamMember}}
+    <div class="row">
+        {{#each allMembers}}
+            {{>leoTeamMember this}}
+        {{/each}}
+    </div>
 </template>
 <template name="leoTeamMember">
     <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well well-sm">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                        <img src="{{getDefaultUrl this.images style}}" alt="" class="img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h4>
-                            Bhaumik Patel</h4>
+                        <h4>{{this.name}}</h4>
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>{{this.title}}
+                        <br>
                         <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
                         </i></cite></small>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                            <i class="glyphicon glyphicon-envelope"></i> {{this.email}}
                             <br />
-                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                            <i class="glyphicon glyphicon-phone"></i>
+                                {{this.number}}
                             <br />
-                            <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+                            <i class="glyphicon glyphicon-gift"></i> {{formatDate this.dob 'MMM DD, YYYY'}}</p>
                         <!-- Split button -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary">
+                        <div class="nav-group">
+                            <!-- <button type="button" class="btn btn-primary">
                                 Social</button>
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span><span class="sr-only">Social</span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
+                            </button> -->
+                            <ul style="padding-left: 0">
+                            {{#each this.socialLinks}}
+                                <li class="float-left" style="list-style: none;float: left">
+                                    <a href="{{url}}" style="padding: 15px"><i class="fa fa-{{code}}"></i>
+                                    </a>
+                                </li>    
+                            {{/each}}
+                            </ul>
+                            <!-- <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Twitter</a></li>
                                 <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
                                 <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">Github</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
