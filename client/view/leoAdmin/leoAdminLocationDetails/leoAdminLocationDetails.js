@@ -1,11 +1,18 @@
 // import {imageUpload} from '../../../cloudinary.config.js'
-Template.leoAdminAddressDetails.onCreated(function () {
+Template.leoAdminLocationDetails.onCreated(function () {
+    let self = this;
+    self.permissions = new ReactiveVar();
+    self.permissions.set([]);
+    this.subscribe("leoRoles",{},{});
     let params = Router.current().params;
     Cloudinary.collection.remove({});
     if(params && params.catId){
-        let address = LeoCollections.LeoAddress.findOne({_id:params.catId});
-        if(address && address.images && address.images.length>0){
-            _.each(address.images,function (image) {
+        let location = LeoCollections.LeoLocation.findOne({_id:params.catId});
+        if(location && location.permissions){
+            self.permissions.set(location.permissions);
+        }
+        if(location && location.images && location.images.length>0){
+            _.each(location.images,function (image) {
                 let obj = image;
                 obj.percent_uploaded = 100;
                 obj.response = obj.response||{};
@@ -17,24 +24,26 @@ Template.leoAdminAddressDetails.onCreated(function () {
         }
     }
 });
-Template.leoAdminAddressDetails.onRendered(function () {
+Template.leoAdminLocationDetails.onRendered(function () {
     let utilObj = new LeoUtils();
-    utilObj.applyValidationAndFloatingLabel($('#address'));
+    utilObj.applyValidationAndFloatingLabel($('#location'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
 });
-Template.leoAdminAddressDetails.events({
+Template.leoAdminLocationDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminAddress")
+        Router.go("leoAdminLocation")
     },
-    "click [data-action='save']":function(){
-        let formData =$("#address");
+    "click [data-action='save']":function(e,t){
+        e.preventDefault();
+        let formData =$("#location");
         let insertObject = {};
         new LeoUtils().getFormValues(formData,function (data) {
             insertObject.tags = data.tags.split(",");
             insertObject.title = data.title;
             insertObject.description = data.description;
             insertObject.isActive = $("[name='isActive']").prop( "checked" );
+            insertObject.permissions = t.permissions.get();
         });
         let images = [];
         _.map(Cloudinary.collection.find().fetch(),function(image){
@@ -49,26 +58,29 @@ Template.leoAdminAddressDetails.events({
             images.push(obj);
         })
         insertObject.images = images;
-        if(getRouterParams('addressId')){
-            Meteor.call('updateAddress',getRouterParams('addressId'),insertObject,function(err,data){
+        if(getRouterParams('locationId')){
+            Meteor.call('updateLocation',getRouterParams('locationId'),insertObject,function(err,data){
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
                     toastr.clear();
-                    toastr.success("Address updated");
+                    toastr.success("Location Updated");
+                    Router.go("leoAdminLocation")
                 }
                 if(err){
                     toastr.clear();
                     toastr.error(err.reason);
+
                 }
             })
         }else{
-            Meteor.call('insertAddress',insertObject,function(err,data){
+            Meteor.call('insertLocation',insertObject,function(err,data){
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
                     toastr.clear();
-                    toastr.success("Address Item Created");
+                    toastr.success("Location Created");
+                    Router.go("leoAdminLocation")
                 }
                 if(err){
                     toastr.clear();
@@ -80,17 +92,19 @@ Template.leoAdminAddressDetails.events({
     },
     "click #reset":function(){
         // $('#productCategory')[0].reset();
-    }
+    },
 });
-Template.leoAdminAddressDetails.helpers({
+Template.leoAdminLocationDetails.helpers({
     showTags:function(){
         let tempData = Template.instance().data;
-        if(tempData && tempData.Address && tempData.Address.tags){
-            return tempData.Address.tags.toString()
+        if(tempData && tempData.Location && tempData.Location.tags){
+            return tempData.Location.tags.toString()
         }
         else return '';
-    }
+    },
+
 });//
-Template.leoAdminAddressDetails.onDestroyed(function () {
-    Cloudinary.collection.remove();
+
+Template.leoAdminLocationDetails.onDestroyed(function () {
+    Cloudinary.collection.remove()
 });

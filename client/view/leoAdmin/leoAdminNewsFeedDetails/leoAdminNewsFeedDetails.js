@@ -25,7 +25,7 @@ Template.leoAdminNewsFeedDetails.onRendered(function () {
 Template.leoAdminNewsFeedDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminNewsFeed")
+        Router.go("leoAdminNewsFeed");
     },
     "click [data-action='save']":function(){
         let formData =$("#newsFeed");
@@ -56,6 +56,7 @@ Template.leoAdminNewsFeedDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Updated news feed");
+                    Router.go("leoAdminNewsFeed");
                 }
                 if(err){
                     toastr.clear();
@@ -70,6 +71,7 @@ Template.leoAdminNewsFeedDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("News feed created");
+                    Router.go("leoAdminNewsFeed");
                 }
                 if(err){
                     toastr.clear();

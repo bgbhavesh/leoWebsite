@@ -55,6 +55,10 @@ Template.leoAdminProductCategoryDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+
+                    toastr.clear();
+                    toastr.success("Product Category Updated");
+                    Router.go("leoAdminNewsFeed");
                 }
                 if(err){
                     toastr.clear();
@@ -67,6 +71,9 @@ Template.leoAdminProductCategoryDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    toastr.clear();
+                    toastr.success("Product Category Created");
+                    Router.go("leoAdminNewsFeed");
                 }
                 if(err){
                     toastr.clear();

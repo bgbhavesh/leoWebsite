@@ -44,9 +44,9 @@ Router.map(function () {
             data.routerTitle='Location';
             return data;
         }
-    });//leoAdminCompanyDetails
-    this.route('leoAdminLocationsDetails',{
-        path:adminContext+'/leoAdminLocationsDetails/:locationId?',
+    });//leoAdminLocationDetails
+    this.route('leoAdminLocationDetails',{
+        path:adminContext+'/leoAdminLocationDetails/:locationId?',
         layoutTemplate:'leoAdminLayout',
         waitOn:function(){
             let subArray=[];

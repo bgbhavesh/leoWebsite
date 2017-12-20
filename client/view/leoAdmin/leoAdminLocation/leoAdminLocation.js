@@ -3,42 +3,41 @@ import {
     updateTabularCollection,
     singleSelectedId
 } from '../smallTemplates/isActiveTemplateForTabular/isActiveTemplateForTabular'
-Template.leoAdminAddress.onCreated(function () {
+Template.leoAdminLocation.onCreated(function () {
+});
+Template.leoAdminLocation.onRendered(function () {
 
 });
-Template.leoAdminAddress.onRendered(function () {
-
-});
-Template.leoAdminAddress.events({
+Template.leoAdminLocation.events({
     "click [data-action='add']":function(e){
         e.preventDefault();
-        Router.go("leoAdminAddressDetails")
+        Router.go("leoAdminLocationDetails")
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        let addressId = singleSelectedId();
-        if(addressId)
-        Router.go("leoAdminAddressDetails",{addressId:addressId})
+        let locationId = singleSelectedId();
+        if(locationId)
+            Router.go("leoAdminLocationDetails",{locationId:locationId})
     },
     "click [data-action='inActive']":function(e){
         e.preventDefault();
-        checkIdsCollectionUpdate(false,'isActive','LeoCollections.LeoAddress')
+        checkIdsCollectionUpdate(false,'isActive','LeoCollections.LeoLocation')
     },
     "click [data-action='active']":function(e){
         e.preventDefault();
-        checkIdsCollectionUpdate(true,'isActive','LeoCollections.LeoAddress')
+        checkIdsCollectionUpdate(true,'isActive','LeoCollections.LeoLocation')
     },
     "click .isActiveTemplateForTabular .text-success":function (e) {
         e.preventDefault();
-        updateTabularCollection([this._id],false,'isActive','LeoCollections.LeoAddress')
+        updateTabularCollection([this._id],false,'isActive','LeoCollections.LeoLocation')
     },
     "click .isActiveTemplateForTabular .text-danger":function (e) {
         e.preventDefault();
-        updateTabularCollection([this._id],true,'isActive','LeoCollections.LeoAddress')
+        updateTabularCollection([this._id],true,'isActive','LeoCollections.LeoLocation')
     }
 });
 Template.leoAdminProductCategory.helpers({
-    addressSelector:function(){
+    locationSelector:function(){
         return {
             // isActive:true
         }

@@ -1,8 +1,35 @@
 let tableAdminConfig = {};
+tableAdminConfig.leoAdminLocation = function () {
+    return {
+        collectionsName: 'LeoCollections.LeoLocation',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
+        aggregateFullQuery:null,
+        name: 'LeoLocation',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:true,
+        filterFields: [
+            'title'
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular","Title":'Select'},
+                {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
+                {data: "title", Title: "Title",sort:true},
+                {data: "showCaseId", Title: "Code",sort:true},
+                {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+};
 tableAdminConfig.leoAdminModule = function () {
     return {
         collectionsName: 'LeoCollections.LeoModule',
-        aggregateQuery: 'leoMethodQuery.leoModule',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'LeoModule',
         order: [1, "desc"],
@@ -29,7 +56,7 @@ tableAdminConfig.leoAdminModule = function () {
 tableAdminConfig.leoAdminShowCaseSlider= function () {
     return {
         collectionsName: 'LeoCollections.LeoShowCaseSlider',
-        aggregateQuery: 'leoMethodQuery.leoShowCaseSlider',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'LeoShowCaseSlider',
         order: [1, "desc"],
@@ -56,7 +83,7 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
 tableAdminConfig.leoAdminAddress= function () {
     return {
         collectionsName: 'LeoCollections.LeoAddress',
-        aggregateQuery: 'leoMethodQuery.leoAddress',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoAddress',
         order: [1, "desc"],
@@ -83,7 +110,7 @@ tableAdminConfig.leoAdminAddress= function () {
 tableAdminConfig.leoAdminGallery= function () {
     return {
         collectionsName: 'LeoCollections.LeoGallery',
-        aggregateQuery: 'leoMethodQuery.leoGallery',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoGallery',
         order: [1, "desc"],
@@ -110,7 +137,7 @@ tableAdminConfig.leoAdminGallery= function () {
 tableAdminConfig.leoAdminNewsFeed= function () {
     return {
         collectionsName: 'LeoCollections.LeoNewsFeed',
-        aggregateQuery: 'leoMethodQuery.leoNewsFeed',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoNewsFeed',
         order: [1, "desc"],
@@ -137,7 +164,7 @@ tableAdminConfig.leoAdminNewsFeed= function () {
 tableAdminConfig.leoAdminProductCategory= function () {
     return {
         collectionsName: 'LeoCollections.LeoProductCategory',
-        aggregateQuery: 'leoMethodQuery.leoProductCategory',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoProductCategory',
         order: [1, "desc"],
@@ -166,7 +193,7 @@ tableAdminConfig.leoAdminProductCategory= function () {
 tableAdminConfig.leoAdminProduct= function () {
     return {
         collectionsName: 'LeoCollections.LeoProduct',
-        aggregateQuery: 'leoMethodQuery.leoProduct',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoProduct',
         order: [1, "desc"],
@@ -195,7 +222,7 @@ tableAdminConfig.leoAdminProduct= function () {
 tableAdminConfig.leoAdminServiceCategory= function () {
     return {
         collectionsName: 'LeoCollections.LeoServiceCategory',
-        aggregateQuery: 'leoMethodQuery.leoServiceCategory',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoServiceCategory',
         order: [1, "desc"],
@@ -224,7 +251,7 @@ tableAdminConfig.leoAdminServiceCategory= function () {
 tableAdminConfig.leoAdminTeamMember= function () {
     return {
         collectionsName: 'LeoCollections.LeoTeamMember',
-        aggregateQuery: 'leoMethodQuery.leoTeamMember',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoTeamMember',
         order: [1, "desc"],
@@ -302,7 +329,7 @@ tableAdminConfig.leoAdminLeoUsers= function () {
 tableAdminConfig.leoAdminService= function () {
     return {
         collectionsName: 'LeoCollections.LeoService',
-        aggregateQuery: 'leoMethodQuery.leoService',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
         aggregateFullQuery:null,
         name: 'leoService',
         order: [1, "desc"],

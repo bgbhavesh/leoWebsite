@@ -25,7 +25,7 @@ Template.leoAdminGalleryDetails.onRendered(function () {
 Template.leoAdminGalleryDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminGallery")
+        Router.go("leoAdminGallery");
     },
     "click [data-action='save']":function(){
         let formData =$("#gallery");
@@ -56,6 +56,7 @@ Template.leoAdminGalleryDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Gallery updated");
+        Router.go("leoAdminGallery");
                 }
                 if(err){
                     toastr.clear();
@@ -69,6 +70,7 @@ Template.leoAdminGalleryDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Gallery Item Created");
+                    Router.go("leoAdminGallery");
                 }
                 if(err){
                     toastr.clear();

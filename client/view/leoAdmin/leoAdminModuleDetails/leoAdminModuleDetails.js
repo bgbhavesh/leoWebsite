@@ -32,7 +32,7 @@ Template.leoAdminModuleDetails.onRendered(function () {
 Template.leoAdminModuleDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminModule")
+        Router.go("leoAdminModule");
     },
     "click [data-action='save']":function(e,t){
         e.preventDefault();
@@ -65,6 +65,7 @@ Template.leoAdminModuleDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Module Updated");
+                    Router.go("leoAdminModule");
                 }
                 if(err){
                     toastr.clear();
@@ -77,6 +78,9 @@ Template.leoAdminModuleDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    toastr.clear();
+                    toastr.success("Module Created");
+                    Router.go("leoAdminModule");
                 }
                 if(err){
                     toastr.clear();

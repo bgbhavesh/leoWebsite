@@ -1,5 +1,6 @@
 leoMethodQuery = {};
-leoMethodQuery.leoProductCategory= function (selector, sort,fields) {
+
+leoMethodQuery.basicCoreQuery= function (selector, sort,fields) {
     return [
         {
             "$match": selector
@@ -8,51 +9,6 @@ leoMethodQuery.leoProductCategory= function (selector, sort,fields) {
         {'$project':fields},
     ]
 };
-leoMethodQuery.leoAddress= function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-};
-leoMethodQuery.leoModule= function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-};
-leoMethodQuery.leoProduct = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-};
-leoMethodQuery.leoNewsFeed = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-};
-leoMethodQuery.leoTeamMember = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-}
 leoMethodQuery.leoUsers = function (selector, sort,fields) {
     return [
         {
@@ -82,41 +38,5 @@ leoMethodQuery.leoUsers = function (selector, sort,fields) {
         // },
         {"$sort": sort},
         // {'$project':fields},
-    ]
-}
-leoMethodQuery.leoShowCaseSlider = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-}
-leoMethodQuery.leoGallery = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-};
-leoMethodQuery.leoServiceCategory = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
-    ]
-}
-leoMethodQuery.leoService = function (selector, sort,fields) {
-    return [
-        {
-            "$match": selector
-        },
-        {"$sort": sort},
-        {'$project':fields},
     ]
 }
