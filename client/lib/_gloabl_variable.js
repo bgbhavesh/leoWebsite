@@ -26,5 +26,10 @@ socialLinks= [
         logo:"",
         code:"pinterest",
         title:"PInterest"
+    },
+    {
+        logo:"",
+        code:"medium",
+        title:"Medium"
     }
 ]

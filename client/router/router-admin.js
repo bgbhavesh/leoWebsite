@@ -241,7 +241,7 @@ Router.map(function () {
         data:function(){
             let data = {}
             data.routerTitle='Team Member';
-            data.productCategory=LeoCollections.LeoTeamMember.findOne({_id:this.params.memberId});
+            data.teamMember=LeoCollections.LeoTeamMember.findOne({_id:this.params.memberId});
             return data
         }
     });

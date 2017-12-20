@@ -19,7 +19,10 @@ Template.leoAdminTeamMemberDetails.onCreated(function () {
 })
 Template.leoAdminTeamMemberDetails.onRendered(function () {
     let utilObj = new LeoUtils();
+
     utilObj.applyValidationAndFloatingLabel($('#teamMember'));
+    utilObj.attachdatepicker($("[name='dob']"),{autoclose: true});
+
     // imageUpload.cloudinary.imageUpload($('#teamMemberImage'));
 })
 Template.leoAdminTeamMemberDetails.events({
@@ -35,7 +38,20 @@ Template.leoAdminTeamMemberDetails.events({
             insertObject.tags = data.tags.split(",");
             insertObject.title = data.title;
             insertObject.description = data.description;
+            insertObject.dob = data.dob||new Date();
+            insertObject.email = data.email||"";
+            insertObject.number = data.number||"";
             insertObject.isActive = $("[name='isActive']").prop( "checked" );
+        });
+        let form2Data =$("#socialLinks");
+        new LeoUtils().getFormValues(form2Data,function (data) {
+            let SL = socialLinks;
+            insertObject.socialLinks = [];
+            _.each(SL,function (slrec) {
+                if(data[slrec.code]){
+                    insertObject.socialLinks.push({url:data[slrec.code],code:slrec.code});
+                }
+            })
         });
         let images = [];
         _.map(Cloudinary.collection.find().fetch(),function(image){
@@ -44,14 +60,14 @@ Template.leoAdminTeamMemberDetails.events({
             obj.isDefault= image.isDefault||false;
             obj.resource_type = image.resource_type||"image";
             obj.seq = image.seq||1;
-            obj.response = obj.response||{};
+            obj.response = image.response||{};
             obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
             obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
             images.push(obj);
         })
         insertObject.images = images;
-        if(getRouterParams('catId')){
-            Meteor.call('updateTeamMember',getRouterParams('catId'),insertObject,function(err,data){
+        if(getRouterParams('memberId')){
+            Meteor.call('updateTeamMember',getRouterParams('memberId'),insertObject,function(err,data){
                 if(data){
                     // $('#teamMember')[0].reset();
                     Cloudinary.collection.remove();
@@ -81,14 +97,25 @@ Template.leoAdminTeamMemberDetails.events({
     }
 })
 Template.leoAdminTeamMemberDetails.helpers({
+    socialLinks:function () {
+        return socialLinks;
+    },
     showTags:function(){
         let tempData = Template.instance().data;
         if(tempData && tempData.teamMember && tempData.teamMember.tags){
             return tempData.teamMember.tags.toString()
         }
         else return ''
-
-
+    },
+    socialLinksUrl:function () {
+        let tempData = Template.instance().data;
+        if(tempData && tempData.teamMember && tempData.teamMember.socialLinks && tempData.teamMember.socialLinks.length>0){
+            let dbValues = tempData.teamMember.socialLinks;
+            let index = _.findWhere(dbValues, {code:this.code});
+            if(index) {
+                return index.url || ""
+            }else return""
+        }
     }
 });//
 Template.leoAdminTeamMemberDetails.onDestroyed(function () {

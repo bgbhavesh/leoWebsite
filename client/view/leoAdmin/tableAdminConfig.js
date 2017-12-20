@@ -244,8 +244,8 @@ tableAdminConfig.leoAdminTeamMember= function () {
                 {tmpl:"isActiveTemplateForTabular","Title":'Active',data:"isActive"},
                 {data: "name", Title: "Name",sort:true},
                 {data: "title", Title: "Title",sort:true},
-                {data: "teamMember", Title: "Code",sort:true},
-                {data: "description", Title: "Description",sort:true},
+                {data: "teamMemberId", Title: "Code",sort:true},
+                {data: "email", Title: "Email",sort:true},
             ]
         }
     }

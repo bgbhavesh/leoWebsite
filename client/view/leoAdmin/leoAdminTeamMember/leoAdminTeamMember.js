@@ -16,9 +16,9 @@ Template.leoAdminTeamMember.events({
     },
     "click [data-action='edit']":function(e){
         e.preventDefault();
-        let teamMemberId = singleSelectedId();
-        if(teamMemberId)
-        Router.go("leoAdminTeamMemberDetails",{teamMemberId:teamMemberId})
+        let memberId = singleSelectedId();
+        if(memberId)
+        Router.go("leoAdminTeamMemberDetails",{memberId:memberId})
     },
     "click [data-action='inActive']":function(e){
         e.preventDefault();

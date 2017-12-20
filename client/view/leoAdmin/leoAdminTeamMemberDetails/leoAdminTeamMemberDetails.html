@@ -15,7 +15,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="onoffswitch3">
-                            <input type="checkbox" name="isActive" class="onoffswitch3-checkbox" id="myonoffswitch3" checked="{{serviceCategory.isActive}}">
+                            <input type="checkbox" name="isActive" class="onoffswitch3-checkbox" id="myonoffswitch3" checked="{{teamMember.isActive}}">
                             <label class="onoffswitch3-label" for="myonoffswitch3">
                                 <span class="onoffswitch3-inner">
                                     <span class="onoffswitch3-active"><span class="onoffswitch3-switch">Active</span></span>
@@ -27,24 +27,24 @@
                 </div>
                 <div class="form-group ">
                     <label class="control-label">Name</label>
-                    <input type="text" name="name" class="form-control" mandatory="true" value="{{serviceCategory.name}}"/>
+                    <input type="text" name="name" class="form-control" mandatory="true" value="{{teamMember.name}}"/>
                 </div>
                 <div class="form-group ">
                     <label class="control-label">Designation</label>
-                    <input type="text" name="title" class="form-control" mandatory="true" value="{{serviceCategory.title}}"/>
+                    <input type="text" name="title" class="form-control" mandatory="true" value="{{teamMember.title}}"/>
                 </div>
                 <div class="form-group ">
                     <label class="control-label">Email</label>
-                    <input type="text" name="title" class="form-control"  validationType="email" value="{{serviceCategory.email}}" />
+                    <input type="text" name="email" class="form-control"  validationType="email" value="{{teamMember.email}}" />
                 </div>
 
                 <div class="form-group ">
                     <label class="control-label">Date of Birth</label>
-                    <input type="text" name="title" class="form-control" mandatory="" validationType="email" value="{{serviceCategory.email}}" />
+                    <input type="date" name="dob" class="form-control" mandatory=""  value="{{teamMember.dob}}" />
                 </div>
                 <div class="form-group ">
                     <label class="control-label">Mobile No.</label>
-                    <input type="text" name="title" class="form-control" mandatory="" validationType="email" value="{{serviceCategory.email}}" />
+                    <input type="text" name="number" class="form-control" mandatory="" validationType="mobileNumber" value="{{teamMember.number}}" />
                 </div>
 
                 <div class="form-group">
@@ -53,9 +53,21 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label">Description</label>
-                    <textarea type="text" name="description" class="form-control" mandatory="true" value="{{serviceCategory.description}}"></textarea>
+                    <textarea type="text" name="description" class="form-control" mandatory="true" value="{{teamMember.description}}"></textarea>
                 </div>
 
+            </form>
+            <form id="socialLinks" class="floating-labe1">
+                {{#each socialLinks}}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">{{title}}</label>
+                                <input type="text" name="{{code}}" class="form-control socialLinks"  value="{{socialLinksUrl}}"/>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
             </form>
             {{> leoImageUpload }}
         </div>
