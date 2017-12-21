@@ -1,4 +1,7 @@
 // import {imageUpload} from '../../../cloudinary.config.js'
+
+import {getAddressFormValues} from '../../leoCommon/leoAddress/leoAddress.js'
+import {getImagesFormValues} from '../../leoCommon/imageUpload/imageUpload.js'
 Template.leoAdminTeamMemberDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
@@ -21,7 +24,7 @@ Template.leoAdminTeamMemberDetails.onRendered(function () {
     let utilObj = new LeoUtils();
 
     utilObj.applyValidationAndFloatingLabel($('#teamMember'));
-    utilObj.attachdatepicker($("[name='dob']"),{autoclose: true});
+    // utilObj.attachdatepicker($("[name='dob']"),{autoclose: true});
 
     // imageUpload.cloudinary.imageUpload($('#teamMemberImage'));
 })
@@ -52,20 +55,9 @@ Template.leoAdminTeamMemberDetails.events({
                     insertObject.socialLinks.push({url:data[slrec.code],code:slrec.code});
                 }
             })
-        });
-        let images = [];
-        _.map(Cloudinary.collection.find().fetch(),function(image){
-            let obj = {};
-            obj.isActive= image.isActive||false;
-            obj.isDefault= image.isDefault||false;
-            obj.resource_type = image.resource_type||"image";
-            obj.seq = image.seq||1;
-            obj.response = image.response||{};
-            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
-            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
-            images.push(obj);
-        })
-        insertObject.images = images;
+        });        
+        insertObject.images = getImagesFormValues();
+        insertObject.address = getAddressFormValues();
         if(getRouterParams('memberId')){
             Meteor.call('updateTeamMember',getRouterParams('memberId'),insertObject,function(err,data){
                 if(data){

@@ -16,7 +16,7 @@ Template.leoTeam.events({
 });
 Template.leoTeam.helpers({
 	allMembers:function(){
-		return LeoCollections.LeoTeamMember.find().fetch({isActive:true});
+		return LeoCollections.LeoTeamMember.find().fetch();
 	},
 	style:function(){
 		return {

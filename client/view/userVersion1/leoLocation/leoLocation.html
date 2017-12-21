@@ -1,0 +1,40 @@
+<template name="leoLocation">
+	<div class="row">
+        {{#each allLocation}}
+            {{>leoEachLocation this}}
+        {{/each}}
+    </div>
+</template>
+<template name="leoEachLocation">
+	
+	<div class="col-xs-12 col-sm-6 col-lg-6 addressDisplay">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="info">
+						<h3 class="title">{{this.title}}</h3>
+    					<!-- <p> -->
+							 <i class="fa fa-map-marker" aria-hidden="true"></i>
+							 {{>addressDisplay this.address}}
+							 <!-- 15/3 Junction Plot  -->
+							 <!-- "Shree Krishna Krupa", Rajkot - 360001. -->
+						<!-- </p> -->
+					<div>
+					{{#if this.tags}}
+						{{#each this.tags}}
+						<span class="badge badge-primary">{{this}}</span>
+						{{/each}}
+					{{/if}}
+					</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		  
+</template>
+<template name="addressDisplay">
+	{{fullAddress}} <br>
+	{{street_number}}  {{route}} <br>
+	{{administrative_area_level_1}} {{postal_code}} <br>
+	{{locality}} {{country}}
+</template>

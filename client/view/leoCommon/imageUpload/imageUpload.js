@@ -42,3 +42,21 @@ Template.leoImageUpload.events({
         Cloudinary.collection.update({_id:this._id},{$set:{seq:seq}})
     },
 });
+let getImagesFormValues = function(){
+    let images = [];
+    _.map(Cloudinary.collection.find().fetch(),function(image){
+        let obj = {};
+        obj.isActive= image.isActive||false;
+        obj.isDefault= image.isDefault||false;
+        obj.resource_type = image.resource_type||"image";
+        obj.seq = image.seq||1;
+        obj.response = obj.response||{};
+        obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+        obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
+        images.push(obj);
+    })
+    return images
+}
+export {
+    getImagesFormValues
+}

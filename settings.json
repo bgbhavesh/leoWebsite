@@ -8,6 +8,7 @@
     }
   },
   "public": {
+    "GoogleApiKey":"AIzaSyAePipBmyY9osSigTRA0QKYo4Ootq5ahzE",
     "CDNUrl":"",
     "cloudinary": {
       "cloud_name": "www-leoquip-com",

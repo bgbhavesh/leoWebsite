@@ -1,5 +1,7 @@
 <template name="leoAdminLocationDetails">
     {{>floatingAdminButtons add=false active=false inActive=false edit=false save=true cancel=true}}
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAePipBmyY9osSigTRA0QKYo4Ootq5ahzE&libraries=places&callback=initAutocomplete"
+        async defer></script> -->
     <div class="container cont ">
         <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 main">
             <form id="location" class="floating-labe1">
@@ -36,8 +38,10 @@
                     <textarea type="text" name="description" class="form-control" mandatory="true"
                               value="{{Location.description}}"></textarea>
                 </div>
-
+                {{>leoAddress Location.address}}
+               
             </form>
+
             {{> leoImageUpload }}            
         </div>
     </div>

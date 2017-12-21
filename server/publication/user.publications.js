@@ -10,3 +10,9 @@ Meteor.publish("leoTeamMember", function (selector, project) {
     console.log("-leoTeamMember-")
     return LeoCollections.LeoTeamMember.find(selector, {fields:project});
 });
+Meteor.publish("leoLocation", function (selector, project) {
+    check(selector, Object);
+    check(project, Object);
+    console.log("-leoLocation-")
+    return LeoCollections.LeoLocation.find(selector, {fields:project});
+});

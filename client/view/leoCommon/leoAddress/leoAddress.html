@@ -1,0 +1,41 @@
+<TEMPLATE name="leoAddress">
+	<form id="leoAddress" class="floating-labe1 ">
+		<div class="form-group col-md-12 col-sm-12 col-xs-12 pad0">
+            <label class="control-label">Search</label>
+            <input id="autocomplete" type="text" name="fullAddress" class="form-control" value="{{this.fullAddress}}"/>
+        </div>
+		<div class="form-group col-md-3 col-sm-3 col-xs-12 pad0">
+            <label class="control-label">Street number</label>
+            <input type="text" name="street_number" id="street_number" class="form-control" value="{{this.street_number}}"/>
+        </div>
+		<div class="form-group col-md-9 col-sm-9 col-xs-12 pad0">
+            <label class="control-label">Address Line</label>
+            <input type="text" name="route" id="route" class="form-control" value="{{this.route}}"/>
+        </div>
+
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">City</label>
+            <input type="text" name="locality" id="locality" class="form-control" value="{{this.locality}}"/>
+        </div>
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">State</label>
+            <input type="text" name="administrative_area_level_1" id="administrative_area_level_1" class="form-control" value="{{this.administrative_area_level_1}}"/>
+        </div>
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">Zip code</label>
+            <input type="text" name="postal_code" id="postal_code" class="form-control" value="{{this.postal_code}}" validationType="ZipCode"/>
+        </div>
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">Country</label>
+            <input type="text" name="country" id="country" class="form-control" value="{{this.country}}"/>
+        </div>
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">Latitude</label>
+            <input type="text" name="latitude" id="latitude" class="form-control" value="{{this.latitude}}"/>
+        </div>
+		<div class="form-group col-md-6 col-sm-6 col-xs-12 pad0">
+            <label class="control-label">Longitude</label>
+            <input type="text" name="longitude" id="longitude" class="form-control" value="{{this.longitude}}"/>
+        </div>
+	</form>
+</TEMPLATE>

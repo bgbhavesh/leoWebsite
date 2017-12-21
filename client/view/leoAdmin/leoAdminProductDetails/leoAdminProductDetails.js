@@ -25,7 +25,7 @@ Template.leoAdminProductDetails.onRendered(function () {
 Template.leoAdminProductDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminProduct")
+        Router.go("leoAdminProduct");
     },
     "click [data-action='save']":function(){
         let formData =$("#product");
@@ -56,6 +56,10 @@ Template.leoAdminProductDetails.events({
                 if(data){
                     // $('#product')[0].reset();
                     Cloudinary.collection.remove();
+                    toastr.clear();
+                    toastr.success("Product Updated");
+                    // $('#product')[0].reset();
+                    Router.go("leoAdminProduct");
                 }
                 if(err){
                     toastr.clear();
@@ -70,6 +74,7 @@ Template.leoAdminProductDetails.events({
                     toastr.success("Product created");
                     // $('#product')[0].reset();
                     Cloudinary.collection.remove();
+                    Router.go("leoAdminProduct");
                 }
                 if(err){
                     toastr.clear();

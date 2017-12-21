@@ -1,4 +1,6 @@
 // import {imageUpload} from '../../../cloudinary.config.js'
+import {getAddressFormValues} from '../../leoCommon/leoAddress/leoAddress.js'
+import {getImagesFormValues} from '../../leoCommon/imageUpload/imageUpload.js'
 Template.leoAdminLocationDetails.onCreated(function () {
     let self = this;
     self.permissions = new ReactiveVar();
@@ -6,8 +8,8 @@ Template.leoAdminLocationDetails.onCreated(function () {
     this.subscribe("leoRoles",{},{});
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.catId){
-        let location = LeoCollections.LeoLocation.findOne({_id:params.catId});
+    if(params && params.locationId){
+        let location = LeoCollections.LeoLocation.findOne({_id:params.locationId});
         if(location && location.permissions){
             self.permissions.set(location.permissions);
         }
@@ -28,6 +30,7 @@ Template.leoAdminLocationDetails.onRendered(function () {
     let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#location'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
+
 });
 Template.leoAdminLocationDetails.events({
     "click [data-action='cancel']":function(e){
@@ -45,19 +48,20 @@ Template.leoAdminLocationDetails.events({
             insertObject.isActive = $("[name='isActive']").prop( "checked" );
             insertObject.permissions = t.permissions.get();
         });
-        let images = [];
-        _.map(Cloudinary.collection.find().fetch(),function(image){
-            let obj = {};
-            obj.isActive= image.isActive||false;
-            obj.isDefault= image.isDefault||false;
-            obj.resource_type = image.resource_type||"image";
-            obj.seq = image.seq||1;
-            obj.response = obj.response||{};
-            obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
-            obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
-            images.push(obj);
-        })
-        insertObject.images = images;
+        // let images = [];
+        // _.map(Cloudinary.collection.find().fetch(),function(image){
+        //     let obj = {};
+        //     obj.isActive= image.isActive||false;
+        //     obj.isDefault= image.isDefault||false;
+        //     obj.resource_type = image.resource_type||"image";
+        //     obj.seq = image.seq||1;
+        //     obj.response = obj.response||{};
+        //     obj.response.secure_url = (image.response && image.response.secure_url)?image.response.secure_url:"";
+        //     obj.response.public_id = (image.response && image.response.public_id)?image.response.public_id:"";
+        //     images.push(obj);
+        // })
+        insertObject.images = getImagesFormValues();
+        insertObject.address = getAddressFormValues();
         if(getRouterParams('locationId')){
             Meteor.call('updateLocation',getRouterParams('locationId'),insertObject,function(err,data){
                 if(data){
@@ -93,6 +97,7 @@ Template.leoAdminLocationDetails.events({
     "click #reset":function(){
         // $('#productCategory')[0].reset();
     },
+    
 });
 Template.leoAdminLocationDetails.helpers({
     showTags:function(){
@@ -108,3 +113,4 @@ Template.leoAdminLocationDetails.helpers({
 Template.leoAdminLocationDetails.onDestroyed(function () {
     Cloudinary.collection.remove()
 });
+/////////////// location function 

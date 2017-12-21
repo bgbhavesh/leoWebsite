@@ -6,8 +6,8 @@ Template.leoAdminModuleDetails.onCreated(function () {
     this.subscribe("leoRoles",{},{});
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.catId){
-        let module = LeoCollections.LeoModule.findOne({_id:params.catId});
+    if(params && params.moduleId){
+        let module = LeoCollections.LeoModule.findOne({_id:params.moduleId});
         if(module && module.permissions){
             self.permissions.set(module.permissions);
         }
