@@ -158,5 +158,14 @@ LeoUtils = function () {
         }
         else return false;
     };
+    LeoUtilsClass.prototype.clearFormValues = function (formObject, submitCallback) {
+        let values = {};
+        let util = this;
+        let clientValidation = true;
+        formObject.find("input,select,textarea").each(function () {
+            let inputObject = $(this);
+            $(inputObject).val("");
+        });
+    }
     return LeoUtilsClass;
 }();

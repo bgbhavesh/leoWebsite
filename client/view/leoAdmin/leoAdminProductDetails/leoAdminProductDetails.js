@@ -55,6 +55,7 @@ Template.leoAdminProductDetails.events({
             Meteor.call('updateProduct',getRouterParams('productId'),insertObject,function(err,data){
                 if(data){
                     // $('#product')[0].reset();
+                    new LeoUtils().clearFormValues(formData,function(){});
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Product Updated");
@@ -70,6 +71,7 @@ Template.leoAdminProductDetails.events({
         }else{
             Meteor.call('insertProduct',insertObject,function(err,data){
                 if(data){
+                    new LeoUtils().clearFormValues(formData,function(){});
                     toastr.clear();
                     toastr.success("Product created");
                     // $('#product')[0].reset();
@@ -86,6 +88,7 @@ Template.leoAdminProductDetails.events({
     },
     "click #reset":function(){
         // $('#product')[0].reset();
+        new LeoUtils().clearFormValues($('#product'),function(){});
     }
 })
 Template.leoAdminProductDetails.helpers({

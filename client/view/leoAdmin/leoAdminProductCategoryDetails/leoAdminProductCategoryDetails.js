@@ -55,7 +55,7 @@ Template.leoAdminProductCategoryDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
-
+                    new LeoUtils().clearFormValues($('#productCategory'),function(){});
                     toastr.clear();
                     toastr.success("Product Category Updated");
                     Router.go("leoAdminNewsFeed");
@@ -70,10 +70,12 @@ Template.leoAdminProductCategoryDetails.events({
             Meteor.call('insertProductCategory',insertObject,function(err,data){
                 if(data){
                     // $('#productCategory')[0].reset();
+                    new LeoUtils().clearFormValues($('#productCategory'),function(){});
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Product Category Created");
                     Router.go("leoAdminNewsFeed");
+
                 }
                 if(err){
                     toastr.clear();
@@ -85,6 +87,7 @@ Template.leoAdminProductCategoryDetails.events({
     },
     "click #reset":function(){
         // $('#productCategory')[0].reset();
+        new LeoUtils().clearFormValues($('#productCategory'),function(){});
     }
 })
 Template.leoAdminProductCategoryDetails.helpers({

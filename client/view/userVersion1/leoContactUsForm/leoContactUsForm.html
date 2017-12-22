@@ -1,21 +1,22 @@
 <template name="leoContactUsForm"> 
-	<form action="leoContactUsForm" class="contact-form" method="post">
+	<form id="leoContactUsForm" class="contact-form floating-labe1" method="post">
 	    <div class="form-group">
-	      	<input type="text" class="form-control" id="name" name="name" placeholder="Name" required="" autofocus="">
+	      	<label class="control-label">Name</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Name" required="" autofocus="">
 	    </div>
-
-
 	    <div class="form-group form_left">
-	      	<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="">
+	      	<label class="control-label">Email</label>
+	      	<input type="email" class="form-control" id="email" name="email" placeholder="Email" >
 	    </div>
-
 	  	<div class="form-group">
-	       	<input type="text" class="form-control" id="phone" name="phone" placeholder="Mobile No." required="">
+	      	<label class="control-label">Mobile No.</label>
+	       	<input type="text" class="form-control" id="number" name="number" placeholder="Mobile No." >
 	  	</div>
 	  	<div class="form-group">
-	  		<textarea class="form-control textarea-contact" rows="5" id="comment" name="comment" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+	      	<label class="control-label">Type Your Message/Feedback here...</label>
+	  		<textarea class="form-control textarea-contact" rows="5" id="comment" name="comment" placeholder="Type Your Message/Feedback here..." ></textarea>
 	  			<br>
-		  	<button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
+		  	<button id="send" class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
 	  	</div>
  	</form>
 </template>

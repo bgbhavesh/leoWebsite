@@ -54,6 +54,7 @@ Template.leoAdminShowCaseSliderDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
                     toastr.clear();
                     toastr.success("Slide Updated");
                     Router.go("leoAdminShowCaseSlider");
@@ -69,6 +70,7 @@ Template.leoAdminShowCaseSliderDetails.events({
                 if(data){
                     // $('#productCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
                     toastr.clear();
                     toastr.success("Slide Created");
                     Router.go("leoAdminShowCaseSlider");
@@ -83,6 +85,8 @@ Template.leoAdminShowCaseSliderDetails.events({
     },
     "click #reset":function(){
         // $('#productCategory')[0].reset();
+        let formData =$("#showCase");
+        new LeoUtils().clearFormValues(formData,function(){});
     }
 })
 Template.leoAdminShowCaseSliderDetails.helpers({

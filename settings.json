@@ -5,7 +5,8 @@
       "password":"abc123123",
       "server":"smtp.mailgun.org",
       "port":"587"
-    }
+    },
+    "emailId":"bgbhavesh@gmail.com"
   },
   "public": {
     "GoogleApiKey":"AIzaSyAePipBmyY9osSigTRA0QKYo4Ootq5ahzE",

@@ -55,6 +55,10 @@ Template.leoAdminServiceCategoryDetails.events({
                 if(data){
                     // $('#serviceCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("service category created");
+                    Router.go("leoAdminService");
                 }
                 if(err){
                     toastr.clear();
@@ -67,6 +71,10 @@ Template.leoAdminServiceCategoryDetails.events({
                 if(data){
                     // $('#serviceCategory')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("service Catagory created");
+                    Router.go("leoAdminService");
                 }
                 if(err){
                     toastr.clear();
@@ -77,7 +85,8 @@ Template.leoAdminServiceCategoryDetails.events({
         }
     },
     "click #reset":function(){
-        // $('#serviceCategory')[0].reset();
+        // [0].reset();
+        new LeoUtils().clearFormValues($('#serviceCategory'),function(){});
     }
 })
 Template.leoAdminServiceCategoryDetails.helpers({

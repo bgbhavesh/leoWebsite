@@ -31,7 +31,7 @@ Template.leoAdminTeamMemberDetails.onRendered(function () {
 Template.leoAdminTeamMemberDetails.events({
     "click [data-action='cancel']":function(e){
         e.preventDefault();
-        Router.go("leoAdminTeamMember")
+        Router.go("leoAdminTeamMember");
     },
     "click [data-action='save']":function(){
         let formData =$("#teamMember");
@@ -63,6 +63,10 @@ Template.leoAdminTeamMemberDetails.events({
                 if(data){
                     // $('#teamMember')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("Member Updated");
+                    Router.go("leoAdminTeamMember");
                 }
                 if(err){
                     toastr.clear();
@@ -75,6 +79,10 @@ Template.leoAdminTeamMemberDetails.events({
                 if(data){
                     // $('#teamMember')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("Member Added");
+                    Router.go("leoAdminTeamMember");
                 }
                 if(err){
                     toastr.clear();
@@ -85,7 +93,8 @@ Template.leoAdminTeamMemberDetails.events({
         }
     },
     "click #reset":function(){
-        // $('#teamMember')[0].reset();
+        let formData =$("#teamMember");
+        new LeoUtils().clearFormValues(formData,function(){});
     }
 })
 Template.leoAdminTeamMemberDetails.helpers({

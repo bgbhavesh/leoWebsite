@@ -56,6 +56,10 @@ Template.leoAdminServiceDetails.events({
                 if(data){
                     // $('#service')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("service updated");
+                    Router.go("leoAdminService");
                 }
                 if(err){
                     toastr.clear();
@@ -68,6 +72,10 @@ Template.leoAdminServiceDetails.events({
                 if(data){
                     // $('#service')[0].reset();
                     Cloudinary.collection.remove();
+                    new LeoUtils().clearFormValues(formData,function(){});
+                    toastr.clear();
+                    toastr.success("service created");
+                    Router.go("leoAdminService");
                 }
                 if(err){
                     toastr.clear();
@@ -79,6 +87,8 @@ Template.leoAdminServiceDetails.events({
     },
     "click #reset":function(){
         // $('#service')[0].reset();
+        let formData =$("#service");
+        new LeoUtils().clearFormValues(formData,function(){});
     }
 });
 Template.leoAdminServiceDetails.helpers({
