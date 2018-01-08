@@ -80,6 +80,36 @@ tableAdminConfig.leoAdminShowCaseSlider= function () {
         }
     }
 };
+
+tableAdminConfig.leoAdminAboutUs= function () {
+    return {
+        collectionsName: 'LeoCollections.LeoAboutUs',
+        aggregateQuery: 'leoMethodQuery.basicCoreQuery',
+        aggregateFullQuery:null,
+        name: 'LeoAboutUs',
+        order: [1, "desc"],
+        exportCsv: true,
+        canPrint: false,
+        tabView: false,
+        alphaFilter: false,
+        isFilter:true,
+        filterFields: [
+            'title'
+        ],
+        tableViewConfig: {
+            extraFields: [],
+            columns: [
+                {tmpl:"selectTemplateForTabular",Title:'Select'},
+                {tmpl:"isActiveTemplateForTabular",Title:'Active',data:"isActive"},
+                {data: "title", Title: "Title",sort:true},
+                {data: "aboutUsId", Title: "Code",sort:true},
+                {data: "seq", Title: "Sequence",sort:true},
+                {data: "aboutType", Title: "Type",sort:true},
+                {data: "description", Title: "Description",sort:true},
+            ]
+        }
+    }
+};
 tableAdminConfig.leoAdminAddress= function () {
     return {
         collectionsName: 'LeoCollections.LeoAddress',

@@ -40,7 +40,9 @@
         <item url="file://$USER_HOME$/.meteor/packages/cfs_http-methods/0.0.32/web.browser/http.methods.client.api.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging_test.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/mdg_validated-method/1.1.0/web.browser/validated-method.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging_cordova.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/mdg_validated-method/1.1.0/web.browser/validated-method-tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/chrismbeckett_toastr/2.1.2_1/web.browser/packages/chrismbeckett_toastr.js" />
         <item url="file://$USER_HOME$/.meteor/packages/chrismbeckett_toastr/2.1.2_1/web.browser/packages/chrismbeckett_toastr/lib/toastr.css" />
         <item url="file://$USER_HOME$/.meteor/packages/dispatch_kernel/0.0.6/web.browser/packages/dispatch_kernel.js" />
@@ -366,7 +368,9 @@
       <root url="file://$USER_HOME$/.meteor/packages/cfs_http-methods/0.0.32/web.browser/http.methods.client.api.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging_test.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/mdg_validated-method/1.1.0/web.browser/validated-method.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.19/web.browser/logging_cordova.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/mdg_validated-method/1.1.0/web.browser/validated-method-tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/chrismbeckett_toastr/2.1.2_1/web.browser/packages/chrismbeckett_toastr.js" />
       <root url="file://$USER_HOME$/.meteor/packages/chrismbeckett_toastr/2.1.2_1/web.browser/packages/chrismbeckett_toastr/lib/toastr.css" />
       <root url="file://$USER_HOME$/.meteor/packages/dispatch_kernel/0.0.6/web.browser/packages/dispatch_kernel.js" />

@@ -25,11 +25,7 @@ Router.configure({
         Meteor.subscribe("leoCompany",{},{});
     }
 });
-Router.map(function () {
-    this.route('leoLogin',{
-    	path:'/leoLogin'
-    })
-});
+
 
 export {
     adminContext// there is nothing wrong in export this way

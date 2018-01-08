@@ -1,0 +1,191 @@
+<template name="leoAdminAboutDetails">
+    {{>floatingAdminButtons add=false active=false inActive=false edit=false save=true cancel=true}}
+    <div class="container cont ">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 main">
+            <form id="aboutUs" class="floating-labe1">
+                <div class="form-group">
+                    <div class="col-sm-6 text-left">
+                        <label>{{routerTitle}}</label>
+                        <!--<button type="button" id="reset" class="btn btn-default preview-add-button">-->
+                        <!--<i class="fa fa-refresh" aria-hidden="true"></i> Reset-->
+                        <!--</button>-->
+                        <!--<button type="button" id="addCategory" class="btn btn-default preview-add-button">-->
+                        <!--<i class="fa fa-plus" aria-hidden="true"></i> Save-->
+                        <!--</button>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="onoffswitch3">
+                            <input type="checkbox" name="isActive" class="onoffswitch3-checkbox" id="myonoffswitch3" checked="{{aboutUs.isActive}}">
+                            <label class="onoffswitch3-label" for="myonoffswitch3">
+                                <span class="onoffswitch3-inner">
+                                    <span class="onoffswitch3-active"><span class="onoffswitch3-switch">Active</span></span>
+                                    <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">Inactive</span></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label">Title</label>
+                    <input type="text" name="title" class="form-control" mandatory="true" value="{{aboutUs.title}}"/>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label">Seqyence</label>
+                    <input type="text" name="seq" class="form-control" mandatory="true" validationType="number" value="{{aboutUs.seq}}"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Tags</label>
+                    <input type="text" name="tags" class="form-control" value="{{showTags}}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea type="text" name="description" class="form-control" mandatory="true" value="{{aboutUs.description}}"></textarea>
+                </div>
+                
+
+            </form>
+
+            <div class="col-md-12 pad0">
+                <div id="changeAboutType" class="btn-group" data-toggle="buttons-radio">
+                <a href="#" data-component="TABS" 
+                  class="btn btn-large btn-info {{checkEqual aboutType 'TABS' 'active' ''}}">
+                    TABS
+                </a>
+                <a href="#" data-component="PARAGRAPH" 
+                  class="btn btn-large btn-info {{checkEqual aboutType 'PARAGRAPH' 'active' ''}}">
+                    PARAGRAPH
+                </a>
+                <a href="#" data-component="CHECKBOX" 
+                  class="btn btn-large btn-info {{checkEqual aboutType 'CHECKBOX' 'active' ''}}">
+                    CHECKBOX
+                </a>
+                <a href="#" data-component="PERCENTAGE" 
+                  class="btn btn-large btn-info {{checkEqual aboutType 'PERCENTAGE' 'active' ''}}" >
+                    PERCENTAGE
+                </a>
+                </div>                
+            </div>
+            <div class="col-md-12 pad0">  
+                {{#if equals aboutType 'TABS'}}
+                    <div class="col-md-10 pad0">
+                        <form id="getAboutTypeDetails">
+                            <div class="form-group col-md-8 pad0">
+                                <label class="control-label">Label</label>
+                                <input type="text" name="label" class="form-control" mandatory="true" />
+                            </div>              
+                            <div class="form-group col-md-12 pad0">                        
+                                <label class="control-label">Para</label>
+                                <textarea type="text" name="paragraph" class="form-control" mandatory="true"></textarea>
+                            </div>          
+                        </form>
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="addAboutUsItem" class="more-less glyphicon glyphicon-plus  "></i>
+                    </div>
+                    {{#each aboutItemList}}
+                    <div class="col-md-10 pad0">
+                        <div class="form-group col-md-8 pad0">
+                            <label class="control-label">Label</label>
+                            <input type="text" class="form-control" readonly value="{{this.label}}" />
+                        </div>         
+                        <div class="form-group col-md-12 pad0">                                
+                            <textarea type="text" class="form-control" readonly value="{{this.paragraph}}"></textarea>
+                        </div>   
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="removeAboutUsItem" class="more-less glyphicon glyphicon-minus" data-id={{this._id}}></i>
+                    </div>  
+                    {{/each}}
+                {{/if}}          
+                {{#if equals aboutType 'PARAGRAPH'}}
+                    <div class="col-md-10 pad0">
+                    <form id="getAboutTypeDetails">
+                        <div class="form-group">
+                            <label class="control-label">Para</label>
+                            <textarea type="text" name="paragraph" class="form-control" mandatory="true"></textarea>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="addAboutUsItem" class="more-less glyphicon glyphicon-plus  "></i>
+                    </div>
+                    {{#each aboutItemList}}
+                    <div class="col-md-10 pad0">
+                        <div class="form-group">
+                            <label class="control-label">Para</label>
+                            <textarea type="text" class="form-control" readonly value="{{this.paragraph}}"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="removeAboutUsItem" class="more-less glyphicon glyphicon-minus" data-id={{this._id}}></i>
+                    </div>
+                    {{/each}}
+                {{/if}}
+                {{#if equals aboutType 'CHECKBOX'}}
+                    <div class="col-md-10 pad0">
+                        <form id="getAboutTypeDetails">
+                            <div class="form-group col-md-8 pad0">
+                                <label class="control-label">Label</label>
+                                <input type="text" name="label" class="form-control" mandatory="true" />
+                            </div>              
+                            <div class="form-group col-md-4 pad0">                                
+                                <input type="checkbox" class="item-checkbox" name="checked" value="TRUE">
+                            </div>          
+                        </form>
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="addAboutUsItem" class="more-less glyphicon glyphicon-plus  "></i>
+                    </div>
+                    {{#each aboutItemList}}
+                    <div class="col-md-10 pad0">
+                        <div class="form-group col-md-8 pad0">
+                            <label class="control-label">Label</label>
+                            <input type="text" class="form-control" readonly value="{{this.label}}" />
+                        </div>         
+                        <div class="form-group col-md-4 pad0">                                
+                            <input type="checkbox" class="item-checkbox" readonly checked="{{this.checked}}" onclick="return false;">
+                        </div>   
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="removeAboutUsItem" class="more-less glyphicon glyphicon-minus" data-id={{this._id}}></i>
+                    </div>  
+                    {{/each}}
+                {{/if}}
+                {{#if equals aboutType 'PERCENTAGE'}}
+                    <div class="col-md-10 pad0">
+                        <form id="getAboutTypeDetails">
+                            <div class="form-group col-md-8 pad0">
+                                <label class="control-label">Label</label>
+                                <input type="text" name="label" class="form-control" mandatory="true" />
+                            </div>              
+                            <div class="form-group col-md-4 pad0">                                
+                                <label class="control-label">Label</label>
+                                <input type="text" name="percent" class="form-control" mandatory="true" validationType=number/>
+                            </div>          
+                        </form>
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="addAboutUsItem" class="more-less glyphicon glyphicon-plus  "></i>
+                    </div>
+                    {{#each aboutItemList}}
+                    <div class="col-md-10 pad0">
+                        <div class="form-group col-md-8 pad0">
+                            <label class="control-label">Label</label>
+                            <input type="text" class="form-control" readonly value="{{this.label}}" />
+                        </div>              
+                        <div class="form-group col-md-4 pad0">                                
+                            <label class="control-label">percent</label>
+                            <input type="text" value="{{this.percent}}" class="form-control" readonly />
+                        </div>   
+                    </div>
+                    <div class="col-md-2 ">
+                        <i id="removeAboutUsItem" class="more-less glyphicon glyphicon-minus" data-id={{this._id}}></i>
+                    </div>  
+                    {{/each}}
+                {{/if}}
+            </div>
+            <!-- {{> leoImageUpload }} -->
+        </div>
+    </div>
+</template>

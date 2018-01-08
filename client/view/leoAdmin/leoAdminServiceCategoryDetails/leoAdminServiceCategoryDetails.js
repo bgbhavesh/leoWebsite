@@ -58,7 +58,7 @@ Template.leoAdminServiceCategoryDetails.events({
                     new LeoUtils().clearFormValues(formData,function(){});
                     toastr.clear();
                     toastr.success("service category created");
-                    Router.go("leoAdminService");
+                    Router.go("leoAdminServiceCategory");
                 }
                 if(err){
                     toastr.clear();
@@ -74,7 +74,7 @@ Template.leoAdminServiceCategoryDetails.events({
                     new LeoUtils().clearFormValues(formData,function(){});
                     toastr.clear();
                     toastr.success("service Catagory created");
-                    Router.go("leoAdminService");
+                    Router.go("leoAdminServiceCategory");
                 }
                 if(err){
                     toastr.clear();

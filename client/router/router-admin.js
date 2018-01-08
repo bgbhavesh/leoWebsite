@@ -2,7 +2,7 @@ import {
     adminContext
 } from './routerConfig.js'
 // Meteor.startup(function () {})
-Router.map(function () {
+Router.map(function () {//
     this.route('leoAdminModule',{
         path:adminContext+'/leoAdminModule',
         layoutTemplate:'leoAdminLayout',
@@ -14,7 +14,7 @@ Router.map(function () {
             data.routerTitle='Modules';
             return data;
         }
-    });//leoAdminCompanyDetails
+    });
     this.route('leoAdminModuleDetails',{
         path:adminContext+'/leoAdminModuleDetails/:moduleId?',
         layoutTemplate:'leoAdminLayout',
@@ -33,6 +33,35 @@ Router.map(function () {
         }
     });
 
+    this.route('leoAdminAbout',{
+        path:adminContext+'/leoAdminAbout',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='About';
+            return data;
+        }
+    });
+    this.route('leoAdminAboutDetails',{
+        path:adminContext+'/leoAdminAboutDetails/:aboutId?',
+        layoutTemplate:'leoAdminLayout',
+        waitOn:function(){
+            let subArray=[];
+            if(this.params.aboutId){
+                subArray.push(Meteor.subscribe("singleDocWithId","LeoCollections.LeoAboutUs", this.params.aboutId,{}));
+            }
+            return subArray;
+        },
+        data:function(){
+            let data = {};
+            data.routerTitle='About Us';
+            data.aboutUs=LeoCollections.LeoAboutUs.findOne({_id:this.params.aboutId});
+            return data
+        }
+    });
     this.route('leoAdminLocation',{
         path:adminContext+'/leoAdminLocation',
         layoutTemplate:'leoAdminLayout',

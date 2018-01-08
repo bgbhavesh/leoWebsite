@@ -58,7 +58,7 @@ Template.leoAdminProductCategoryDetails.events({
                     new LeoUtils().clearFormValues($('#productCategory'),function(){});
                     toastr.clear();
                     toastr.success("Product Category Updated");
-                    Router.go("leoAdminNewsFeed");
+                    Router.go("leoAdminProductCategory");
                 }
                 if(err){
                     toastr.clear();
@@ -74,7 +74,7 @@ Template.leoAdminProductCategoryDetails.events({
                     Cloudinary.collection.remove();
                     toastr.clear();
                     toastr.success("Product Category Created");
-                    Router.go("leoAdminNewsFeed");
+                    Router.go("leoAdminProductCategory");
 
                 }
                 if(err){

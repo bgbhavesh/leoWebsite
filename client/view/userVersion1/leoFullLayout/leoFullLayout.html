@@ -1,0 +1,15 @@
+<template name="leoFullLayout">
+    <div class="wrapper">
+        <div class="container">
+		{{>leoHeader}}
+			<div class="col-md-12 pad0">
+				<div class="col-md-3 pad0">
+			    {{> leoClientLeftNav}}
+			    </div>
+				<div class="col-md-9">
+					{{>yield}}
+			    </div>
+		    </div>    
+	    </div>
+    </div>
+</template>

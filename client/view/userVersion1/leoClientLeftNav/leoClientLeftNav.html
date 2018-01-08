@@ -1,0 +1,63 @@
+<template name="leoClientLeftNav">
+	<div class="support-menu">
+        <nav class="vertical">
+            <ul class="menu">
+                {{#each leoProductCategory}}
+                <li class="chapter">
+                    <a href="#">
+                    {{name}}
+                    </a>
+                    {{#let categoryId = this._id}}
+                        {{#if leoProduct categoryId}}
+                            <ul>
+                                {{#each leoProduct categoryId}}
+                                <li>
+                                    <a href="">
+                                        {{name}}
+                                    </a>                                
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/if}}
+                    {{/let}}
+                </li>
+                {{/each}}
+                {{#each leoServiceCategory}}
+                <li class="chapter">
+                    <a href="#">
+                    {{name}}
+                    </a>
+                    {{#let categoryId = this._id}}
+                        {{#if leoService categoryId}}
+                            <ul>
+                                {{#each leoService categoryId}}
+                                <li>
+                                    <a href="">
+                                        {{name}}
+                                    </a>                                
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/if}}
+                    {{/let}}
+                </li>
+                {{/each}}    
+                <li class="chapter">
+                    <a href="{{pathFor 'aboutUs'}}">
+                        About Us
+                    </a>
+                </li>
+                <li class="chapter">
+                    <a href="{{pathFor 'contactUs'}}">
+                        Contact Us
+                    </a>
+                </li>
+                <li class="chapter">
+                    <a href="{{pathFor 'leoLogin'}}">
+                        Log In
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</template>

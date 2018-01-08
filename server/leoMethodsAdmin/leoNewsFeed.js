@@ -1,18 +1,18 @@
 
 Meteor.methods({
-    insertNewsFeed:function (moduleDetails) {
+    insertModule:function (moduleDetails) {
         check(moduleDetails,Object);
         return new LeoModuleProcessor({
             module:moduleDetails
-        }).insertNewsFeedProcessor()
+        }).insertModuleProcessor()
     },
-    updateNewsFeed:function (moduleId,moduleDetails) {
+    updateModule:function (moduleId,moduleDetails) {
         check(moduleId,String);
         check(moduleDetails,Object);
 
         return new LeoModuleProcessor({
             module:moduleDetails,
             moduleId:moduleId
-        }).updateNewsFeedProcessor()
+        }).updateModuleProcessor()
     }
 });

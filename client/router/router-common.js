@@ -1,7 +1,17 @@
 Router.map(function () {
+    this.route('leoLogin',{
+        path:'/leoLogin',
+        layoutTemplate:'leoFullLayout',
+        waitOn: function () {
+
+        },
+        data: function () {
+            routerTitle:'Log In'
+        }
+    });
     this.route('signup', {
         path: '/signup',
-        // layoutTemplate:'',
+        layoutTemplate:'leoFullLayout',
         waitOn: function () {
 
         },
@@ -14,8 +24,7 @@ Router.map(function () {
         path: '/verify-email/:token',
         action: function () {
             let token = this.params.token;
-            console.log(token);
-            debugger
+            console.log(token);            
             Accounts.verifyEmail(this.params.token, function (err) {
                 console.log(err);
                 if (err && err !== null) {
