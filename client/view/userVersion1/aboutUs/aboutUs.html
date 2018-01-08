@@ -6,7 +6,7 @@
 				<div class="custom-tab">
 					<ul class="nav nav-tabs nav-justified" role="tablist">
 					{{#each aboutItemList}}
-						<li class="">
+						<li class="{{checkEqual @index 0 'active' ''}}">
 							<a href="#{{_id}}" role="tab" data-toggle="tab" >
 							{{label}}
 							</a>
@@ -16,7 +16,7 @@
 					<div class="tab-content">
 
 						{{#each aboutItemList}}
-							<div class="tab-pane " id="{{_id}}">
+							<div class="tab-pane {{checkEqual @index 0 'active' ''}}" id="{{_id}}">
 							{{{paragraph}}}
 							</div>
 						{{/each}}
