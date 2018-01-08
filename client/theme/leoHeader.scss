@@ -1,0 +1,5 @@
+@import 'theme.scss';
+#header .navbar-default .navbar-nav > li > a:hover, 
+#header .navbar-default .navbar-nav > li > a:focus{
+	color:$primaryColor	
+}

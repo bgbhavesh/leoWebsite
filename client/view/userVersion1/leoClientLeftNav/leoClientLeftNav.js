@@ -36,7 +36,7 @@ Template.leoClientLeftNav.helpers({
 		return LeoCollections.LeoProduct.find({isActive:true ,categoryId:categoryId},{sort:{seq:1}}).fetch();
 	},
 
-	leoService:function(){
+	leoService:function(categoryId){
 		return LeoCollections.LeoService.find({isActive:true,categoryId:categoryId},{sort:{seq:1}}).fetch();
 	},	
 	

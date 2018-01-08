@@ -1,0 +1,15 @@
+@import 'theme.scss';
+.aboutUs ul {
+	list-style: none
+}
+.aboutUs .nav-tabs > li.active > a,
+.aboutUs .nav-tabs > li.active > a:hover,
+.aboutUs .nav-tabs > li.active > a:focus{
+	color:$primaryColor;	
+}
+.aboutUs .nav-tabs > li > a{
+	color:$secondoryFont;	
+}
+.aboutUs i.fa{
+	color:$primaryColor;		
+}

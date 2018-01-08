@@ -1,6 +1,7 @@
 <template name="aboutUs">
 	<div class="col-md-12 aboutUs">
 		{{#each allAboutUs}}
+		<!-- <div class="col-md-6 pad0"> -->
 			<h2>{{title}}</h2>
 			{{#if equals aboutType 'TABS'}}
 				<div class="custom-tab">
@@ -14,7 +15,6 @@
 					{{/each}}
 					</ul>
 					<div class="tab-content">
-
 						{{#each aboutItemList}}
 							<div class="tab-pane {{checkEqual @index 0 'active' ''}}" id="{{_id}}">
 							{{{paragraph}}}
@@ -47,7 +47,9 @@
 	                </div>  
 	            </div>
 				{{/each}}
-			{{/if}}          
+			{{/if}}       
+		<!-- </div> -->
+			   
 		{{/each}}
 	</div>
 	

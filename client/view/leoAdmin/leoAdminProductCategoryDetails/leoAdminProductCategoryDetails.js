@@ -34,6 +34,7 @@ Template.leoAdminProductCategoryDetails.events({
             insertObject.name = data.name;
             insertObject.tags = data.tags.split(",");
             insertObject.title = data.title;
+            insertObject.seq = data.seq;
             insertObject.description = data.description;
             insertObject.isActive = $("[name='isActive']").prop( "checked" );
         });

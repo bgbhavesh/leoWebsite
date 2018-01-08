@@ -72,11 +72,6 @@
     overflow:hidden;
 }
 
-
-
-
-
-
 @media (max-width: 768px) {
     .navbar-brand{
         max-width: 100px;
