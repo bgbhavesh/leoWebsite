@@ -6,6 +6,7 @@ Template.aboutUs.onCreated(function () {
 Template.aboutUs.onRendered(function () {
 	let self = this;
 	self.autorun(function(){
+		
 	}.bind(this))
 });
 Template.aboutUs.events({
