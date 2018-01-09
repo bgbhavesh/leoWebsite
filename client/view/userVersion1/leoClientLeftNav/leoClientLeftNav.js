@@ -14,8 +14,8 @@ Template.leoClientLeftNav.events({
 		// e.preventDefault();
 		let component = $(e.currentTarget);
 	    if ($(component).hasClass('activado')) {
-	      // $(component).removeClass('activado');
-	      // $(component).children('ul').slideUp();
+	      $(component).removeClass('activado');
+	      $(component).children('ul').slideUp();
 	    }else{
 	      $('.menu li ul').slideUp();
 	      $('.menu li').removeClass('activado');

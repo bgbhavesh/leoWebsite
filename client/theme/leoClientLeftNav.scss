@@ -41,19 +41,20 @@ div.support-menu {
  }
 
 .support-menu nav.vertical > ul > li > ul {
-  background-color: rgb(255,255,255);
+  background-color: $secondoryColor;
 }
 .support-menu nav.vertical > ul > li > ul {list-style-type: none;}
 .support-menu nav.vertical > ul > li > ul > li > a {
   background-color: $secondoryColor;
   border-bottom: 1px solid rgba(0,0,0,.05);
-  color: #333331;display: block;font-size: 1.1rem;
+  color: $secondoryFont;
+  display: block;font-size: 1.1rem;
   padding: 10px 0;text-decoration: none;
   transition: all 0.15s linear;
   }
 .support-menu nav.vertical > ul > li > ul > li:hover > a {
   background-color: $secondoryLightColor;
   color: $secondoryLightFont;
-  /*padding: 10px 0 10px 50px;*/
+  padding: 10px 0 10px 10px;
 }
 

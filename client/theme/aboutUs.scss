@@ -1,6 +1,7 @@
 @import 'theme.scss';
 .aboutUs ul {
-	list-style: none
+	list-style: none;
+	padding-left:10px;
 }
 .aboutUs .nav-tabs > li.active > a,
 .aboutUs .nav-tabs > li.active > a:hover,
@@ -8,8 +9,9 @@
 	color:$primaryColor;	
 }
 .aboutUs .nav-tabs > li > a{
-	color:$secondoryFont;	
+	color:$basisFont;	
 }
 .aboutUs i.fa{
+	padding-right:10px;
 	color:$primaryColor;		
 }

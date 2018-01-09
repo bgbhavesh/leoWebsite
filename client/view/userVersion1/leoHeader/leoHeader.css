@@ -43,13 +43,14 @@
 
 }
 #header .companyBrief{
-    color:#fff;
+    /*color:#fff;*/
     /*font-size:2.4em;*/
     float:left;
     margin-top:-65px !important;
     margin-left:15px;
     font-family: 'Open Sans Condensed', sans-serif, sans-serif;
-
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #header .site-name{

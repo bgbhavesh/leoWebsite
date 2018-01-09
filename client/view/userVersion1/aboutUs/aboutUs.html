@@ -7,8 +7,8 @@
 				<div class="custom-tab">
 					<ul class="nav nav-tabs nav-justified" role="tablist">
 					{{#each aboutItemList}}
-						<li class="{{checkEqual @index 0 'active' ''}}">
-							<a href="#{{_id}}" role="tab" data-toggle="tab" >
+						<li class="{{checkEqual @index 0 'active' ''}} bRadiT">
+							<a href="#{{_id}}" role="tab" data-toggle="tab" class="bRadiT" >
 							{{label}}
 							</a>
 						</li>					
@@ -39,8 +39,8 @@
 				{{#each aboutItemList}}
 				<div class="skill">
 	                <p>{{label}}</p>          
-	                <div class="progress">         
-	                    <div class="progress-bar" role="progressbar" data-percentage="{{percent}}" style="width: {{percent}}%;">
+	                <div class="progress bRadiT">         
+	                    <div class="progress-bar bRadiT" role="progressbar" data-percentage="{{percent}}" style="width: {{percent}}%;">
 	                        <span class="progress-bar-span">{{percent}}%</span>
 	                        <span class="sr-only">{{percent}}% Complete</span>
 	                    </div>

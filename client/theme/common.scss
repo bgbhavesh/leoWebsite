@@ -2,3 +2,74 @@
 .progress-bar{
 	background-color:$primaryColor
 }
+
+
+.primaryT{
+	background-color:$primaryColor;
+	color:$primaryFont;
+}
+.primaryLightT{
+	background-color:$primaryLightColor;
+	color:$primaryLightFont;
+}
+.secondoryT{
+	background-color:$secondoryColor;
+	color:$secondoryFont;
+}
+.secondoryLightT{
+	background-color:$secondoryLightColor;
+	color:$secondoryLightFont;
+}
+.tertiaryT{
+	background-color:$tertiaryColor;
+	color:$tertiaryFont;
+}
+.tertiaryLightT{
+	background-color:$tertiaryLightColor;
+	color:$tertiaryLightFont;
+}
+.quaternaryT{
+	background-color:$quaternaryColor;
+	color:$quaternaryFont;
+}
+.quaternaryLightT{
+	background-color:$quaternaryLightColor;
+	color:$quaternaryLightFont;
+}
+
+.primaryI{
+	color:$primaryColor;
+	background-color:$primaryFont;
+}
+.primaryLightI{
+	color:$primaryLightColor;
+	background-color:$primaryLightFont;
+}
+.secondoryI{
+	color:$secondoryColor;
+	background-color:$secondoryFont;
+}
+.secondoryLightI{
+	color:$secondoryLightColor;
+	background-color:$secondoryLightFont;
+}
+.tertiaryI{
+	color:$tertiaryColor;
+	background-color:$tertiaryFont;
+}
+.tertiaryLightI{
+	color:$tertiaryLightColor;
+	background-color:$tertiaryLightFont;
+}
+.quaternaryI{
+	color:$quaternaryColor;
+	background-color:$quaternaryFont;
+}
+.quaternaryLightI{
+	color:$quaternaryLightColor;
+	background-color:$quaternaryLightFont;
+}
+
+.bRadiT{
+	border-radius:$primaryRadious;
+}
