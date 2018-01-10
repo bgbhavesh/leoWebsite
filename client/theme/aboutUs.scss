@@ -15,3 +15,12 @@
 	padding-right:10px;
 	color:$primaryColor;		
 }
+.nav-tabs.nav-justified > li > a {
+  border-radius: $primaryRadious;
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid $quaternaryLightColor;
+    border-radius: $primaryRadious $primaryRadious 0 0;
+  }
+}
