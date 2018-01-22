@@ -76,7 +76,7 @@
                             </div>              
                             <div class="form-group col-md-12 pad0">                        
                                 <label class="control-label">Para</label>
-                                <textarea type="text" name="paragraph" class="form-control" mandatory="true"></textarea>
+                                <textarea type="text" name="paragraph" summer-note='true' class="form-control" mandatory="true"></textarea>
                             </div>          
                         </form>
                     </div>
@@ -90,7 +90,8 @@
                             <input type="text" class="form-control" readonly value="{{this.label}}" />
                         </div>         
                         <div class="form-group col-md-12 pad0">                                
-                            <textarea type="text" class="form-control" readonly value="{{this.paragraph}}"></textarea>
+                        {{{this.paragraph}}}
+                            <!-- <textarea type="text" class="form-control" readonly value="{{this.paragraph}}"></textarea> -->
                         </div>   
                     </div>
                     <div class="col-md-2 ">
@@ -131,7 +132,7 @@
                                 <input type="text" name="label" class="form-control" mandatory="true" />
                             </div>              
                             <div class="form-group col-md-4 pad0">                                
-                                <input type="checkbox" class="item-checkbox" name="checked" value="TRUE">
+                                <input type="checkbox" class="item-checkbox" name="checked" value="TRUE" style="margin: 20px">
                             </div>          
                         </form>
                     </div>
@@ -145,7 +146,7 @@
                             <input type="text" class="form-control" readonly value="{{this.label}}" />
                         </div>         
                         <div class="form-group col-md-4 pad0">                                
-                            <input type="checkbox" class="item-checkbox" readonly checked="{{this.checked}}" onclick="return false;">
+                            <input type="checkbox" class="item-checkbox" readonly checked="{{this.checked}}" onclick="return false;" style="margin:20px; ">
                         </div>   
                     </div>
                     <div class="col-md-2 ">
@@ -161,7 +162,7 @@
                                 <input type="text" name="label" class="form-control" mandatory="true" />
                             </div>              
                             <div class="form-group col-md-4 pad0">                                
-                                <label class="control-label">Label</label>
+                                <label class="control-label">Percent</label>
                                 <input type="text" name="percent" class="form-control" mandatory="true" validationType=number/>
                             </div>          
                         </form>
@@ -176,7 +177,7 @@
                             <input type="text" class="form-control" readonly value="{{this.label}}" />
                         </div>              
                         <div class="form-group col-md-4 pad0">                                
-                            <label class="control-label">percent</label>
+                            <label class="control-label">Percent</label>
                             <input type="text" value="{{this.percent}}" class="form-control" readonly />
                         </div>   
                     </div>
