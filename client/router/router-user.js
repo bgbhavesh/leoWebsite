@@ -32,4 +32,26 @@ Router.map(function () {
             leoAboutUs:LeoCollections.LeoAboutUs.find().fetch();
         }
     });
+    this.route('leoProCat', {
+        layoutTemplate:"leoFullLayout",
+        path: '/leoProCat/:catId?',
+        waitOn: function () {
+            // Meteor.subscribe("leoAboutUs",{isActive:true},{})
+        },
+        data: function () {
+            routerTitle:'Product Cat';
+            // leoAboutUs:LeoCollections.LeoAboutUs.find().fetch();
+        }
+    });
+    this.route('leoSerCat', {
+        layoutTemplate:"leoFullLayout",
+        path: '/leoSerCat/:catId?',
+        waitOn: function () {
+            // Meteor.subscribe("leoAboutUs",{isActive:true},{})
+        },
+        data: function () {
+            routerTitle:'Service Cat';
+            // leoAboutUs:LeoCollections.LeoAboutUs.find().fetch();
+        }
+    });
 });

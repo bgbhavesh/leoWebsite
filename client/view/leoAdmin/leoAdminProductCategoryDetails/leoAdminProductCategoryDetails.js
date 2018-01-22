@@ -21,6 +21,9 @@ Template.leoAdminProductCategoryDetails.onRendered(function () {
     let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#productCategory'));
     // imageUpload.cloudinary.imageUpload($('#productCategoryImage'));
+    Meteor.defer(function(){
+        $("[summer-note='true']").summernote()
+    }) 
 });
 Template.leoAdminProductCategoryDetails.events({
     "click [data-action='cancel']":function(e){

@@ -25,6 +25,9 @@ Template.registerHelper('not', (value) => {
 Template.registerHelper('getDefaultUrl', function (images,style) {
     return getDefaultUrl(images,style);
 });
+Template.registerHelper('getActivetUrl', function (images,style) {
+    return getActivetUrl(images,style);
+});
 
 Template.registerHelper('getSessionVar', function (name) {
     return Session.get(name);

@@ -103,7 +103,7 @@
                     <form id="getAboutTypeDetails">
                         <div class="form-group">
                             <label class="control-label">Para</label>
-                            <textarea type="text" name="paragraph" class="form-control" mandatory="true"></textarea>
+                            <textarea type="text" name="paragraph" class="form-control" summer-note='true' mandatory="true"></textarea>
                         </div>
                     </form>
                     </div>
@@ -114,7 +114,8 @@
                     <div class="col-md-10 pad0">
                         <div class="form-group">
                             <label class="control-label">Para</label>
-                            <textarea type="text" class="form-control" readonly value="{{this.paragraph}}"></textarea>
+                            <!-- <textarea type="text" class="form-control" readonly value=""></textarea> -->
+                            {{{this.paragraph}}}
                         </div>
                     </div>
                     <div class="col-md-2 ">

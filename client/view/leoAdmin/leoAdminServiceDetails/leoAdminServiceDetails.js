@@ -21,6 +21,9 @@ Template.leoAdminServiceDetails.onRendered(function () {
     let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#service'));
     // imageUpload.cloudinary.imageUpload($('#serviceImage'));
+    Meteor.defer(function(){
+        $("[summer-note='true']").summernote()
+    }) 
 });
 Template.leoAdminServiceDetails.events({
     "click [data-action='cancel']":function(e){

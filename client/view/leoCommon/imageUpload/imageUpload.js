@@ -34,7 +34,14 @@ Template.leoImageUpload.events({
         Cloudinary.collection.update({_id:this._id},{$set:{isDefault:true}})
     },
     "click .leoImageUpload .isActive":function () {
-        Cloudinary.collection.update({_id:this._id},{$set:{isActive:true}})
+        debugger
+        if(this.isActive){
+            Cloudinary.collection.update({_id:this._id},{$set:{isActive:false}})
+        }
+        else{
+            Cloudinary.collection.update({_id:this._id},{$set:{isActive:true}})
+
+        }
     },
     "change .leoImageUpload .seq":function (e) {
         let seq= $(e.currentTarget).val()

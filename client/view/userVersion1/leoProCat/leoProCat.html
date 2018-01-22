@@ -1,0 +1,25 @@
+<template name="leoProCat">
+	{{>leoProSerItem productCat}}
+	{{#if product}}
+	<hr>
+	<h2> Product list </h2>
+	<div class="col-md-12 pad0">
+		{{#each product}}
+		<div class="col-md-4">
+			{{>leoProSerItem this}}
+		</div>
+		{{/each}}
+	</div>
+	{{/if}}
+	{{#if relatedProductCat}}
+	<hr>
+	<h2> Related product catagory </h2>
+	<div class="col-md-12 pad0">
+		{{#each relatedProductCat}}
+		<div class="col-md-4">
+			{{>leoProSerItem this}}
+		</div>
+		{{/each}}
+	</div>
+	{{/if}}
+</template>

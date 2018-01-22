@@ -4,6 +4,16 @@
 }
 
 
+.basisT{
+	background-color:$basisColor;
+	color:$basisFont;
+}
+
+.basisLightT{
+	background-color:$basisLightColor;
+	color:$basisLightFont;
+}
+
 .primaryT{
 	background-color:$primaryColor;
 	color:$primaryFont;
@@ -37,7 +47,7 @@
 	color:$quaternaryLightFont;
 }
 
-.primaryI{
+.primaryT:hover, .primaryI{
 	color:$primaryColor;
 	background-color:$primaryFont;
 }
@@ -45,7 +55,7 @@
 	color:$primaryLightColor;
 	background-color:$primaryLightFont;
 }
-.secondoryI{
+.secondoryT:hover, .secondoryI{
 	color:$secondoryColor;
 	background-color:$secondoryFont;
 }
@@ -53,7 +63,7 @@
 	color:$secondoryLightColor;
 	background-color:$secondoryLightFont;
 }
-.tertiaryI{
+.tertiaryT:hover, .tertiaryI{
 	color:$tertiaryColor;
 	background-color:$tertiaryFont;
 }
@@ -69,6 +79,16 @@
 	color:$quaternaryLightColor;
 	background-color:$quaternaryLightFont;
 }
+.basisI{
+	background-color:$basisFont;
+	color:$basisColor;
+}
+
+.basisLightI{
+	background-color:$basisLightFont;
+	color:$basisLightColor;
+}
+
 
 .bRadiT{
 	border-radius:$primaryRadious;

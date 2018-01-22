@@ -1,0 +1,25 @@
+<template name="leoSerCat">
+	{{>leoProSerItem serviceCat}}
+	<hr>
+	{{#if service}}
+	<h2> Service list </h2>
+	<div class="col-md-12 pad0">
+		{{#each service}}
+		<div class="col-md-4">
+			{{>leoProSerItem this}}
+		</div>
+		{{/each}}
+	</div>
+	{{/if}}
+	<hr>
+	{{#if relatedServiceCat}}
+	<h2> Related service catagory </h2>
+	<div class="col-md-12 pad0">
+		{{#each relatedServiceCat}}
+		<div class="col-md-4">
+			{{>leoProSerItem this}}
+		</div>
+		{{/each}}
+	</div>
+	{{/if}}
+</template>

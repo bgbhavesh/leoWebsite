@@ -38,13 +38,40 @@ Meteor.publish("leoService", function (selector, project) {
     return LeoCollections.LeoService.find(selector, {fields:project});
 });
 
-
+//
 
 Meteor.publish("leoProductCategory", function (selector, project) {
     check(selector, Object);
     check(project, Object);
-    console.log("-leoProductCategory-")
+    console.log("-leoProductCategory-");
+    console.log(selector);
     return LeoCollections.LeoProductCategory.find(selector, {fields:project});
+});
+Meteor.publishComposite("leoProductCategoryProduct", function (selector, project) {
+    check(selector, Object);
+    check(project, Object);
+    console.log("-leoProductCategoryProduct-");
+    console.log(selector);
+    return {
+        find:function(){
+            return LeoCollections.LeoProductCategory.find(selector, {fields:project});
+        },
+        children:function(){
+            return {
+                    find:function(pc){
+                        if(pc && pc._id){
+                            return LeoCollections.LeoProduct.find({isActive:true ,categoryId:pc._id},{sort:{seq:1}});
+                        }
+                    }
+            },{
+                find:function(pc){
+                    if(pc && pc.tags){
+                        return LeoCollections.LeoProductCategory.find(isActive:true,tags:{$in:pc.tags},{sort:{seq:1}});
+                    }
+                }
+            }
+        }
+    }
 });
 
 

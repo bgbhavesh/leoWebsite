@@ -2,8 +2,8 @@
 Template.leoAdminProductDetails.onCreated(function () {
     let params = Router.current().params;
     Cloudinary.collection.remove({});
-    if(params && params.catId){
-        let product = LeoCollections.LeoProduct.findOne({_id:params.catId})
+    if(params && params.productId){
+        let product = LeoCollections.LeoProduct.findOne({_id:params.productId})
         if(product && product.images && product.images.length>0){
             _.each(product.images,function (image) {
                 let obj = image;
@@ -21,6 +21,9 @@ Template.leoAdminProductDetails.onRendered(function () {
     let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#product'));
     // imageUpload.cloudinary.imageUpload($('#productImage'));
+    Meteor.defer(function(){
+        $("[summer-note='true']").summernote()
+    }) 
 });
 Template.leoAdminProductDetails.events({
     "click [data-action='cancel']":function(e){

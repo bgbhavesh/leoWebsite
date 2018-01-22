@@ -3,17 +3,17 @@
         <nav class="vertical bRadiT">
             <ul class="menu">
                 {{#each leoProductCategory}}
-                <li class="chapter">
-                    <a href="#">
-                    {{name}}
+                <li class="chapter ">
+                    <a class="secondoryT" href="/leoProCat/{{title}}">
+                    {{title}}
                     </a>
                     {{#let categoryId = this._id}}
                         {{#if leoProduct categoryId}}
                             <ul>
                                 {{#each leoProduct categoryId}}
-                                <li>
-                                    <a href="">
-                                        {{name}}
+                                <li >
+                                    <a class="tertiaryT" href="/p/{{title}}">
+                                        {{title}}
                                     </a>                                
                                 </li>
                                 {{/each}}
@@ -23,17 +23,17 @@
                 </li>
                 {{/each}}
                 {{#each leoServiceCategory}}
-                <li class="chapter">
-                    <a href="#">
-                    {{name}}
+                <li class="chapter ">
+                    <a class="secondoryT" href="/leoSerCat/{{title}}">
+                    {{title}}
                     </a>
                     {{#let categoryId = this._id}}
                         {{#if leoService categoryId}}
                             <ul>
                                 {{#each leoService categoryId}}
-                                <li>
-                                    <a href="">
-                                        {{name}}
+                                <li class="tertiaryT">
+                                    <a class="tertiaryT" href="/s">
+                                        {{title}}
                                     </a>                                
                                 </li>
                                 {{/each}}
@@ -42,23 +42,23 @@
                     {{/let}}
                 </li>
                 {{/each}}    
-                <li class="chapter">
-                    <a href="{{pathFor 'aboutUs'}}">
+                <li class="chapter ">
+                    <a class="secondoryT" href="{{pathFor 'aboutUs'}}">
                         About Us
                     </a>
                 </li>
                 <li class="chapter">
-                    <a href="{{pathFor 'contactUs'}}">
+                    <a class="secondoryT" href="{{pathFor 'contactUs'}}">
                         Contact Us
                     </a>
                 </li>
                 <li class="chapter">
-                    <a href="{{pathFor 'leoLogin'}}">
+                    <a class="secondoryT" href="{{pathFor 'leoLogin'}}">
                         Log In
                     </a>
                 </li>
                 <li class="chapter">
-                    <a href="{{pathFor 'leoAdminCompanyDetails'}}">
+                    <a class="secondoryT" href="{{pathFor 'leoAdminCompanyDetails'}}">
                         Company Settings
                     </a>
                 </li>

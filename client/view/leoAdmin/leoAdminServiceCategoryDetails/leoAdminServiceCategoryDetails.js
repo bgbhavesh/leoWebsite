@@ -20,6 +20,9 @@ Template.leoAdminServiceCategoryDetails.onCreated(function () {
 Template.leoAdminServiceCategoryDetails.onRendered(function () {
     let utilObj = new LeoUtils();
     utilObj.applyValidationAndFloatingLabel($('#serviceCategory'));
+    Meteor.defer(function(){
+        $("[summer-note='true']").summernote()
+    }) 
     // imageUpload.cloudinary.imageUpload($('#serviceCategoryImage'));
 });
 Template.leoAdminServiceCategoryDetails.events({

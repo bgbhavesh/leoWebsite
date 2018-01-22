@@ -1,0 +1,10 @@
+<template name="leoProSerList">
+	<div >
+		{{#each leoProductCategory}}
+			{{> leoProSerItem this}}
+		{{/each}}
+		{{#each leoServiceCategory}}
+			{{> leoProSerItem this}}
+		{{/each}}
+	</div>
+</template>

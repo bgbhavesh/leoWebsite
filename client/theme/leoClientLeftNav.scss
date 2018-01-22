@@ -19,10 +19,10 @@ div.support-menu {
 }
 
 .support-menu nav.vertical > ul > li > a {
-  background-color: $primaryColor;
+  /*background-color: $primaryColor;
   border-bottom: 1px solid rgba(255,255,255,.1);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
-  color: $primaryFont;
+  color: $primaryFont;*/
   display: block;
   font-size: .85rem;
   font-weight: 500;
@@ -32,8 +32,8 @@ div.support-menu {
 
 }
 .support-menu nav.vertical > ul > li > a:hover {
-  background-color: $primaryLightColor;
-  /*background-image: -webkit-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
+  /*background-color: $primaryLightColor;
+  background-image: -webkit-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
   background-image: -moz-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
   background-image: -o-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
   background-image: linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));*/
@@ -41,20 +41,20 @@ div.support-menu {
  }
 
 .support-menu nav.vertical > ul > li > ul {
-  background-color: $secondoryColor;
+  /*background-color: $secondoryColor;*/
 }
 .support-menu nav.vertical > ul > li > ul {list-style-type: none;}
 .support-menu nav.vertical > ul > li > ul > li > a {
-  background-color: $secondoryColor;
+  /*background-color: $secondoryColor;
   border-bottom: 1px solid rgba(0,0,0,.05);
-  color: $secondoryFont;
+  color: $secondoryFont;*/
   display: block;font-size: 1.1rem;
   padding: 10px 0;text-decoration: none;
   transition: all 0.15s linear;
   }
 .support-menu nav.vertical > ul > li > ul > li:hover > a {
-  background-color: $secondoryLightColor;
-  color: $secondoryLightFont;
+  /*background-color: $secondoryLightColor;
+  color: $secondoryLightFont;*/
   padding: 10px 0 10px 10px;
 }
 
